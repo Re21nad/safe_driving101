@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aca00ca-39dd-40df-bc52-5e3968c15edc" name="Changes" comment="Final Code">
-      <change afterPath="$PROJECT_DIR$/lib/hello1.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/hello2.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/image-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/image-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/image-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hello4.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hello5.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hello2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/hello2.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,11 +49,21 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "C:/Users/asus/src/safe_driving_101",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "C:/Users/asus/src/safe_driving101/images",
     "settings.editor.selected.configurable": "vcs.Git",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\src\safe_driving101\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\src\safe_driving101\images" />
+      <recent name="C:\Users\asus\src\safe_driving101" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
@@ -87,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681115237021</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Final Code">
+      <created>1681115754371</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681115754371</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

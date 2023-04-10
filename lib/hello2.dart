@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-// import 'hello4.dart';
+import 'hello4.dart';
 // import 'log-in.dart';
 
 // void main() {
@@ -9,9 +9,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Hello2 extends StatelessWidget {
   void navigateNextPage(BuildContext ctx) {
-    // Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-    //   return Hello4();
-    // }));
+    Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
+      return Hello4();
+    }));
   }
 
   @override
