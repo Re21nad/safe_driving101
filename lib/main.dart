@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:safe_driving101/hello1.dart';
-// import 'package:firebase_core/firebase_core.dart';
-//import 'package:safe_driving_101/log-in.dart';
-//import 'package:safe_driving_101/sign-up1.dart';
-//import 'home_page.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:safe_driving101/log-in.dart';
+// import 'package:safe_driving101/sign-up1.dart';
+import 'home_page.dart';
 
 void main() async{
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
 
   runApp(const MyApp());
 }

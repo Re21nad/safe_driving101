@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "418238345842",
+    "project_id": "my-project-fe67d",
+    "storage_bucket": "my-project-fe67d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418238345842:android:7ab581a3eb9af64f1c88eb",
+        "android_client_info": {
+          "package_name": "com.example.safe_driving101"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418238345842-7p14sqefqqpktb5fvbr6cpuqs4ojgmop.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXv9Xr_XwDXn7HRl6SPUre8rdWoDkdKRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "418238345842-7p14sqefqqpktb5fvbr6cpuqs4ojgmop.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

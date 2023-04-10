@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 //import 'package:firebase_core/firebase_core.dart';
 import 'hello2.dart';
-// import 'log-in.dart';
+import 'log-in.dart';
 
 class Hello1 extends StatelessWidget {
   void navigateNextPage(BuildContext ctx) {
@@ -43,7 +43,16 @@ class Hello1 extends StatelessWidget {
                   ),
                 ),
               ),
-
+              // Container(
+              //   // image1RSd (1:63)
+              //   margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
+              //   width: 173,
+              //   height: 173,
+              //   child: Image.asset(
+              //     'images/image-3.png',
+              //     fit: BoxFit.cover,
+              //   ),
+              // ),
               Center(
                 child: Container(
                   margin: EdgeInsets.fromLTRB(1, 270, 0, 50),
@@ -155,8 +164,8 @@ class Hello1 extends StatelessWidget {
                 margin: EdgeInsets.fromLTRB(281, 20, 0, 0),
                 child: TextButton(
                   onPressed: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => LoginScreen()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginScreen()));
                   },
                   style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
@@ -178,5 +187,6 @@ class Hello1 extends StatelessWidget {
       ),
     );
 
+    //);
   }
 }

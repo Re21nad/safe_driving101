@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'hello4.dart';
-// import 'log-in.dart';
+import 'log-in.dart';
 
 // void main() {
 //   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: hallo2()));
@@ -169,8 +169,8 @@ class Hello2 extends StatelessWidget {
                 margin: EdgeInsets.fromLTRB(281, 20, 0, 0),
                 child: TextButton(
                   onPressed: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => LoginScreen()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginScreen()));
                   },
                   style: TextButton.styleFrom(
                       padding: EdgeInsets.zero,
