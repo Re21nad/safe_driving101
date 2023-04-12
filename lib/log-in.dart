@@ -2,13 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:safe_driving101/reset-password.dart';
+import 'package:safe_driving101/sign-up.dart';
 // import 'package:safe_driving101/sign-up1.dart';
 
 // void main(){
 //  runApp(Log_in());
 // }
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  //final VoidCallback showRegesterPage;
+  const LoginScreen({
+    Key? key,
+    //required this.showRegesterPage,
+  }) : super(key: key);
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -198,15 +203,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     ),
 
-                    // Text(
-                    //   'Forget Password?',
-                    //   style: GoogleFonts.rokkitt(
-                    //     fontSize: 16,
-                    //     fontWeight: FontWeight.w400,
-                    //     height: 1.1375,
-                    //     color: Color(0xff686a66),
-                    //   ),
-                    // ),
                   ),
 
 
@@ -259,8 +255,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           // The Sign in Button
                           // signupTnD (1:358)
                           onPressed: () {
-                            // Navigator.push(context,
-                            //     MaterialPageRoute(builder: (context) => signUp()));
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) => signUp()));
 
                             //Navigator.of(context).pushReplacementNamed('signUpScreen');
                           },

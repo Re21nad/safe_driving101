@@ -107,6 +107,7 @@ class _HomePage1State extends State<HomePage1> {
               // SizedBox(
               //   height: 10,
               // ),
+
               Container(
                 margin: EdgeInsets.only(left: 13, right: 13),
                 width: double.infinity,
@@ -149,106 +150,104 @@ class _HomePage1State extends State<HomePage1> {
                   ),
                 ),
               ),
-              // SizedBox(
-              //   height: 5,
-              // ),
-              Container(
-                margin: EdgeInsets.only(left: 20),
-                width: double.infinity,
-                height: 120,
-                child: Row(
-                  children: [
-                    Container(
-                      //margin: EdgeInsets.only(left: 13),
-                      width: 120,
-                      height: 120,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          // Add your desired onPressed functionality here
-                        },
-                        style: ElevatedButton.styleFrom(
-                          primary: Color(0xfc161853),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(24),
-                          ),
-                        ),
-                        child: Container(
-                          //padding: EdgeInsets.only(right: 10 ),
-                          child: Column(
-                            //crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                // choosingacarnuB (1:76)
-                                margin: EdgeInsets.only(top: 10,right: 30),
-                                child: Text(
-                                  'Manage \ndangers',
-                                  style: GoogleFonts.domine(
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.35,
-                                    color: Color(0xff000000),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                // image24hFT (1:77)
-                                margin: EdgeInsets.only(left: 50),
-                                width: 80,
-                                height: 75,
-                                child: Image.asset(
-                                  'images/image-25-83X.png',
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
 
-
-                    SizedBox(width: 15,),
-                    InkWell(
-                      onTap: () {
-                        //Tools1();
-                      },
-                      child: Container(
-                        // autogrouppgysF6d (BEu3KQ7h5sjLiRSs21PGys)
-                        margin: EdgeInsets.fromLTRB(0, 0, 13, 0),
-                        padding: EdgeInsets.fromLTRB(5, 23, 15, 23),
-                        height: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(24),
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage(
-                              'images/rectangle-118-bg.png',
-                            ),
-                          ),
-                        ),
-
-                        child: Align(
-                          // toolsusinginthecarj1o (1:68)
-                          alignment: Alignment.topCenter,
-                          child: SizedBox(
-                            child: Container(
-                              // constraints: BoxConstraints(
-                              //   maxWidth: 143,
-                              // ),
-                              child: Text(
-                                'Tools using in \nthe car',
-                                style: GoogleFonts.domine(
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.w700,
-                                  height: 1.35,
-                                  color: Color(0xfcffffff),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
+              // Container(
+              //   margin: EdgeInsets.only(left: 20),
+              //   width: double.infinity,
+              //   height: 120,
+              //   child: Row(
+              //     children: [
+              //       Container(
+              //         //margin: EdgeInsets.only(left: 13),
+              //         width: 120,
+              //         height: 120,
+              //         child: ElevatedButton(
+              //           onPressed: () {
+              //             // Add your desired onPressed functionality here
+              //           },
+              //           style: ElevatedButton.styleFrom(
+              //             primary: Color(0xfc161853),
+              //             shape: RoundedRectangleBorder(
+              //               borderRadius: BorderRadius.circular(24),
+              //             ),
+              //           ),
+              //           child: Container(
+              //             //padding: EdgeInsets.only(right: 10 ),
+              //             child: Column(
+              //               //crossAxisAlignment: CrossAxisAlignment.center,
+              //               children: [
+              //                 Container(
+              //                   // choosingacarnuB (1:76)
+              //                   margin: EdgeInsets.only(top: 10,right: 30),
+              //                   child: Text(
+              //                     'Manage \ndangers',
+              //                     style: GoogleFonts.domine(
+              //                       fontSize: 10,
+              //                       fontWeight: FontWeight.w400,
+              //                       height: 1.35,
+              //                       color: Color(0xff000000),
+              //                     ),
+              //                   ),
+              //                 ),
+              //                 Container(
+              //                   // image24hFT (1:77)
+              //                   margin: EdgeInsets.only(left: 50),
+              //                   width: 80,
+              //                   height: 75,
+              //                   child: Image.asset(
+              //                     'images/image-25-83X.png',
+              //                     fit: BoxFit.cover,
+              //                   ),
+              //                 ),
+              //               ],
+              //             ),
+              //           ),
+              //         ),
+              //       ),
+              //
+              //
+              //       SizedBox(width: 15,),
+              //       InkWell(
+              //         onTap: () {
+              //           //Tools1();
+              //         },
+              //         child: Container(
+              //           // autogrouppgysF6d (BEu3KQ7h5sjLiRSs21PGys)
+              //           margin: EdgeInsets.fromLTRB(0, 0, 13, 0),
+              //           padding: EdgeInsets.fromLTRB(5, 23, 15, 23),
+              //           height: double.infinity,
+              //           decoration: BoxDecoration(
+              //             borderRadius: BorderRadius.circular(24),
+              //             image: DecorationImage(
+              //               fit: BoxFit.cover,
+              //               image: AssetImage(
+              //                 'images/rectangle-118-bg.png',
+              //               ),
+              //             ),
+              //           ),
+              //
+              //           child: Align(
+              //             // toolsusinginthecarj1o (1:68)
+              //             alignment: Alignment.topCenter,
+              //             child: SizedBox(
+              //               child: Container(
+              //                 // constraints: BoxConstraints(
+              //                 //   maxWidth: 143,
+              //                 // ),
+              //                 child: Text(
+              //                   'Tools using in \nthe car',
+              //                   style: GoogleFonts.domine(
+              //                     fontSize: 10,
+              //                     fontWeight: FontWeight.w700,
+              //                     height: 1.35,
+              //                     color: Color(0xfcffffff),
+              //                   ),
+              //                 ),
+              //               ),
+              //             ),
+              //           ),
+              //         ),
+              //       ),
 
                     //SizedBox(width: 15,),
                     // Container(
@@ -300,11 +299,11 @@ class _HomePage1State extends State<HomePage1> {
                     // ),
 
 
-                  ],
-                ),
-              ),
+              //     ],
+              //   ),
+              // ),
 
-              SizedBox(height: 40,),
+              SizedBox(height: 100,),
               Container(
                 margin: EdgeInsets.only(left: 20),
                 width: double.infinity,
@@ -321,58 +320,58 @@ class _HomePage1State extends State<HomePage1> {
               ),
 
               //SizedBox(height: 5,),
-              Container(
-                margin: EdgeInsets.only(left: 20),
-                width: double.infinity,
-                height: 120,
-                child: Row(
-                  children: [
-
-                    InkWell(
-                      onTap: () {
-                        //Tools1();
-                      },
-                      child: Container(
-                        // autogrouppgysF6d (BEu3KQ7h5sjLiRSs21PGys)
-                        margin: EdgeInsets.fromLTRB(0, 0, 13, 0),
-                        padding: EdgeInsets.fromLTRB(5, 23, 15, 23),
-                        height: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(24),
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage(
-                              'images/rectangle-118-bg.png',
-                            ),
-                          ),
-                        ),
-
-                        child: Align(
-                          // toolsusinginthecarj1o (1:68)
-                          alignment: Alignment.topCenter,
-                          child: SizedBox(
-                            child: Container(
-                              // constraints: BoxConstraints(
-                              //   maxWidth: 143,
-                              // ),
-                              child: Text(
-                                'Tools using in \nthe car',
-                                style: GoogleFonts.domine(
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.w700,
-                                  height: 1.35,
-                                  color: Color(0xfcffffff),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-
-                  ],
-                ),
-              ),
+              // Container(
+              //   margin: EdgeInsets.only(left: 20),
+              //   width: double.infinity,
+              //   height: 120,
+              //   child: Row(
+              //     children: [
+              //
+              //       InkWell(
+              //         onTap: () {
+              //           //Tools1();
+              //         },
+              //         child: Container(
+              //           // autogrouppgysF6d (BEu3KQ7h5sjLiRSs21PGys)
+              //           margin: EdgeInsets.fromLTRB(0, 0, 13, 0),
+              //           padding: EdgeInsets.fromLTRB(5, 23, 15, 23),
+              //           height: double.infinity,
+              //           decoration: BoxDecoration(
+              //             borderRadius: BorderRadius.circular(24),
+              //             image: DecorationImage(
+              //               fit: BoxFit.cover,
+              //               image: AssetImage(
+              //                 'images/rectangle-118-bg.png',
+              //               ),
+              //             ),
+              //           ),
+              //
+              //           child: Align(
+              //             // toolsusinginthecarj1o (1:68)
+              //             alignment: Alignment.topCenter,
+              //             child: SizedBox(
+              //               child: Container(
+              //                 // constraints: BoxConstraints(
+              //                 //   maxWidth: 143,
+              //                 // ),
+              //                 child: Text(
+              //                   'Tools using in \nthe car',
+              //                   style: GoogleFonts.domine(
+              //                     fontSize: 10,
+              //                     fontWeight: FontWeight.w700,
+              //                     height: 1.35,
+              //                     color: Color(0xfcffffff),
+              //                   ),
+              //                 ),
+              //               ),
+              //             ),
+              //           ),
+              //         ),
+              //       ),
+              //
+              //     ],
+              //   ),
+              // ),
 
             ],
           ),
