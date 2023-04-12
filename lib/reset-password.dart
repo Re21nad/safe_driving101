@@ -4,9 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:safe_driving101/log-in.dart';
 
 
-void main(){
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: ResetPass()));
-}
+// void main(){
+//   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: ResetPass()));
+// }
 
 class ResetPass extends StatefulWidget {
   const ResetPass({Key? key}) : super(key: key);
@@ -85,9 +85,10 @@ class _ResetPassState extends State<ResetPass> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
 
+            SizedBox(height: 100,),
             Container(
               width: double.infinity,
-              margin: EdgeInsets.only(left: 20,right: 20,top:50),
+              margin: EdgeInsets.only(left: 20,right: 20),
               height: 60,
               alignment: Alignment.center,
               child: Text(

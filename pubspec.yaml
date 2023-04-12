@@ -46,6 +46,9 @@ flutter:
      - images/image-3.png
      - images/image-4.png
      - images/safe-driving101-1-fLh.png
+     - images/image-25-83X.png
+     - images/rectangle-118-bg.png
+     - images/image-26.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
