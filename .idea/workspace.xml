@@ -10,21 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aca00ca-39dd-40df-bc52-5e3968c15edc" name="Changes" comment="Final Code">
-      <change afterPath="$PROJECT_DIR$/lib/authentication-page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/get_user_name.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/homePage.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/pages/guides.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/pages/home.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/pages/laws_and_regulations.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/pages/profile.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/pages/test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/users.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/auth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/log-in.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/log-in.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/my-lessons.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/my-lessons.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/sign-up.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/sign-up.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/get_user_name.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/get_user_name.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +76,10 @@
     </key>
   </component>
   <component name="RunManager" selected="Flutter.main.dart">
+    <configuration name="homePage.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/read data/homePage.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
@@ -93,6 +94,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.homePage.dart" />
         <item itemvalue="Flutter.my-lessons.dart" />
         <item itemvalue="Flutter.sign-up.dart" />
       </list>
@@ -163,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681260934320</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Final Code">
+      <created>1681325735691</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681325735691</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

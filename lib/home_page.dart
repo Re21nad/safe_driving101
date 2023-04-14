@@ -4,6 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:safe_driving101/my-lessons.dart';
 import 'package:safe_driving101/read%20data/get_user_name.dart';
+import 'package:safe_driving101/read%20data/homePage.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,19 +16,30 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final user = FirebaseAuth.instance.currentUser!;
 
+  //final userRef = FirebaseFirestore.instance.collection('Users').doc(user.uid);
+
+  Future<String> _getNickName(DocumentReference userRef) async {
+    final snapshot = await userRef.get();
+    final data = snapshot.data() as Map<String, dynamic>;
+    return data['nick name'] ?? 'N/A';
+  }
+
+
   // document IDs
   List<String> docIDs = [];
 
   // get docIDs
   Future getDocId() async {
-    await FirebaseFirestore.instance.collection("Users").get().then(
-          (snapshot) => snapshot.docs.forEach(
-            (document) {
+    await FirebaseFirestore.instance.collection("Users").where(
+        'email', isEqualTo: user.email).get().then(
+          (snapshot) =>
+          snapshot.docs.forEach(
+                (document) {
               print(document.reference);
               docIDs.add(document.reference.id);
             },
           ),
-        );
+    );
   }
 
   @override
@@ -66,25 +79,58 @@ class _HomePageState extends State<HomePage> {
             //     ),),
             // ),
 
-            Expanded(
+            // ******************************************************************
+            // Expanded(
+            //   child: FutureBuilder(
+            //     future: getDocId(),
+            //     builder: (context, snapshot) {
+            //       return ListView.builder(
+            //         itemCount: 1,
+            //         itemBuilder: (context, index) {
+            //           return Padding(
+            //             padding: const EdgeInsets.all(8.0),
+            //             child: ListTile(
+            //               title: GetUserName(documentId: docIDs[index]),
+            //               tileColor: Colors.grey[100],
+            //             ),
+            //           );
+            //         },
+            //       );
+            //     },
+            //   ),
+            // ),
+
+            Container(
               child: FutureBuilder(
-                future: getDocId(),
-                builder: (context, snapshot) {
-                  return ListView.builder(
-                    itemCount: docIDs.length,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.all(8.0),
+                  future: getDocId(),
+                  builder: (context, snapshot) {
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
                         child: ListTile(
-                          title: GetUserName(documentId: docIDs[index]),
+                          title: GetUserName(documentId: docIDs[0]),
                           tileColor: Colors.grey[100],
-                        ),
-                      );
-                    },
-                  );
-                },
+                    ),
+                    );
+
+                  }
               ),
             ),
+            // Expanded(
+            //   child: ListView.builder(
+            //     itemCount: 1,
+            //     itemBuilder: (context, index) {
+            //       return Padding(
+            //         padding: const EdgeInsets.all(8.0),
+            //         child: ListTile(
+            //           title: Text('Name: ${user.displayName}'),
+            //           subtitle: Text('Email: ${user.email}\nNick name: ${GetUserName(documentId: docIDs[0],)}'),
+            //           tileColor: Colors.grey[100],
+            //         ),
+            //       );
+            //     },
+            //   ),
+            // ),
+
 
             ElevatedButton(
               child: Text(
@@ -103,11 +149,11 @@ class _HomePageState extends State<HomePage> {
                       20), // Adjust border radius as per your need
                 ),
                 primary:
-                    Color(0xfc161853), // Set the background color of the button
+                Color(0xfc161853), // Set the background color of the button
               ),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => HomePage1()));
+                    MaterialPageRoute(builder: (context) => Home_Page()));
                 //navigateNextPage(context);
               },
             ),
