@@ -10,18 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aca00ca-39dd-40df-bc52-5e3968c15edc" name="Changes" comment="Final Code">
-      <change afterPath="$PROJECT_DIR$/lib/read data/homePage.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/pages/guides.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/pages/home.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/pages/laws_and_regulations.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/pages/profile.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/pages/test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/users.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/image-10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/image-11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/tata.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/exam/question1.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/exam/result1.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/skill.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/users_.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/auth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/auth.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/my-lessons.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/my-lessons.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/get_user_name.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/get_user_name.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/homePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/homePage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/pages/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/pages/profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/profile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/pages/test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/users.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/users.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,19 +62,21 @@
     "com.google.services.firebase.aqiPopupShown": "true",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "C:/Users/asus/src/safe_driving101/images",
+    "last_opened_file_path": "C:/Users/asus/src/safe_driving101/lib/read data/pages",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\asus\src\safe_driving101\images" />
+      <recent name="C:\Users\asus\src\safe_driving101\lib\read data\pages" />
       <recent name="C:\Users\asus\src\safe_driving101\lib" />
+      <recent name="C:\Users\asus\src\safe_driving101\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\asus\src\safe_driving101\android\app" />
+      <recent name="C:\Users\asus\src\safe_driving101\lib\read data" />
       <recent name="C:\Users\asus\src\safe_driving101\images" />
+      <recent name="C:\Users\asus\src\safe_driving101\android\app" />
       <recent name="C:\Users\asus\src\safe_driving101" />
     </key>
   </component>
@@ -92,8 +97,13 @@
       <option name="filePath" value="$PROJECT_DIR$/lib/sign-up.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="test.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/exam/test.dart" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.test.dart" />
         <item itemvalue="Flutter.homePage.dart" />
         <item itemvalue="Flutter.my-lessons.dart" />
         <item itemvalue="Flutter.sign-up.dart" />
@@ -172,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681325735691</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Final Code">
+      <created>1681491092175</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681491092175</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

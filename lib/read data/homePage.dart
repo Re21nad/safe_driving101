@@ -15,7 +15,9 @@ import 'package:safe_driving101/read%20data/pages/test.dart';
 // }
 
 class Home_Page extends StatefulWidget {
-  const Home_Page({Key? key}) : super(key: key);
+  // final int _selectedIndex;
+  // Home_Page({required this._selectedIndex});
+  //const Home_Page({Key? key}) : super(key: key);
 
   @override
   State<Home_Page> createState() => _Home_PageState();
@@ -31,7 +33,7 @@ class _Home_PageState extends State<Home_Page> {
     });
   }
 
-  final List<Widget> _pages = [
+   List<Widget> _pages = [
     Guides(),
     LawsAndRegulations(),
     Home(),

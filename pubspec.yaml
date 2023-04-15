@@ -50,6 +50,9 @@ flutter:
      - images/image-25-83X.png
      - images/rectangle-118-bg.png
      - images/image-26.png
+     - images/tata.png
+     - images/image-10.png
+     - images/image-11.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

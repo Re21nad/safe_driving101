@@ -45,14 +45,14 @@ class Home extends StatelessWidget {
             color: Color(0xff000000),
           ),
         ),
-        actions: [
-          GestureDetector(
-            onTap: () {
-              FirebaseAuth.instance.signOut();
-            },
-            child: Icon(Icons.logout, color: Colors.black,),
-          )
-        ],
+        // actions: [
+        //   GestureDetector(
+        //     onTap: () {
+        //       FirebaseAuth.instance.signOut();
+        //     },
+        //     child: Icon(Icons.logout, color: Colors.black,),
+        //   )
+        // ],
       ),
       backgroundColor: Colors.white,
       body: Center(

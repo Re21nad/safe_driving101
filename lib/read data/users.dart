@@ -2,8 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:safe_driving101/my-lessons.dart';
+import 'package:safe_driving101/read%20data/pages/profile.dart';
 
-class User {
+class Users {
   final String name;
   final String nickName;
   final String email;
@@ -11,7 +12,7 @@ class User {
   final String gender;
   final String city;
 
-  User({
+  Users({
     required this.name,
     required this.nickName,
     required this.email,
@@ -22,7 +23,7 @@ class User {
 }
 
 class UserManagement {
-  storeNewUser(User user, context) async {
+  storeNewUser(Users user, context) async {
     var firebaseUser = FirebaseAuth.instance.currentUser;
 
     if (firebaseUser != null) {
@@ -39,7 +40,7 @@ class UserManagement {
       }).then((value) {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => HomePage1()),
+          MaterialPageRoute(builder: (context) => Profile_()),
         );
       });
     }
