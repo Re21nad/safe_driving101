@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:safe_driving101/read%20data/edit_profile.dart';
 import 'package:safe_driving101/read%20data/skill.dart';
 
 class Profile_ extends StatefulWidget {
@@ -110,7 +111,10 @@ class _Profile_State extends State<Profile_> {
                               left: 139,
                               child: GestureDetector(
                                 onTap: () {
-                                  // Do something when the icon is tapped
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => EditProfilePage()),
+                                  );
                                 },
                                 child: Icon(Icons.edit,
                                     size: 30, color: Colors.black),
