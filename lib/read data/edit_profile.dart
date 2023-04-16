@@ -15,8 +15,6 @@ class _EditProfilePageState extends State<EditProfilePage> {
   final _nameController = TextEditingController(text: '');
   final _nickNameController = TextEditingController(text: '');
   final _emailController = TextEditingController(text: '');
-  final _passwordController = TextEditingController(text: '');
-  final _confirmPasswordController = TextEditingController(text: '');
   final _birthDateController = TextEditingController(text: '');
   final _genderController = TextEditingController(text: '');
   final _cityController = TextEditingController(text: '');
@@ -26,13 +24,59 @@ class _EditProfilePageState extends State<EditProfilePage> {
     _nameController.dispose();
     _nickNameController.dispose();
     _emailController.dispose();
-    _passwordController.dispose();
-    _confirmPasswordController.dispose();
     _birthDateController.dispose();
     _genderController.dispose();
     _cityController.dispose();
     super.dispose();
   }
+
+  Future<void>updateUserData(String name, String nickName, String email,
+      String birthDate, String gender, String city) async {
+    CollectionReference userRef = FirebaseFirestore.instance.collection("Users");
+
+    await userRef.doc(users.uid.toString()).set({
+      "name": name,
+      "nick name": nickName,
+      "email": email,
+      "birth date": birthDate,
+      "gender": gender,
+      "city": city
+    })
+        .then((value) => print("User data updated"))
+        .catchError((error) => print("Failed to update user data: $error"));
+  }
+
+  // Future<void> updateUserData(String name, String nickName, String email, String birthDate, String gender, String city) async {
+  //   try {
+  //     final userRef = FirebaseFirestore.instance.collection("Users");
+  //     final userDoc = userRef.doc(users.uid!);
+  //     final userDocSnapshot = await userDoc.get();
+  //
+  //     if (!userDocSnapshot.exists) {
+  //       // Document does not exist
+  //       print("Error: Document does not exist");
+  //       return;
+  //     }
+  //
+  //     final dataToUpdate = {
+  //       "name": name,
+  //       "nick name": nickName,
+  //       "email": email,
+  //       "birth date": birthDate,
+  //       "gender": gender,
+  //       "city": city
+  //     };
+  //
+  //     // Only update fields that are not null
+  //     dataToUpdate.removeWhere((key, value) => value == null);
+  //
+  //     await userDoc.set(dataToUpdate);
+  //
+  //     print("User data updated successfully");
+  //   } catch (e) {
+  //     print("Error updating user data: $e");
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +150,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                             fillColor: Color(0xffffffff),
                             filled: true,
                           ),
-                        //  onChanged: print(_nameController.text);
+                          //  onChanged: print(_nameController.text);
                         ),
                       ), // Name Field
 
@@ -401,15 +445,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
                       ElevatedButton(
                         onPressed: () async {
                           try {
-                            await FirebaseFirestore.instance.collection('Users').doc(users.uid).update({
-                              'name': _nameController.text,
-                              'nickname': _nickNameController.text,
-                              'email': _emailController.text,
-                              'birthDate': _birthDateController.text,
-                              'gender': _genderController.text,
-                              'city': _cityController.text,
-                            }
-                            );
+                            updateUserData(_nameController.text, _nickNameController.text,
+                                _emailController.text, _birthDateController.text,
+                                _genderController.text, _cityController.text);
 
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(content: Text('Profile updated successfully!')),
