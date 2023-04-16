@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:safe_driving101/hello.dart';
 import 'package:safe_driving101/hello1.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:safe_driving101/log-in.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Hello1(),
+      home: Hello(),
 
     );
   }

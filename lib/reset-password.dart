@@ -17,6 +17,7 @@ class ResetPass extends StatefulWidget {
 
 class _ResetPassState extends State<ResetPass> {
 
+  final _formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
 
   @override
@@ -80,91 +81,93 @@ class _ResetPassState extends State<ResetPass> {
         ),
       ),
       body: SingleChildScrollView(
+        child: Form(
+          key: _formKey,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
 
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+              SizedBox(height: 150,),
+              Container(
+                width: double.infinity,
+                margin: EdgeInsets.only(left: 20,right: 20),
+                height: 60,
+                alignment: Alignment.center,
+                child: Text(
+                    'Enter your email to send to you a link\n that you can reset your password:',
+                  style: GoogleFonts.rokkitt(
+                    //Color(0xffc2c5bc),
+                    textStyle: TextStyle(
 
-            SizedBox(height: 100,),
-            Container(
-              width: double.infinity,
-              margin: EdgeInsets.only(left: 20,right: 20),
-              height: 60,
-              alignment: Alignment.center,
-              child: Text(
-                  'Enter your email to send to you a link\n that you can reset your password:',
-                style: GoogleFonts.rokkitt(
-                  //Color(0xffc2c5bc),
-                  textStyle: TextStyle(
+                      fontSize: 17.0, // Set font size
 
-                    fontSize: 17.0, // Set font size
+                    ),),
+              ),
+              ),
+              SizedBox(height: 30,),
 
-                  ),),
-            ),
-            ),
-            SizedBox(height: 30,),
+              Container(
+                margin: EdgeInsets.only(left: 30, right: 30),
+                //padding: const EdgeInsets.symmetric(horizontal: 26.0),
+                height: 50,
+                child: TextField(
+                  controller: _emailController,
+                  style: GoogleFonts.rokkitt(
+                    //Color(0xffc2c5bc),
+                    textStyle: TextStyle(
+                      fontSize: 17.0, // Set font size
 
-            Container(
-              margin: EdgeInsets.only(left: 30, right: 30),
-              //padding: const EdgeInsets.symmetric(horizontal: 26.0),
-              height: 50,
-              child: TextField(
-                controller: _emailController,
-                style: GoogleFonts.rokkitt(
-                  //Color(0xffc2c5bc),
-                  textStyle: TextStyle(
-                    fontSize: 17.0, // Set font size
-
+                    ),
                   ),
-                ),
 
-                decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                        color: Color(0xff1d1a20)),
-                    borderRadius: BorderRadius.circular(10),
-                    //color: Color(0xffffffff),
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Color(0xff1d1a20)),
+                      borderRadius: BorderRadius.circular(10),
+                      //color: Color(0xffffffff),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: Color(0xfcec255a)),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    hintText: 'E-mail',
+                    fillColor: Color(0xffffffff),
+                    filled: true,
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                        color: Color(0xfcec255a)),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  hintText: 'E-mail',
-                  fillColor: Color(0xffffffff),
-                  filled: true,
                 ),
               ),
-            ),
 
-            SizedBox(height: 50,),
+              SizedBox(height: 50,),
 
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 50),
-              child: GestureDetector(
-                onTap: passwordReset,
-                child: Container(
-                  padding: EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                      color: Color(0xfc161853),
-                      borderRadius: BorderRadius.circular(20)
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Reset',
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.rokkitt(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w700,
-                        height: 1.1375,
-                        color: Color(0xffffffff),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 50),
+                child: GestureDetector(
+                  onTap: passwordReset,
+                  child: Container(
+                    padding: EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                        color: Color(0xfc161853),
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Reset',
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.rokkitt(
+                          fontSize: 25,
+                          fontWeight: FontWeight.w700,
+                          height: 1.1375,
+                          color: Color(0xffffffff),
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

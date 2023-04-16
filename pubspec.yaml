@@ -53,6 +53,7 @@ flutter:
      - images/tata.png
      - images/image-10.png
      - images/image-11.png
+     - images/datetoday.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

@@ -10,9 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aca00ca-39dd-40df-bc52-5e3968c15edc" name="Changes" comment="Final Code">
+      <change afterPath="$PROJECT_DIR$/images/datetoday.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/edit_profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/edit_profile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/pages/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hello.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/hello.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/reset-password.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reset-password.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/sign-up.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/sign-up.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,18 +54,17 @@
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
     "dart.analysis.tool.window.visible": "false",
-    "flutter.view.tool.window.visible": "true",
     "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "C:/Users/asus/src/safe_driving101/lib/read data/pages",
+    "last_opened_file_path": "C:/Users/asus/src/safe_driving101/images",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\src\safe_driving101\images" />
       <recent name="C:\Users\asus\src\safe_driving101\lib\read data\pages" />
       <recent name="C:\Users\asus\src\safe_driving101\lib" />
-      <recent name="C:\Users\asus\src\safe_driving101\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\asus\src\safe_driving101\lib\read data" />
@@ -70,6 +74,10 @@
     </key>
   </component>
   <component name="RunManager" selected="Flutter.main.dart">
+    <configuration name="hello.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/hello.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="homePage.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/read data/homePage.dart" />
       <method v="2" />
@@ -92,6 +100,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.hello.dart" />
         <item itemvalue="Flutter.test.dart" />
         <item itemvalue="Flutter.homePage.dart" />
         <item itemvalue="Flutter.my-lessons.dart" />
@@ -192,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681560002517</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Final Code">
+      <created>1681652595562</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681652595562</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
