@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
 import 'package:safe_driving101/my-lessons.dart';
 import 'package:safe_driving101/read%20data/get_user_name.dart';
 import 'package:safe_driving101/read%20data/pages/guides.dart';
@@ -40,11 +41,20 @@ class _Home_PageState extends State<Home_Page> {
     Test(),
     Profile_(),
   ];
-
+  Future<void> _handleRefresh() async{
+    return await Future.delayed(Duration(seconds: 2));
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: _pages[_selected],
+        body: LiquidPullToRefresh(
+            onRefresh: _handleRefresh,
+            color: Colors.indigo[100],
+            height: 300,
+            backgroundColor: Color(0xfc161853),
+            animSpeedFactor: 3,
+            showChildOpacityTransition: true,
+            child: _pages[_selected]),
         bottomNavigationBar: Container(
           color: Colors.white,
           child: Padding(
