@@ -152,6 +152,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "google_nav_bar",
+      "rootUri": "file:///C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/google_nav_bar-5.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "http",
       "rootUri": "file:///C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/http-0.13.5",
       "packageUri": "lib/",
@@ -332,7 +338,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-04-16T15:33:43.430131Z",
+  "generated": "2023-04-17T10:41:27.725224Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }

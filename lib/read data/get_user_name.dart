@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class GetUserName extends StatelessWidget {
   final String documentId;
 
-  GetUserName({required this.documentId});
+  GetUserName({required this.documentId, required TextStyle style});
 
   @override
   Widget build(BuildContext context) {

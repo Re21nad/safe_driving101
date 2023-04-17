@@ -10,13 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aca00ca-39dd-40df-bc52-5e3968c15edc" name="Changes" comment="Final Code">
-      <change afterPath="$PROJECT_DIR$/images/datetoday.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/hello.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/hello.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/reset-password.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/reset-password.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/sign-up.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/sign-up.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/get_user_name.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/get_user_name.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/homePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/homePage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/pages/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -208,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681652595562</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Final Code">
+      <created>1681666766509</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681666766509</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

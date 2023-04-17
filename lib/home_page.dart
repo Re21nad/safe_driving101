@@ -107,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                         child: ListTile(
-                          title: GetUserName(documentId: docIDs[0]),
+                          //title: GetUserName(documentId: docIDs[0]),
                           tileColor: Colors.grey[100],
                     ),
                     );
