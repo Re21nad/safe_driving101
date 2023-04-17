@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:safe_driving101/hello1.dart';
+import 'package:safe_driving101/introduction_screen.dart';
 
 //import 'dart:ui';
 //import 'package:flutter/src/widgets/media_query.dart';
@@ -25,7 +26,7 @@ class _HelloState extends State<Hello> {
 
   _navigation() async{
     await Future.delayed(Duration(microseconds: 2500),(){});
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Hello1()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Introduction()));
   }
   @override
   Widget build(BuildContext context) {

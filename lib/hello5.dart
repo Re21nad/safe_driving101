@@ -17,13 +17,14 @@ class Hello5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
         body: SingleChildScrollView(
         child: Container(
         padding: EdgeInsets.fromLTRB(25.5, 45, 26.5, 40.5),
     width: double.infinity,
-        decoration: BoxDecoration(
-          color: Color(0xffffffff),
-        ),
+        // decoration: BoxDecoration(
+        //   color: Color(0xffffffff),
+        // ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
@@ -75,92 +76,92 @@ class Hello5 extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              // circlesvXF (1:41)
-              margin: EdgeInsets.fromLTRB(125, 15, 20.5, 30),
-              width: double.infinity,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    // ellipse1Ryo (1:42)
-                    width: 13,
-                    height: 13,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6.5),
-                      color: Color(0xffd9d9d9),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Container(
-                    // ellipse1Ryo (1:42)
-                    width: 13,
-                    height: 13,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6.5),
-                      color: Color(0xffd9d9d9),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Container(
-                    // ellipse1Ryo (1:42)
-                    width: 13,
-                    height: 13,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6.5),
-                      color: Color(0xffd9d9d9),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Container(
-                    // ellipse1Ryo (1:42)
-                    width: 13,
-                    height: 13,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6.5),
-                      color: Color(0xff000000),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-
-                ],
-              ),
-            ),
-            SizedBox(
-              width: 350,
-              height: 65,
-              child: ElevatedButton(
-
-                child: Text(
-                  'Get Started',
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.rokkitt(
-                    fontSize: 25,
-                    fontWeight: FontWeight.w700,
-                    height: 1.1375,
-                    color: Color(0xffffffff),
-                  ),
-                ),
-
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20), // Adjust border radius as per your need
-                  ),
-                  primary: Color(0xfc161853), // Set the background color of the button
-                ),
-                onPressed: () {
-                  navigateNextPage(context);
-                },
-              ),
-            ),
+            // Container(
+            //   // circlesvXF (1:41)
+            //   margin: EdgeInsets.fromLTRB(125, 15, 20.5, 30),
+            //   width: double.infinity,
+            //   child: Row(
+            //     crossAxisAlignment: CrossAxisAlignment.center,
+            //     children: [
+            //       Container(
+            //         // ellipse1Ryo (1:42)
+            //         width: 13,
+            //         height: 13,
+            //         decoration: BoxDecoration(
+            //           borderRadius: BorderRadius.circular(6.5),
+            //           color: Color(0xffd9d9d9),
+            //         ),
+            //       ),
+            //       SizedBox(
+            //         width: 15,
+            //       ),
+            //       Container(
+            //         // ellipse1Ryo (1:42)
+            //         width: 13,
+            //         height: 13,
+            //         decoration: BoxDecoration(
+            //           borderRadius: BorderRadius.circular(6.5),
+            //           color: Color(0xffd9d9d9),
+            //         ),
+            //       ),
+            //       SizedBox(
+            //         width: 15,
+            //       ),
+            //       Container(
+            //         // ellipse1Ryo (1:42)
+            //         width: 13,
+            //         height: 13,
+            //         decoration: BoxDecoration(
+            //           borderRadius: BorderRadius.circular(6.5),
+            //           color: Color(0xffd9d9d9),
+            //         ),
+            //       ),
+            //       SizedBox(
+            //         width: 15,
+            //       ),
+            //       Container(
+            //         // ellipse1Ryo (1:42)
+            //         width: 13,
+            //         height: 13,
+            //         decoration: BoxDecoration(
+            //           borderRadius: BorderRadius.circular(6.5),
+            //           color: Color(0xff000000),
+            //         ),
+            //       ),
+            //       SizedBox(
+            //         width: 15,
+            //       ),
+            //
+            //     ],
+            //   ),
+            // ),
+            // SizedBox(
+            //   width: 350,
+            //   height: 65,
+            //   child: ElevatedButton(
+            //
+            //     child: Text(
+            //       'Get Started',
+            //       textAlign: TextAlign.center,
+            //       style: GoogleFonts.rokkitt(
+            //         fontSize: 25,
+            //         fontWeight: FontWeight.w700,
+            //         height: 1.1375,
+            //         color: Color(0xffffffff),
+            //       ),
+            //     ),
+            //
+            //     style: ElevatedButton.styleFrom(
+            //       shape: RoundedRectangleBorder(
+            //         borderRadius: BorderRadius.circular(20), // Adjust border radius as per your need
+            //       ),
+            //       primary: Color(0xfc161853), // Set the background color of the button
+            //     ),
+            //     onPressed: () {
+            //       navigateNextPage(context);
+            //     },
+            //   ),
+            // ),
 
           ],
         ),

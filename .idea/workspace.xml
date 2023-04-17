@@ -10,10 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aca00ca-39dd-40df-bc52-5e3968c15edc" name="Changes" comment="Final Code">
-      <change afterPath="$PROJECT_DIR$/lib/liquid-pull-to-refresh.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/introduction_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/homePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/homePage.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hello.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/hello.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hello1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/hello1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hello2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/hello2.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hello4.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/hello4.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/hello5.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/hello5.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
@@ -80,6 +87,10 @@
       <option name="filePath" value="$PROJECT_DIR$/lib/read data/homePage.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="introduction_screen.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/introduction_screen.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="liquid-pull-to-refresh.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/liquid-pull-to-refresh.dart" />
       <method v="2" />
@@ -88,21 +99,17 @@
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="my-lessons.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/my-lessons.dart" />
-      <method v="2" />
-    </configuration>
     <configuration name="test.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/exam/test.dart" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.introduction_screen.dart" />
         <item itemvalue="Flutter.liquid-pull-to-refresh.dart" />
         <item itemvalue="Flutter.hello.dart" />
         <item itemvalue="Flutter.test.dart" />
         <item itemvalue="Flutter.homePage.dart" />
-        <item itemvalue="Flutter.my-lessons.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681735777018</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Final Code">
+      <created>1681736753871</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681736753871</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
