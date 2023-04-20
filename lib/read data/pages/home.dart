@@ -2,11 +2,29 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:safe_driving101/log-in.dart';
 import 'package:safe_driving101/read%20data/get_user_name.dart';
+class Home extends StatefulWidget {
+  const Home({Key? key}) : super(key: key);
 
-class Home extends StatelessWidget {
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   //final user = FirebaseAuth.instance.currentUser!;
   final users = FirebaseAuth.instance.currentUser!;
+  bool loggedIn = false;
+
+  void signOut() {
+    setState(() {
+      loggedIn = false;
+    });
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => LoginScreen()),
+    );
+  }
 
   // document IDs
   //List<String> docIDs = [];
@@ -46,17 +64,23 @@ class Home extends StatelessWidget {
             color: Color(0xff000000),
           ),
         ),
-        actions: [
-          GestureDetector(
-            onTap: () {
-              FirebaseAuth.instance.signOut();
-            },
-            child: Icon(
-              Icons.logout,
-              color: Colors.black,
-            ),
-          )
-        ],
+        // actions: [
+        //   GestureDetector(
+        //     onTap: () {
+        //       FirebaseAuth.instance.signOut();
+        //     },
+        //     child: Icon(
+        //       Icons.logout,
+        //       color: Colors.black,
+        //     ),
+        //   )
+        // ],
+
+        leading: IconButton(
+          icon: Icon(Icons.logout,),
+          color: Colors.black,
+          onPressed: signOut,
+        ),
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(

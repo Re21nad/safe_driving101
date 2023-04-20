@@ -123,7 +123,7 @@ class _IntroductionState extends State<Introduction> {
                 //         },
                 //         child: Text('Done'))
                     : SizedBox(
-                        width: 350,
+                        width: double.infinity,
                         height: 65,
                         child: ElevatedButton(
                           child: Text(

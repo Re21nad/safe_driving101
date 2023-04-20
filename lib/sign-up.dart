@@ -34,6 +34,7 @@ class _signUpState extends State<signUp> {
   final _birthDateController = TextEditingController();
   final _genderController = TextEditingController();
   final _cityController = TextEditingController();
+  bool loggedIn = false;
 
   @override
   void dispose() {
@@ -71,12 +72,16 @@ class _signUpState extends State<signUp> {
             child: CircularProgressIndicator(),
           );
         });
+    setState(() {
+      loggedIn = true;
+    });
 
     if (passwordConfirm()) {
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: _emailController.text.trim(),
         password: _passwordController.text.trim(),
       );
+
 
       addUserDetail(
         _nameController.text.trim(),
@@ -406,7 +411,8 @@ class _signUpState extends State<signUp> {
                       onChanged: (item) {
                         setState(() {
                           valueChoice1 = item;
-                          _genderController.text = item ?? ''; // set the text of the controller, handling null
+                          //_genderController.text = item ?? '';
+                          _genderController.text = valueChoice1 ?? '';// set the text of the controller, handling null
                         });
                       },
                     ),

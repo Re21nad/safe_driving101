@@ -68,7 +68,7 @@ class _Home_PageState extends State<Home_Page> {
               gap: 8,
               tabs: [
                 GButton(
-                  icon: Icons.book,
+                  icon: Icons.menu_book_outlined,
                   text: 'Guides',
                   backgroundColor: Colors.green.shade100,
                   textStyle: GoogleFonts.domine(
@@ -76,7 +76,7 @@ class _Home_PageState extends State<Home_Page> {
                           .shade700), //iconActiveColor: Colors.green.shade700,
                 ),
                 GButton(
-                  icon: Icons.ballot_rounded,
+                  icon: Icons.ballot_outlined,
                   text: 'Laws',
                   backgroundColor: Colors.yellow.shade100,
                   textStyle: GoogleFonts.domine(
