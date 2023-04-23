@@ -10,24 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aca00ca-39dd-40df-bc52-5e3968c15edc" name="Changes" comment="Final Code">
-      <change afterPath="$PROJECT_DIR$/images/car 10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/car 2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/car 3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/car 4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/car 5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/car 6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/car 7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/car 8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/car 9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/car1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/image-24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/license.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Guide1/tools1.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Guide1/toolsView.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/testing/card-view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/testing/drag-and-drop.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/testing/swappable.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/pages/guides.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/guides.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/pages/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/home.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/pages/laws_and_regulations.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/laws_and_regulations.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Guide1/tools1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Guide1/tools1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,13 +58,14 @@
     "com.google.services.firebase.aqiPopupShown": "true",
     "dart.analysis.tool.window.visible": "false",
     "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "C:/Users/asus/src/safe_driving101/lib/read data/Guides/Guide1",
+    "last_opened_file_path": "C:/Users/asus/src/safe_driving101/lib/testing",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\src\safe_driving101\lib\testing" />
       <recent name="C:\Users\asus\src\safe_driving101\lib\read data\Guides\Guide1" />
       <recent name="C:\Users\asus\src\safe_driving101\images" />
       <recent name="C:\Users\asus\src\safe_driving101\lib" />
@@ -86,37 +79,38 @@
     </key>
   </component>
   <component name="RunManager" selected="Flutter.main.dart">
-    <configuration name="hello.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/hello.dart" />
+    <configuration name="drag-and-drop.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/testing/drag-and-drop.dart" />
       <method v="2" />
     </configuration>
     <configuration name="introduction_screen.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/introduction_screen.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="liquid-pull-to-refresh.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/liquid-pull-to-refresh.dart" />
-      <method v="2" />
-    </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="swappable.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/testing/swappable.dart" />
       <method v="2" />
     </configuration>
     <configuration name="teee.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/teee.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="test.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/exam/test.dart" />
+    <configuration name="tests in swappable.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/lib/testing/swappable.dart" />
+      <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.swappable.dart" />
+        <item itemvalue="Flutter Test.tests in swappable.dart" />
+        <item itemvalue="Flutter.drag-and-drop.dart" />
         <item itemvalue="Flutter.teee.dart" />
         <item itemvalue="Flutter.introduction_screen.dart" />
-        <item itemvalue="Flutter.liquid-pull-to-refresh.dart" />
-        <item itemvalue="Flutter.hello.dart" />
-        <item itemvalue="Flutter.test.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -255,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682033743834</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Final Code">
+      <created>1682255820747</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1682255820747</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

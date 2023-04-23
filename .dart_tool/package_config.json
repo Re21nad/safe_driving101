@@ -308,6 +308,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "swipeable_card_stack",
+      "rootUri": "file:///C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/swipeable_card_stack-0.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "term_glyph",
       "rootUri": "file:///C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.1",
       "packageUri": "lib/",
@@ -350,7 +356,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-04-23T13:02:18.259918Z",
+  "generated": "2023-04-23T13:20:48.917397Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }
