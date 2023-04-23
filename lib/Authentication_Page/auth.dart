@@ -1,10 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:safe_driving101/authentication-page.dart';
-import 'package:safe_driving101/home_page.dart';
-import 'package:safe_driving101/log-in.dart';
+import 'package:safe_driving101/Authentication_Page/log-in.dart';
 import 'package:safe_driving101/read%20data/homePage.dart';
-import 'sign-up.dart';
 
 enum AuthFlowStatus { login, signUp, session }
 

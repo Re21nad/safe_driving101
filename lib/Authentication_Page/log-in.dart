@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:safe_driving101/reset-password.dart';
-import 'package:safe_driving101/sign-up.dart';
-// import 'package:safe_driving101/sign-up1.dart';
+import 'package:safe_driving101/Authentication_Page/reset-password.dart';
+import 'package:safe_driving101/Authentication_Page/sign-up.dart';
 
-// void main(){
-//  runApp(Log_in());
-// }
 class LoginScreen extends StatefulWidget {
   //final VoidCallback showRegesterPage;
   const LoginScreen({

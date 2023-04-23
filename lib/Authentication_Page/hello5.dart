@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:safe_driving101/auth.dart';
-import 'log-in.dart';
+import 'package:safe_driving101/Authentication_Page/auth.dart';
 
-// void main() {
-//   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Hello4()));
-// }
 
 class Hello5 extends StatelessWidget {
   void navigateNextPage(BuildContext ctx) {

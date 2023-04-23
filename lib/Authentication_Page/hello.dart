@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:safe_driving101/hello1.dart';
-import 'package:safe_driving101/introduction_screen.dart';
+import 'package:safe_driving101/Authentication_Page/introduction_screen.dart';
 
-//import 'dart:ui';
-//import 'package:flutter/src/widgets/media_query.dart';
-
-// void main() {
-//   runApp(Hello());
-// }
 
 class Hello extends StatefulWidget {
   const Hello({Key? key}) : super(key: key);

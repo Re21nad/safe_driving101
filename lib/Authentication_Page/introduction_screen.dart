@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:safe_driving101/auth.dart';
-import 'package:safe_driving101/hello1.dart';
-import 'package:safe_driving101/hello2.dart';
-import 'package:safe_driving101/hello4.dart';
-import 'package:safe_driving101/hello5.dart';
-import 'package:safe_driving101/log-in.dart';
+import 'package:safe_driving101/Authentication_Page/auth.dart';
+import 'package:safe_driving101/Authentication_Page/hello1.dart';
+import 'package:safe_driving101/Authentication_Page/hello2.dart';
+import 'package:safe_driving101/Authentication_Page/hello4.dart';
+import 'package:safe_driving101/Authentication_Page/hello5.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 void main() {

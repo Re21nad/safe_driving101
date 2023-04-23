@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:safe_driving101/my-lessons.dart';
 import 'package:safe_driving101/read%20data/pages/profile.dart';
 
 class Users {
