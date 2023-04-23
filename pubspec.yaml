@@ -56,6 +56,18 @@ flutter:
      - images/tata.png
      - images/image-10.png
      - images/image-11.png
+     - images/image-24.png
+     - images/car1.jpg
+     - images/car 2.jpg
+     - images/car 3.jpg
+     - images/car 4.jpg
+     - images/car 5.jpg
+     - images/car 6.jpg
+     - images/car 7.jpg
+     - images/car 8.jpg
+     - images/car 9.jpg
+     - images/car 10.jpg
+     - images/license.png
      - images/datetoday.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

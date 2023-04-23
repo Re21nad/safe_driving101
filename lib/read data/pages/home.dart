@@ -183,7 +183,7 @@ class _HomeState extends State<Home> {
                                       borderRadius: BorderRadius.circular(100),
                                       borderSide: BorderSide.none,
                                     ),
-                                    hintText: "eg: Traffic infraction",
+                                    hintText: "What are you looking for?",
                                     prefixIcon: Icon(Icons.search),
                                     prefixIconColor: Colors.grey,
                                   ),
