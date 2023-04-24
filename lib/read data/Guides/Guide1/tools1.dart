@@ -56,10 +56,10 @@ class _Tools1State extends State<Tools1> {
             margin: EdgeInsets.only(left: 23, right: 23),
             width: double.infinity,
             child: Text(
-              'There are many basic tools you need to use it in your car:\n (You can swap these cards to see all tools)',
+              'There are many basic tools you need to use it in your car:\n (You can drag these cards to see all tools)',
               style: GoogleFonts.domine(
-                fontWeight: FontWeight.w400,
-                fontSize: 16,
+                fontWeight: FontWeight.w700,
+                fontSize: 13,
               ),
               textAlign: TextAlign.center,
             ),
@@ -70,21 +70,22 @@ class _Tools1State extends State<Tools1> {
             //add the first 3 cards
             items: [
               ToolsView(
-                  title: "First card",
-                  subtitle: "Subtitle 1",
-                  description: "Description 1",
-                  color: Colors.grey),
+                  title: "First Tool",
+                  subtitle: "Steering Wheel",
+                  description: "  The wheel is a circle and is the first thing you notice in front of the driver. The vehicle's front wheels' movements will be controlled by it. In order to control the car and the rotation of its wheels, the driver must have your hands on him and grip him firmly",
+                  color: Colors.grey.shade300,
+                  image: 'images/steering wheel.jpg',),
               ToolsView(
-                  title: "Second card",
-                  subtitle: "Subtitle 2",
-                  description: "Description 2",
-                  color: Colors.amber),
+                  title: "Second Tool",
+                  subtitle: "Brakes",
+                  description: "The vehicle's brakes are used to bring it to a halt and make sure it stays stopped. In some cars, the manual brake is located next to the transmission and is in the shape of a retractable lever. In other cars, the manual brake is an electronic switch with the letter P painted on it that must be depressed to operate.",
+                  color: Colors.pink.shade100),
               ToolsView(
-                title: "Third card",
-                subtitle: "Subtitle 3",
-                description: "Description 3",
+                title: "Third Tool",
+                subtitle: "Mirror",
+                description: "Three mirrors are present inside the car, two of which are placed on either side so you can see everything that is outside on either side, and the third is in the middle, directly in front of you. The mirror is designed specifically to look out the back window of the car and view everything behind it.",
                 color: Colors.cyanAccent,
-                image: 'images/image-24.png',
+                //image: 'images/mirror.jpg',
               ),
             ],
             onCardSwiped: (dir, index, widget) {
@@ -149,30 +150,7 @@ class _Tools1State extends State<Tools1> {
           SizedBox(
             height: 30,
           ),
-          // Container(
-          //   margin: EdgeInsets.symmetric(vertical: 20.0),
-          //   child: Row(
-          //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //     children: [
-          //       FloatingActionButton(
-          //         child: Icon(Icons.chevron_left),
-          //         onPressed: () => _cardController.triggerSwipeLeft(),
-          //       ),
-          //       FloatingActionButton(
-          //         child: Icon(Icons.chevron_right),
-          //         onPressed: () => _cardController.triggerSwipeRight(),
-          //       ),
-          //       FloatingActionButton(
-          //         child: Icon(Icons.arrow_upward),
-          //         onPressed: () => _cardController.triggerSwipeUp(),
-          //       ),
-          //       FloatingActionButton(
-          //         child: Icon(Icons.arrow_downward),
-          //         onPressed: () => _cardController.triggerSwipeDown(),
-          //       ),
-          //     ],
-          //   ),
-          // )
+
         ],
       ),
     );
