@@ -93,7 +93,7 @@ class _signUpState extends State<signUp> {
       );
     }
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => Home_Page()));
+        context, MaterialPageRoute(builder: (context) => LoginScreen()));
   }
 
   Future addUserDetail(String name, String nickName, String email,

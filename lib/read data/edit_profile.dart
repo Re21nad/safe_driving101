@@ -98,6 +98,16 @@ class _EditProfilePageState extends State<EditProfilePage> {
             color: Color(0xff000000),
           ),
         ),
+
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
       body: StreamBuilder(
         stream: FirebaseFirestore.instance
