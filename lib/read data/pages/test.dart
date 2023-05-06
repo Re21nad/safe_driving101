@@ -3,14 +3,11 @@ import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:safe_driving101/exam/question1.dart';
-// import 'package:safe_driving_101/assets/exam/questions1.dart';
-//import 'package:myapp/page-1/result11.dart';
-//import 'package:myapp/page-1/testquestions.dart';
-//import 'package:myapp/utils.dart';
 
-void main(){
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Test()));
-}
+
+// void main(){
+//   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Test()));
+// }
 
 class Test extends StatelessWidget {
   const Test({Key? key}) : super(key: key);

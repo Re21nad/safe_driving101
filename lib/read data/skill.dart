@@ -5,10 +5,10 @@ import '../exam/question1.dart';
 import 'package:safe_driving101/read%20data/homePage.dart';
 
 
-void main(){
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Skill()));
-
-}
+// void main(){
+//   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Skill()));
+//
+// }
 
 class Skill extends StatelessWidget {
   //const Skill({Key? key}) : super(key: key);
@@ -47,10 +47,7 @@ class Skill extends StatelessWidget {
           icon: Icon(Icons.arrow_back),
           color: Colors.black,
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Profile_()),
-            );
+            Navigator.pop(context);
           },
         ),
       ),
