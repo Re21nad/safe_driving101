@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/gestures.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:safe_driving101/exam/question1.dart';
 
-
-// void main(){
-//   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Test()));
-// }
 
 class Test extends StatelessWidget {
   const Test({Key? key}) : super(key: key);
@@ -32,13 +27,13 @@ class Test extends StatelessWidget {
             color: Color(0xff000000),
           ),
         ),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          color: Colors.black,
-          onPressed: () {
-            // Add the desired functionality when the back button is pressed
-          },
-        ),
+        // leading: IconButton(
+        //   icon: Icon(Icons.arrow_back),
+        //   color: Colors.black,
+        //   onPressed: () {
+        //     // Add the desired functionality when the back button is pressed
+        //   },
+        // ),
       ),
       body: SingleChildScrollView(
 

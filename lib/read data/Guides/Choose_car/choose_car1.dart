@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:safe_driving101/read%20data/Guides/Choose_car/automatic.dart';
+import 'package:safe_driving101/read%20data/Guides/Choose_car/manual.dart';
 
 class ChooseCar extends StatefulWidget {
   const ChooseCar({Key? key}) : super(key: key);
@@ -121,8 +123,8 @@ class _ChooseCarState extends State<ChooseCar> {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(builder: (context) => ChooseCar()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Automatic()));
                     },
                     style: ElevatedButton.styleFrom(
                       //padding: EdgeInsets.fromLTRB(10, 8, 10, 0),
@@ -136,7 +138,7 @@ class _ChooseCarState extends State<ChooseCar> {
                       // choosingacarnuB (1:76)
                       margin: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                       child: Text(
-                        'Electronic',
+                        'Automatic',
                         style: GoogleFonts.domine(
                           fontSize: 15,
                           fontWeight: FontWeight.w400,
@@ -150,8 +152,8 @@ class _ChooseCarState extends State<ChooseCar> {
                   SizedBox(width: 20,),
                   ElevatedButton(
                     onPressed: () {
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(builder: (context) => ChooseCar()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Manual()));
                     },
                     style: ElevatedButton.styleFrom(
                       //padding: EdgeInsets.fromLTRB(10, 8, 10, 0),
@@ -165,7 +167,7 @@ class _ChooseCarState extends State<ChooseCar> {
                       // choosingacarnuB (1:76)
                       margin: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                       child: Text(
-                        'Virtual',
+                        'Manual',
                         style: GoogleFonts.domine(
                           fontSize: 15,
                           fontWeight: FontWeight.w400,

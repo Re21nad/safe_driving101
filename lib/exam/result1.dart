@@ -4,18 +4,10 @@ import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:safe_driving101/exam/question1.dart';
 import 'package:safe_driving101/read%20data/homePage.dart';
-//import 'package:safe_driving_101/assets/exam/question1.dart';
 
-//import 'questions1.dart';
-import '../read data/pages/test.dart';
-//import 'test.dart';
-
-// void main() {
-//   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Result1()));
-// }
 
 class Result1 extends StatelessWidget {
-  //const Result({Key? key}) : super(key: key);
+
   List<Color> colors = [];
 
   @override
@@ -49,13 +41,7 @@ class Result1 extends StatelessWidget {
             color: Color(0xff000000),
           ),
         ),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          color: Colors.black,
-          onPressed: () {
-            // Add the desired functionality when the back button is pressed
-          },
-        ),
+
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -70,7 +56,7 @@ class Result1 extends StatelessWidget {
               Container(
                 // group48gJt (23:138)
                 height: 70,
-                padding: EdgeInsets.only(left: 35, right: 35),
+                padding: EdgeInsets.only(left: 35, right: 15),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Color(0xfff6f6f6),
@@ -101,8 +87,8 @@ class Result1 extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 70),
-                      width: 80,
+                      margin: EdgeInsets.only(left: 74),
+                      width: 110,
                       height: 35,
                       decoration: BoxDecoration(
                         //color: Colors.tealAccent,
@@ -136,7 +122,7 @@ class Result1 extends StatelessWidget {
               Container(
                 // group48gJt (23:138)
                 height: 70,
-                padding: EdgeInsets.only(left: 35, right: 35),
+                padding: EdgeInsets.only(left: 35, right: 15),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Color(0xfff6f6f6),
@@ -168,7 +154,7 @@ class Result1 extends StatelessWidget {
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 70),
-                      width: 80,
+                      width: 110,
                       height: 35,
                       decoration: BoxDecoration(
                         //color: Colors.tealAccent,
@@ -202,7 +188,7 @@ class Result1 extends StatelessWidget {
               Container(
                 // group48gJt (23:138)
                 height: 70,
-                padding: EdgeInsets.only(left: 35, right: 35),
+                padding: EdgeInsets.only(left: 35, right: 15),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Color(0xfff6f6f6),
@@ -234,7 +220,7 @@ class Result1 extends StatelessWidget {
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 70),
-                      width: 80,
+                      width: 110,
                       height: 35,
                       decoration: BoxDecoration(
                         //color: Colors.tealAccent,
@@ -269,7 +255,7 @@ class Result1 extends StatelessWidget {
               Container(
                 // group48gJt (23:138)
                 height: 70,
-                padding: EdgeInsets.only(left: 35, right: 35),
+                padding: EdgeInsets.only(left: 35, right: 15),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Color(0xfff6f6f6),
@@ -301,7 +287,7 @@ class Result1 extends StatelessWidget {
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 70),
-                      width: 80,
+                      width: 110,
                       height: 35,
                       decoration: BoxDecoration(
                         //color: Colors.tealAccent,
@@ -336,7 +322,7 @@ class Result1 extends StatelessWidget {
               Container(
                 // group48gJt (23:138)
                 height: 70,
-                padding: EdgeInsets.only(left: 35, right: 35),
+                padding: EdgeInsets.only(left: 35, right: 15),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Color(0xfff6f6f6),
@@ -368,7 +354,7 @@ class Result1 extends StatelessWidget {
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 70),
-                      width: 80,
+                      width: 110,
                       height: 35,
                       decoration: BoxDecoration(
                         //color: Colors.tealAccent,
@@ -396,7 +382,7 @@ class Result1 extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 30,
+                height: 70,
               ),
 
               Container(

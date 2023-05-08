@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:safe_driving101/read%20data/Laws_and_Regulations/Law1/law1.dart';
+import 'package:safe_driving101/read%20data/Laws_and_Regulations/Law2/law2.dart';
+import 'package:safe_driving101/read%20data/Laws_and_Regulations/Law3/law3.dart';
+import 'package:safe_driving101/read%20data/Laws_and_Regulations/Law4/law4.dart';
+import 'package:safe_driving101/read%20data/Laws_and_Regulations/Law5/law5.dart';
+import 'package:safe_driving101/read%20data/Laws_and_Regulations/Law6/law6.dart';
+import 'package:safe_driving101/read%20data/Laws_and_Regulations/Law7/law7.dart';
+import 'package:safe_driving101/read%20data/Laws_and_Regulations/Law8/law8.dart';
 class LawsAndRegulations extends StatefulWidget {
   const LawsAndRegulations({Key? key}) : super(key: key);
 
@@ -124,7 +132,10 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                   shadowColor: Colors.black.withOpacity(0.9),
                   borderRadius: BorderRadius.circular(26),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Law1()));
+                    },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.zero,
                       shape: RoundedRectangleBorder(
@@ -170,7 +181,10 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                   shadowColor: Colors.black.withOpacity(0.9),
                   borderRadius: BorderRadius.circular(26),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Law2()));
+                    },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.zero,
                       shape: RoundedRectangleBorder(
@@ -217,7 +231,10 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                   shadowColor: Colors.black.withOpacity(0.9),
                   borderRadius: BorderRadius.circular(26),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Law3()));
+                    },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.zero,
                       shape: RoundedRectangleBorder(
@@ -263,7 +280,10 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                   shadowColor: Colors.black.withOpacity(0.9),
                   borderRadius: BorderRadius.circular(26),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Law4()));
+                    },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.zero,
                       shape: RoundedRectangleBorder(
@@ -310,7 +330,10 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                   shadowColor: Colors.black.withOpacity(0.9),
                   borderRadius: BorderRadius.circular(26),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Law5()));
+                    },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.zero,
                       shape: RoundedRectangleBorder(
@@ -357,7 +380,10 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                   shadowColor: Colors.black.withOpacity(0.9),
                   borderRadius: BorderRadius.circular(26),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Law6()));
+                    },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.zero,
                       shape: RoundedRectangleBorder(
@@ -404,7 +430,10 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                   shadowColor: Colors.black.withOpacity(0.9),
                   borderRadius: BorderRadius.circular(26),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Law7()));
+                    },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.zero,
                       shape: RoundedRectangleBorder(
@@ -451,7 +480,10 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                   shadowColor: Colors.black.withOpacity(0.9),
                   borderRadius: BorderRadius.circular(26),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Law8()));
+                    },
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.zero,
                       shape: RoundedRectangleBorder(

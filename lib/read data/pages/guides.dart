@@ -268,7 +268,7 @@ class _GuidesState extends State<Guides> {
                                     fontSize: 15,
                                     fontWeight: FontWeight.w400,
                                     height: 1.35,
-                                    color: Color(0xff000000),
+                                    color: Colors.white,
                                   ),
                                 ),
                               ),
