@@ -982,12 +982,12 @@ class _HomeState extends State<Home> {
                                       case 3:
                                         buttonWidget = InkWell(
                                           onTap: () {
-                                            // Navigator.push(
-                                            //   context,
-                                            //   MaterialPageRoute(
-                                            //       builder: (context) =>
-                                            //           Manage()),
-                                            // );
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      Traffic()),
+                                            );
                                           },
                                           child: Container(
                                             margin: EdgeInsets.symmetric(
@@ -1307,12 +1307,12 @@ class _HomeState extends State<Home> {
                                       case 3:
                                         buttonWidget = InkWell(
                                           onTap: () {
-                                            // Navigator.push(
-                                            //   context,
-                                            //   MaterialPageRoute(
-                                            //       builder: (context) =>
-                                            //           Manage()),
-                                            // );
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      Traffic()),
+                                            );
                                           },
                                           child: Container(
                                             margin: EdgeInsets.symmetric(
