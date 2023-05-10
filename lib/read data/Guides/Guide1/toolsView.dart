@@ -37,8 +37,8 @@ class ToolsView extends StatelessWidget {
                 borderRadius: BorderRadius.circular(26.0),
                 child: Image.asset(
                   image!,
-                  height: 150.0,
-                  width: 200.0,
+                  height: 110.0,
+                  width: 180.0,
                   fit: BoxFit.cover,
                 ),
               ),

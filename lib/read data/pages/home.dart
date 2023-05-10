@@ -562,6 +562,7 @@ import 'package:safe_driving101/exam/question1.dart';
 import 'package:safe_driving101/exam/result1.dart';
 import 'package:safe_driving101/read%20data/Guides/Driving_license/driving_license.dart';
 import 'package:safe_driving101/read%20data/Guides/Guide1/tools1.dart';
+import 'package:safe_driving101/read%20data/Guides/Manage_dangers/manage_dangers.dart';
 import 'package:safe_driving101/read%20data/Guides/Traffic_Infraction/traffic_infraction.dart';
 import 'package:safe_driving101/read%20data/pages/test.dart';
 
@@ -930,11 +931,11 @@ class _HomeState extends State<Home> {
                                       case 2:
                                         buttonWidget = ElevatedButton(
                                           onPressed: () {
-                                            // Navigator.push(
-                                            //     context,
-                                            //     MaterialPageRoute(
-                                            //         builder: (context) =>
-                                            //             ChooseCar()));
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        Manage()));
                                           },
                                           style: ElevatedButton.styleFrom(
                                             padding: EdgeInsets.fromLTRB(
@@ -981,12 +982,12 @@ class _HomeState extends State<Home> {
                                       case 3:
                                         buttonWidget = InkWell(
                                           onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      TrafficInfraction()),
-                                            );
+                                            // Navigator.push(
+                                            //   context,
+                                            //   MaterialPageRoute(
+                                            //       builder: (context) =>
+                                            //           Manage()),
+                                            // );
                                           },
                                           child: Container(
                                             margin: EdgeInsets.symmetric(
@@ -1255,11 +1256,11 @@ class _HomeState extends State<Home> {
                                       case 2:
                                         buttonWidget = ElevatedButton(
                                           onPressed: () {
-                                            // Navigator.push(
-                                            //     context,
-                                            //     MaterialPageRoute(
-                                            //         builder: (context) =>
-                                            //             ChooseCar()));
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        Manage()));
                                           },
                                           style: ElevatedButton.styleFrom(
                                             padding: EdgeInsets.fromLTRB(
@@ -1306,12 +1307,12 @@ class _HomeState extends State<Home> {
                                       case 3:
                                         buttonWidget = InkWell(
                                           onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      TrafficInfraction()),
-                                            );
+                                            // Navigator.push(
+                                            //   context,
+                                            //   MaterialPageRoute(
+                                            //       builder: (context) =>
+                                            //           Manage()),
+                                            // );
                                           },
                                           child: Container(
                                             margin: EdgeInsets.symmetric(

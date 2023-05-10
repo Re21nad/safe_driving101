@@ -28,6 +28,8 @@ class CardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 10.0),
+      // width: 350,
+      height: 350,
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(26.0),

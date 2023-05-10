@@ -72,6 +72,29 @@ flutter:
      - images/datetoday.png
      - images/steering wheel.jpg
      - images/mirror.jpg
+     - images/ABS.jpg
+     - images/ABS ll.png
+     - images/loss of control.jpg
+     - images/1.png
+     - images/2.png
+     - images/3.png
+     - images/4.png
+     - images/5.png
+     - images/6.png
+     - images/7.png
+     - images/Animal.jpg
+     - images/acceleration.jpg
+     - images/airbags.jpg
+     - images/P.png
+     - images/11.png
+     - images/22.png
+     - images/R.png
+     - images/M.png
+     - images/N.png
+     - images/D.png
+     - images/automatic.jpg
+     - images/private license.png
+     - images/taxis.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

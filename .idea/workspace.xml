@@ -10,31 +10,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aca00ca-39dd-40df-bc52-5e3968c15edc" name="Changes" comment="Final Code">
-      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Choose_car/automatic.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Choose_car/manual.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/abs.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/animal.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/control.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/driving.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/emergency_equipment.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/mechanical_failures.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/traffic_infraction.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law1/law1.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law2/law2.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law3/law3.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law4/law4.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law5/law5.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law6/law6.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law7/law7.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law8/law8.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/ABS ll.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/ABS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/Animal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/D.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/M.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/N.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/P.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/R.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/acceleration.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/airbags.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/automatic.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/loss of control.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/private license.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/taxis.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/heavy_equipment.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/motorcycle_license.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/private_license.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/public_license.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/temporary_license.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Guide1/padels.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Guide1/transmissions.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving1.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving2.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving3.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving4.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving5.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving6.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving7.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/abs.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/animal.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/control.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/control2.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/emergency_equipment.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/manage_dangers.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/exam/question1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/exam/question1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/exam/result1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/exam/result1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Choose_car/choose_car1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Choose_car/choose_car1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/pages/guides.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/guides.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/driving_license.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/driving_license.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Guide1/tools1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Guide1/tools1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Guide1/toolsView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Guide1/toolsView.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/abs.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/animal.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/control.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/driving.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/driving.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/emergency_equipment.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/mechanical_failures.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/mechanical_failures.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/traffic_infraction.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/traffic_infraction.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/read data/pages/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/home.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/pages/laws_and_regulations.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/laws_and_regulations.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/pages/test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/testing/card-view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/testing/card-view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/testing/swappable.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/testing/swappable.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,20 +97,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "com.google.services.firebase.aqiPopupShown": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "C:/Users/asus/src/safe_driving101/images",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/asus/src/safe_driving101/images&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\asus\src\safe_driving101\images" />
@@ -86,11 +120,11 @@
       <recent name="C:\Users\asus\src\safe_driving101\lib\read data\pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\src\safe_driving101\lib\read data\Guides\Traffic_Infraction" />
+      <recent name="C:\Users\asus\src\safe_driving101\lib\read data\Guides\Manage_dangers" />
       <recent name="C:\Users\asus\src\safe_driving101\lib\Authentication_Page" />
       <recent name="C:\Users\asus\src\safe_driving101\lib\read data" />
       <recent name="C:\Users\asus\src\safe_driving101\images" />
-      <recent name="C:\Users\asus\src\safe_driving101\android\app" />
-      <recent name="C:\Users\asus\src\safe_driving101" />
     </key>
   </component>
   <component name="RunManager" selected="Flutter.main.dart">
@@ -306,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683391504576</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Final Code">
+      <created>1683546807951</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1683546807951</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

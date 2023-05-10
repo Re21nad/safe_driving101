@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
-import 'package:safe_driving101/read%20data/Guides/Driving_license/heavy_equipment.dart';
-import 'package:safe_driving101/read%20data/Guides/Driving_license/motorcycle_license.dart';
-import 'package:safe_driving101/read%20data/Guides/Driving_license/private_license.dart';
-import 'package:safe_driving101/read%20data/Guides/Driving_license/public_license.dart';
-import 'package:safe_driving101/read%20data/Guides/Driving_license/temporary_license.dart';
+import 'package:safe_driving101/read%20data/Guides/Manage_dangers/Different_conditions/driving1.dart';
+import 'package:safe_driving101/read%20data/Guides/Manage_dangers/Different_conditions/driving2.dart';
+import 'package:safe_driving101/read%20data/Guides/Manage_dangers/Different_conditions/driving3.dart';
+import 'package:safe_driving101/read%20data/Guides/Manage_dangers/Different_conditions/driving4.dart';
+import 'package:safe_driving101/read%20data/Guides/Manage_dangers/Different_conditions/driving5.dart';
+import 'package:safe_driving101/read%20data/Guides/Manage_dangers/Different_conditions/driving6.dart';
+import 'package:safe_driving101/read%20data/Guides/Manage_dangers/Different_conditions/driving7.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class Driving_license extends StatefulWidget {
-  const Driving_license({Key? key}) : super(key: key);
+class Driving extends StatefulWidget {
+  const Driving({Key? key}) : super(key: key);
 
   @override
-  State<Driving_license> createState() => _Driving_licenseState();
+  State<Driving> createState() => _DrivingState();
 }
 
-class _Driving_licenseState extends State<Driving_license> {
+class _DrivingState extends State<Driving> {
+
+
   PageController _controller = PageController();
   bool onLastPage = false;
 
@@ -32,10 +36,10 @@ class _Driving_licenseState extends State<Driving_license> {
         centerTitle: true,
         elevation: 0.0,
         title: Text(
-          'Driving License',
-          textAlign: TextAlign.center,
+          'Driving in Different Conditions',
+          textAlign: TextAlign.left,
           style: GoogleFonts.domine(
-            fontSize: 23,
+            fontSize: 15,
             fontWeight: FontWeight.w700,
             height: 1.14,
             letterSpacing: -0.7000000834,
@@ -54,6 +58,7 @@ class _Driving_licenseState extends State<Driving_license> {
         ),
       ),
       backgroundColor: Colors.white,
+
       body: LiquidPullToRefresh(
         onRefresh: _handleRefresh,
         color: Colors.indigo[100],
@@ -71,11 +76,13 @@ class _Driving_licenseState extends State<Driving_license> {
                 });
               },
               children: [
-                PrivateLicense(),
-                PublicLicense(),
-                MotorcycleLicense(),
-                Heavy_Equ_License(),
-                TempoLicense(),
+                Driving1(),
+                Driving2(),
+                Driving3(),
+                Driving4(),
+                Driving5(),
+                Driving6(),
+                Driving7(),
               ],
             ),
             Container(
@@ -87,7 +94,7 @@ class _Driving_licenseState extends State<Driving_license> {
                   SizedBox(
                     height: 580,
                   ),
-                  SmoothPageIndicator(controller: _controller, count: 5),
+                  SmoothPageIndicator(controller: _controller, count: 7),
                 ],
               ),
             )
