@@ -51,12 +51,12 @@ class _mechanicalFailureState extends State<mechanicalFailure> {
             children: [
               SizedBox(height: 30,),
               Text(
-                'There are many basic tools you need to use it in your car:\n (You can drag these cards to see all tools)',
+                'Vehicle drivers may be at risk from mechanical failures. The most common problems are:',
                 style: GoogleFonts.domine(
                   fontWeight: FontWeight.w700,
                   fontSize: 13,
                 ),
-                textAlign: TextAlign.left,
+                textAlign: TextAlign.center,
               ),
 
               SizedBox(height: 30,),
@@ -66,7 +66,7 @@ class _mechanicalFailureState extends State<mechanicalFailure> {
               MechanicalView(
                 title: 'Disable the throttle',
                 description: ' - Put the transmission in (N) for automatic transmission vehicles and Neutral for manual transmission vehicles\n - Then apply the brakes\n - Then carefully move away from the road\n - Then turn off the engine',
-                color: Colors.pinkAccent,
+                color: Colors.grey.shade100,
               ),
               MechanicalView(
                 title: 'fluid leakage',
@@ -76,22 +76,22 @@ class _mechanicalFailureState extends State<mechanicalFailure> {
               MechanicalView(
                 title: 'Tire explosion',
                 description: 'When this happens, the driver of the vehicle must:\n - His foot is removed from the gas pedal.\n - Doesn\'t use the brakes\n - He maintains a steady grip on the steering wheel while directing the car in a straight route.',
-                color: Colors.pinkAccent,
+                color: Colors.indigo.shade300,
               ),
               MechanicalView(
                 title: 'Disable the brakes',
                 description: ' - You have to change the transmission to a lower position in order to slow down the movement of the vehiclen\n - Then press the brakes several times to equalize the pressure of the brake oil, so it may work again, or it may not\n - Use the handbrake, keeping in mind that if the car skids\n - Once you are safely off the road, turn off the vehicle\'s engine',
-                color: Colors.pinkAccent,
+                color: Colors.pink,
               ),
               MechanicalView(
                 title: 'Disable fuel',
                 description: 'To approach the side of the road until the car comes to a complete stop, the driver must turn the steering wheel with both hands.',
-                color: Colors.pinkAccent,
+                color: Colors.grey.shade200,
               ),
               MechanicalView(
                 title: 'Hood elevation',
                 description: ' - The driver of the vehicle should slow down gradually\n - Try to see through the window\n - Use the lane markers as a guide\n - Get out of the way as soon as possible with caution',
-                color: Colors.pinkAccent,
+                color: Colors.pinkAccent.shade100,
               ),
             ],
           ),
