@@ -560,14 +560,17 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:safe_driving101/Authentication_Page/log-in.dart';
 import 'package:safe_driving101/exam/question1.dart';
 import 'package:safe_driving101/exam/result1.dart';
+import 'package:safe_driving101/read%20data/Guides/Choose_car/choose_car1.dart';
 import 'package:safe_driving101/read%20data/Guides/Driving_license/driving_license.dart';
 import 'package:safe_driving101/read%20data/Guides/Guide1/tools1.dart';
 import 'package:safe_driving101/read%20data/Guides/Manage_dangers/manage_dangers.dart';
 import 'package:safe_driving101/read%20data/Guides/Traffic_Infraction/traffic_infraction.dart';
 import 'package:safe_driving101/read%20data/pages/test.dart';
 
-import '../Guides/Choose_car/choose_car1.dart';
-
+// import '../Guides/Choose_car/choose_car1.dart';
+ void main() {
+  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Home()));
+}
 class Lesson {
   final int lessonID;
 
@@ -590,41 +593,13 @@ class _HomeState extends State<Home> {
   List<Lesson> recomended = [];
   List<Lesson> completed = [];
 
-  List<String> searchData = [
-    'Choosing a car',
-    'Tools using in the car',
-    'Manage dangers',
-    'Traffic infraction ',
-    'Driving license',
+  List<String> imagePaths = [
+    'images/car1.jpg',
+    'images/car 2.jpg',
+    'images/car 3.jpg',
+    'images/car 4.jpg',
+    'images/car 5.jpg'
   ];
-
-  List<String> searchResults = [];
-
-  void search(String query) {
-    setState(() {
-      if (query.isNotEmpty) {
-        searchResults = searchData
-            .where((data) => data.toLowerCase().contains(query.toLowerCase()))
-            .toList();
-      } else {
-        searchResults = List.from(searchData);
-      }
-    });
-  }
-  @override
-  void initState() {
-    super.initState();
-    search('');
-  }
-
-
-  // List<String> imagePaths = [
-  //   'images/car1.jpg',
-  //   'images/car 2.jpg',
-  //   'images/car 3.jpg',
-  //   'images/car 4.jpg',
-  //   'images/car 5.jpg'
-  // ];
 
   void signOut() {
     setState(() {
@@ -717,7 +692,7 @@ class _HomeState extends State<Home> {
               return Center(
                 child: Column(
                   children: [snapshot.data!.docs[0]].map(
-                    (document) {
+                        (document) {
                       return Container(
                         child: Center(
                           child: Column(
@@ -750,26 +725,26 @@ class _HomeState extends State<Home> {
                                       color: Color(0xFFEC255A),
                                     ),
                                   )
-                                  // FutureBuilder(
-                                  //   future: getDocId(),
-                                  //   builder: (context, snapshot) {
-                                  //     if (snapshot.connectionState ==
-                                  //         ConnectionState.done) {
-                                  //       return ListTile(
-                                  //         title: GetUserName(
-                                  //           documentId: docIDs[0],
-                                  //           style: GoogleFonts.rokkitt(
-                                  //             fontWeight: FontWeight.bold,
-                                  //             fontSize: 20,
-                                  //             color: Color(0xFFEC255A),
-                                  //           ),
-                                  //         ),
-                                  //       );
-                                  //     }
-                                  //     return Text('leading...');
-                                  //   },
-                                  // ),
-                                  ),
+                                // FutureBuilder(
+                                //   future: getDocId(),
+                                //   builder: (context, snapshot) {
+                                //     if (snapshot.connectionState ==
+                                //         ConnectionState.done) {
+                                //       return ListTile(
+                                //         title: GetUserName(
+                                //           documentId: docIDs[0],
+                                //           style: GoogleFonts.rokkitt(
+                                //             fontWeight: FontWeight.bold,
+                                //             fontSize: 20,
+                                //             color: Color(0xFFEC255A),
+                                //           ),
+                                //         ),
+                                //       );
+                                //     }
+                                //     return Text('leading...');
+                                //   },
+                                // ),
+                              ),
                               Container(
                                 margin: EdgeInsets.only(left: 23),
                                 width: double.infinity,
@@ -788,7 +763,6 @@ class _HomeState extends State<Home> {
                                 width: double.infinity,
                                 height: 50,
                                 child: TextField(
-                                  onChanged: search,
                                   style: GoogleFonts.rokkitt(
                                     //Color(0xffc2c5bc),
                                     textStyle: TextStyle(
@@ -844,345 +818,17 @@ class _HomeState extends State<Home> {
                               SizedBox(
                                 height: 20,
                               ),
-                              SingleChildScrollView(
-                                child: Container(
-                                  height: 140,
-
-                                  child: ListView.separated(
-                                    scrollDirection: Axis.horizontal,
-                                    itemCount: recomended.length,
-                                    separatorBuilder: (context, _) =>
-                                        SizedBox(width: 12),
-                                    itemBuilder: (context, int index) {
-                                      Widget buttonWidget;
-                                      switch (searchResults[index]) {
-                                        case 'Choosing a car':
-                                          buttonWidget = ElevatedButton(
-                                            onPressed: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          ChooseCar()));
-                                            },
-                                            style: ElevatedButton.styleFrom(
-                                              padding: EdgeInsets.fromLTRB(
-                                                  10, 8, 10, 0),
-                                              primary: Color(0xfcc4eaf6),
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(26),
-                                              ),
-                                            ),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Container(
-                                                  margin: EdgeInsets.fromLTRB(
-                                                      0, 15, 0, 10),
-                                                  child: Text(
-                                      index < searchResults.length ? searchResults[index] : '',
-                                                    style: GoogleFonts.domine(
-                                                      fontSize: 12,
-                                                      fontWeight: FontWeight.w400,
-                                                      height: 1.35,
-                                                      color: Color(0xff000000),
-                                                    ),
-                                                    textAlign: TextAlign.left,
-                                                  ),
-                                                ),
-                                                Container(
-                                                  margin: EdgeInsets.fromLTRB(
-                                                      50, 10, 0, 0),
-                                                  width: 75,
-                                                  height: 75,
-                                                  child: Image.asset(
-                                                    'images/image-24.png',
-                                                    fit: BoxFit.cover,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          );
-                                          break;
-                                        case 'Tools using in the car':
-                                          buttonWidget = InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        Tools1()),
-                                              );
-                                            },
-                                            child: Container(
-                                              margin: EdgeInsets.symmetric(
-                                                  horizontal: 10),
-                                              width: 150,
-                                              height: double.infinity,
-                                              decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(26),
-                                                image: DecorationImage(
-                                                  fit: BoxFit.cover,
-                                                  image: AssetImage(
-                                                    'images/rectangle-118-bg.png',
-                                                  ),
-                                                ),
-                                              ),
-                                              child: Align(
-                                                // toolsusinginthecarj1o (1:68)
-                                                alignment: Alignment.topLeft,
-                                                child: SizedBox(
-                                                  child: Container(
-                                                    margin: EdgeInsets.symmetric(
-                                                        horizontal: 15,
-                                                        vertical: 15),
-                                                    // constraints: BoxConstraints(
-                                                    //   maxWidth: 143,
-                                                    // ),
-                                                    child: Text(
-                                                      searchResults[index],
-                                                      style: GoogleFonts.domine(
-                                                        fontSize: 12,
-                                                        fontWeight:
-                                                            FontWeight.w700,
-                                                        height: 1.35,
-                                                        color: Color(0xfcffffff),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          );
-                                          break;
-                                        case 'Manage dangers':
-                                          buttonWidget = ElevatedButton(
-                                            onPressed: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          Manage()));
-                                            },
-                                            style: ElevatedButton.styleFrom(
-                                              padding: EdgeInsets.fromLTRB(
-                                                  10, 8, 10, 0),
-                                              primary: Color(0xfc161853),
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(26),
-                                              ),
-                                            ),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Container(
-                                                  // choosingacarnuB (1:76)
-                                                  margin: EdgeInsets.fromLTRB(
-                                                      0, 15, 0, 10),
-                                                  child: Text(
-                                                    searchResults[index],
-                                                    style: GoogleFonts.domine(
-                                                      fontSize: 12,
-                                                      fontWeight: FontWeight.w400,
-                                                      height: 1.35,
-                                                      color: Colors.white,
-                                                    ),
-                                                  ),
-                                                ),
-                                                Container(
-                                                  // image24hFT (1:77)
-                                                  margin: EdgeInsets.fromLTRB(
-                                                      50, 10, 0, 0),
-                                                  width: 75,
-                                                  height: 75,
-                                                  child: Image.asset(
-                                                    'images/image-25-83X.png',
-                                                    fit: BoxFit.cover,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          );
-                                          break;
-                                        case 'Traffic infraction ':
-                                          buttonWidget = InkWell(
-                                            onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        Traffic()),
-                                              );
-                                            },
-                                            child: Container(
-                                              margin: EdgeInsets.symmetric(
-                                                  horizontal: 10),
-                                              width: 150,
-                                              height: double.infinity,
-                                              decoration: BoxDecoration(
-                                                borderRadius:
-                                                BorderRadius.circular(26),
-                                                image: DecorationImage(
-                                                  fit: BoxFit.cover,
-                                                  image: AssetImage(
-                                                    'images/car 4.jpg',
-                                                  ),
-                                                ),
-                                              ),
-                                              child: Align(
-                                                // toolsusinginthecarj1o (1:68)
-                                                alignment: Alignment.topLeft,
-                                                child: SizedBox(
-                                                  child: Container(
-                                                    margin: EdgeInsets.symmetric(
-                                                        horizontal: 15,
-                                                        vertical: 15),
-                                                    // constraints: BoxConstraints(
-                                                    //   maxWidth: 143,
-                                                    // ),
-                                                    child: Text(
-                                                      searchResults[index],
-                                                      style: GoogleFonts.domine(
-                                                        fontSize: 12,
-                                                        fontWeight:
-                                                        FontWeight.w700,
-                                                        height: 1.35,
-                                                        color: Color(0xfcffffff),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          );
-                                          break;
-                                        case 'Driving license':
-                                          buttonWidget = ElevatedButton(
-                                            onPressed: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(builder: (context) => Driving_license()),
-                                              );
-                                            },
-                                            style: ElevatedButton.styleFrom(
-                                              padding: EdgeInsets.fromLTRB(
-                                                  10, 8, 10, 0),
-                                              primary: Color(0xfcfee0e0),
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                BorderRadius.circular(26),
-                                              ),
-                                            ),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                              children: [
-                                                Container(
-                                                  // choosingacarnuB (1:76)
-                                                  margin: EdgeInsets.fromLTRB(
-                                                      0, 15, 0, 10),
-                                                  child: Text(
-                                                    searchResults[index],
-                                                    style: GoogleFonts.domine(
-                                                      fontSize: 12,
-                                                      fontWeight: FontWeight.w400,
-                                                      height: 1.35,
-                                                      color: Color(0xff000000),
-                                                    ),
-                                                  ),
-                                                ),
-                                                Container(
-                                                  // image24hFT (1:77)
-                                                  margin: EdgeInsets.fromLTRB(
-                                                      50, 6, 0, 0),
-                                                  width: 75,
-                                                  height: 75,
-                                                  child: Image.asset(
-                                                    'images/license.png',
-                                                    fit: BoxFit.cover,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          );
-                                          break;
-                                        default:
-                                          buttonWidget = TextButton(
-                                            onPressed: () {
-                                              // Do something else
-                                            },
-                                            style: TextButton.styleFrom(
-                                              padding: EdgeInsets.zero,
-                                            ),
-                                            child: Container(
-                                              width: 200,
-                                              height: 200,
-                                              child: Text(''),
-                                              // Image.asset(
-                                              //   imagePaths[
-                                              //       recomended[index].lessonID],
-                                              //   width: 200,
-                                              //   height: 200,
-                                              // ),
-                                            ),
-                                          );
-                                      }
-                                      return Container(child: buttonWidget);
-                                    },
-                                  ),
-                                ),
-                              ),
-
-                              SizedBox(
-                                height: 40,
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(left: 23),
-                                width: double.infinity,
-                                height: 30,
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      child: Text(
-                                        'Completed',
-                                        style: GoogleFonts.domine(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.w700,
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      child: Text(
-                                        '   _______________________________',
-                                        style: GoogleFonts.domine(
-                                          fontSize: 10,
-                                          fontWeight: FontWeight.w700,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-
                               Container(
                                 height: 140,
 
                                 child: ListView.separated(
                                   scrollDirection: Axis.horizontal,
-                                  itemCount: completed.length,
+                                  itemCount: recomended.length,
                                   separatorBuilder: (context, _) =>
                                       SizedBox(width: 12),
                                   itemBuilder: (context, int index) {
                                     Widget buttonWidget;
-                                    switch (completed[index].lessonID) {
+                                    switch (recomended[index].lessonID) {
                                       case 0:
                                         buttonWidget = ElevatedButton(
                                           onPressed: () {
@@ -1449,13 +1095,337 @@ class _HomeState extends State<Home> {
                                           child: Container(
                                             width: 200,
                                             height: 200,
-                                            child: Text('')
-                                            // Image.asset(
-                                            //   imagePaths[
-                                            //   recomended[index].lessonID],
-                                            //   width: 200,
-                                            //   height: 200,
-                                            // ),
+                                            child: Image.asset(
+                                              imagePaths[
+                                              recomended[index].lessonID],
+                                              width: 200,
+                                              height: 200,
+                                            ),
+                                          ),
+                                        );
+                                    }
+                                    return Container(child: buttonWidget);
+                                  },
+                                ),
+                              ),
+
+                              SizedBox(
+                                height: 40,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 23),
+                                width: double.infinity,
+                                height: 30,
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      child: Text(
+                                        'Completed',
+                                        style: GoogleFonts.domine(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                    Container(
+                                      child: Text(
+                                        '   _______________________________',
+                                        style: GoogleFonts.domine(
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+
+                              Container(
+                                height: 140,
+
+                                child: ListView.separated(
+                                  scrollDirection: Axis.horizontal,
+                                  itemCount: completed.length,
+                                  separatorBuilder: (context, _) =>
+                                      SizedBox(width: 12),
+                                  itemBuilder: (context, int index) {
+                                    Widget buttonWidget;
+                                    switch (recomended[index].lessonID) {
+                                      case 0:
+                                        buttonWidget = ElevatedButton(
+                                          onPressed: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        ChooseCar()));
+                                          },
+                                          style: ElevatedButton.styleFrom(
+                                            padding: EdgeInsets.fromLTRB(
+                                                10, 8, 10, 0),
+                                            primary: Color(0xfcc4eaf6),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(26),
+                                            ),
+                                          ),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                            children: [
+                                              Container(
+                                                margin: EdgeInsets.fromLTRB(
+                                                    0, 15, 0, 10),
+                                                child: Text(
+                                                  'Choosing a car',
+                                                  style: GoogleFonts.domine(
+                                                    fontSize: 12,
+                                                    fontWeight: FontWeight.w400,
+                                                    height: 1.35,
+                                                    color: Color(0xff000000),
+                                                  ),
+                                                  textAlign: TextAlign.left,
+                                                ),
+                                              ),
+                                              Container(
+                                                margin: EdgeInsets.fromLTRB(
+                                                    50, 10, 0, 0),
+                                                width: 75,
+                                                height: 75,
+                                                child: Image.asset(
+                                                  'images/image-24.png',
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        );
+                                        break;
+                                      case 1:
+                                        buttonWidget = InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      Tools1()),
+                                            );
+                                          },
+                                          child: Container(
+                                            margin: EdgeInsets.symmetric(
+                                                horizontal: 10),
+                                            width: 150,
+                                            height: double.infinity,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                              BorderRadius.circular(26),
+                                              image: DecorationImage(
+                                                fit: BoxFit.cover,
+                                                image: AssetImage(
+                                                  'images/rectangle-118-bg.png',
+                                                ),
+                                              ),
+                                            ),
+                                            child: Align(
+                                              // toolsusinginthecarj1o (1:68)
+                                              alignment: Alignment.topLeft,
+                                              child: SizedBox(
+                                                child: Container(
+                                                  margin: EdgeInsets.symmetric(
+                                                      horizontal: 15,
+                                                      vertical: 15),
+                                                  // constraints: BoxConstraints(
+                                                  //   maxWidth: 143,
+                                                  // ),
+                                                  child: Text(
+                                                    'Tools using in \nthe car',
+                                                    style: GoogleFonts.domine(
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                      FontWeight.w700,
+                                                      height: 1.35,
+                                                      color: Color(0xfcffffff),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        );
+                                        break;
+                                      case 2:
+                                        buttonWidget = ElevatedButton(
+                                          onPressed: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        Manage()));
+                                          },
+                                          style: ElevatedButton.styleFrom(
+                                            padding: EdgeInsets.fromLTRB(
+                                                10, 8, 10, 0),
+                                            primary: Color(0xfc161853),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(26),
+                                            ),
+                                          ),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                            children: [
+                                              Container(
+                                                // choosingacarnuB (1:76)
+                                                margin: EdgeInsets.fromLTRB(
+                                                    0, 15, 0, 10),
+                                                child: Text(
+                                                  'Manage dangers',
+                                                  style: GoogleFonts.domine(
+                                                    fontSize: 12,
+                                                    fontWeight: FontWeight.w400,
+                                                    height: 1.35,
+                                                    color: Colors.white,
+                                                  ),
+                                                ),
+                                              ),
+                                              Container(
+                                                // image24hFT (1:77)
+                                                margin: EdgeInsets.fromLTRB(
+                                                    50, 10, 0, 0),
+                                                width: 75,
+                                                height: 75,
+                                                child: Image.asset(
+                                                  'images/image-25-83X.png',
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        );
+                                        break;
+                                      case 3:
+                                        buttonWidget = InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      Traffic()),
+                                            );
+                                          },
+                                          child: Container(
+                                            margin: EdgeInsets.symmetric(
+                                                horizontal: 10),
+                                            width: 150,
+                                            height: double.infinity,
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                              BorderRadius.circular(26),
+                                              image: DecorationImage(
+                                                fit: BoxFit.cover,
+                                                image: AssetImage(
+                                                  'images/car 4.jpg',
+                                                ),
+                                              ),
+                                            ),
+                                            child: Align(
+                                              // toolsusinginthecarj1o (1:68)
+                                              alignment: Alignment.topLeft,
+                                              child: SizedBox(
+                                                child: Container(
+                                                  margin: EdgeInsets.symmetric(
+                                                      horizontal: 15,
+                                                      vertical: 15),
+                                                  // constraints: BoxConstraints(
+                                                  //   maxWidth: 143,
+                                                  // ),
+                                                  child: Text(
+                                                    'Traffic infraction ',
+                                                    style: GoogleFonts.domine(
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                      FontWeight.w700,
+                                                      height: 1.35,
+                                                      color: Color(0xfcffffff),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        );
+                                        break;
+                                      case 4:
+                                        buttonWidget = ElevatedButton(
+                                          onPressed: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(builder: (context) => Driving_license()),
+                                            );
+                                          },
+                                          style: ElevatedButton.styleFrom(
+                                            padding: EdgeInsets.fromLTRB(
+                                                10, 8, 10, 0),
+                                            primary: Color(0xfcfee0e0),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(26),
+                                            ),
+                                          ),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                            children: [
+                                              Container(
+                                                // choosingacarnuB (1:76)
+                                                margin: EdgeInsets.fromLTRB(
+                                                    0, 15, 0, 10),
+                                                child: Text(
+                                                  'Driving license',
+                                                  style: GoogleFonts.domine(
+                                                    fontSize: 12,
+                                                    fontWeight: FontWeight.w400,
+                                                    height: 1.35,
+                                                    color: Color(0xff000000),
+                                                  ),
+                                                ),
+                                              ),
+                                              Container(
+                                                // image24hFT (1:77)
+                                                margin: EdgeInsets.fromLTRB(
+                                                    50, 6, 0, 0),
+                                                width: 75,
+                                                height: 75,
+                                                child: Image.asset(
+                                                  'images/license.png',
+                                                  fit: BoxFit.cover,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        );
+                                        break;
+                                      default:
+                                        buttonWidget = TextButton(
+                                          onPressed: () {
+                                            // Do something else
+                                          },
+                                          style: TextButton.styleFrom(
+                                            padding: EdgeInsets.zero,
+                                          ),
+                                          child: Container(
+                                            width: 200,
+                                            height: 200,
+                                            child: Image.asset(
+                                              imagePaths[
+                                              recomended[index].lessonID],
+                                              width: 200,
+                                              height: 200,
+                                            ),
                                           ),
                                         );
                                     }

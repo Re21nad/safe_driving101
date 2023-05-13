@@ -530,7 +530,7 @@ class _testQuestionsState1 extends State<testQuestions1> {
                                 Hcounter++;
                               }
                             } else {
-                              ////wrong answer
+                              //wrong answer
                               //if question was easy
                               if (questions.elementAt(chosenQ).difficulty ==
                                   "hard") {

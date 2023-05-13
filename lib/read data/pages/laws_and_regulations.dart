@@ -8,6 +8,7 @@ import 'package:safe_driving101/read%20data/Laws_and_Regulations/Law5/law5.dart'
 import 'package:safe_driving101/read%20data/Laws_and_Regulations/Law6/law6.dart';
 import 'package:safe_driving101/read%20data/Laws_and_Regulations/Law7/law7.dart';
 import 'package:safe_driving101/read%20data/Laws_and_Regulations/Law8/law8.dart';
+
 class LawsAndRegulations extends StatefulWidget {
   const LawsAndRegulations({Key? key}) : super(key: key);
 
@@ -16,6 +17,35 @@ class LawsAndRegulations extends StatefulWidget {
 }
 
 class _LawsAndRegulationsState extends State<LawsAndRegulations> {
+  List<String> searchData = [
+    'Scope and Definitions',
+    'Vehicle Registration and Licensing',
+    'Weights, Dimensions, and Inspection of Vehicles',
+    'Driving Licenses',
+    'Rules of the Road',
+    'Accidents',
+    'Detecting and Recording Violations and Determining Penalties',
+    'General Provisions',
+  ];
+  List<String> searchResults = [];
+
+  void search(String query) {
+    setState(() {
+      if (query.isNotEmpty) {
+        searchResults = searchData
+            .where((data) => data.toLowerCase().contains(query.toLowerCase()))
+            .toList();
+      } else {
+        searchResults = List.from(searchData);
+      }
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    search('');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,19 +66,20 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
             color: Color(0xff000000),
           ),
         ),
-
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.only(left: 20,right: 20),
+          margin: EdgeInsets.only(left: 23, right: 23),
           width: double.infinity,
+          height: 1150,
           child: Column(
             children: [
-
-              SizedBox(height: 50,),
+              SizedBox(
+                height: 50,
+              ),
               Container(
-                margin: EdgeInsets.only(left: 30,right: 30),
+                margin: EdgeInsets.only(left: 30, right: 30),
                 width: double.infinity,
                 height: 190,
                 //color: Colors.indigo,
@@ -61,16 +92,18 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                     ),
                   ),
                 ),
+              ), // Picture
 
-              ),// Picture
-
-              SizedBox(height: 25,),
+              SizedBox(
+                height: 25,
+              ),
               Container(
                 //margin: EdgeInsets.only(top: 50),
                 width: double.infinity,
                 height: 50,
 
                 child: TextField(
+                  onChanged: search,
                   style: GoogleFonts.rokkitt(
                     //Color(0xffc2c5bc),
                     textStyle: TextStyle(
@@ -88,12 +121,13 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                     hintText: "What are you looking for?",
                     prefixIcon: Icon(Icons.search),
                     prefixIconColor: Colors.grey,
-
                   ),
                 ),
-              ),//Search
+              ), //Search
 
-              SizedBox(height: 35,),
+              SizedBox(
+                height: 35,
+              ),
               Container(
                 margin: EdgeInsets.only(left: 23),
                 width: double.infinity,
@@ -122,404 +156,461 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                 ),
               ), // Header
 
-              SizedBox(height: 20,),
+              SizedBox(
+                height: 20,
+              ),
 
               Container(
+                margin: EdgeInsets.only(bottom: 20),
                 width: double.infinity,
-                height: 72,
-                child: Material(
-                  elevation: 7,
-                  shadowColor: Colors.black.withOpacity(0.9),
-                  borderRadius: BorderRadius.circular(26),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Law1()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.zero,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(26),
-                      ),
-                    ),
-                    child: Stack(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(26),
-                          child: Image.asset(
-                            'images/car 2.jpg',
-                            width: double.infinity,
-                            height: 72,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Container(
-                          alignment: Alignment.centerLeft,
-                          margin: EdgeInsets.only(left: 30),
-                          child: Text(
-                            'Laws 1',
-                            style: GoogleFonts.domine(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white,
+                height: 700,
+                child: ListView.separated(
+                  separatorBuilder: (context, index) => Divider(),
+                  // scrollDirection: Axis.vertical,
+                  itemCount: searchResults.length,
+                  // separatorBuilder: (context, _) =>
+                  //     SizedBox(height: 12),
+                  itemBuilder: (context, index) {
+                    switch (searchResults[index]) {
+                      case 'Scope and Definitions':
+                        return Container(
+                          width: double.infinity,
+                          height: 72,
+                          child: Material(
+                            elevation: 7,
+                            shadowColor: Colors.black.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(26),
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Law1()));
+                              },
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.zero,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(26),
+                                ),
+                              ),
+                              child: Stack(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(26),
+                                    child: Image.asset(
+                                      'images/car 2.jpg',
+                                      width: double.infinity,
+                                      height: 72,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    margin: EdgeInsets.only(left: 30),
+                                    child: Text(
+                                      'Scope and Definitions',
+                                      style: GoogleFonts.domine(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ), // Law 1
+                        );
 
-              SizedBox(height: 20,),
+                      case 'Vehicle Registration and Licensing': // Law 1
 
-              Container(
-                width: double.infinity,
-                height: 72,
-                child: Material(
-                  elevation: 7,
-                  shadowColor: Colors.black.withOpacity(0.9),
-                  borderRadius: BorderRadius.circular(26),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Law2()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.zero,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(26),
-                      ),
-                    ),
-                    child: Stack(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(26),
-                          child: Image.asset(
-                            'images/car 3.jpg',
-                            width: double.infinity,
-                            height: 72,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Container(
-                          alignment: Alignment.centerLeft,
-                          margin: EdgeInsets.only(left: 30),
-                          child: Text(
-                            'Laws 2',
-                            style: GoogleFonts.domine(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white,
+                        // SizedBox(
+                        //   height: 20,
+                        // );
+
+                         return Container(
+                          width: double.infinity,
+                          height: 72,
+                          child: Material(
+                            elevation: 7,
+                            shadowColor: Colors.black.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(26),
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Law2()));
+                              },
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.zero,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(26),
+                                ),
+                              ),
+                              child: Stack(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(26),
+                                    child: Image.asset(
+                                      'images/car 3.jpg',
+                                      width: double.infinity,
+                                      height: 72,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    margin: EdgeInsets.only(left: 30),
+                                    child: Text(
+                                      'Vehicle Registration and Licensing',
+                                      style: GoogleFonts.domine(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),// Law 2
+                        );
 
+                      case 'Weights, Dimensions, and Inspection of Vehicles': // Law 2
 
-              SizedBox(height: 20,),
+                        // SizedBox(
+                        //   height: 20,
+                        // );
 
-              Container(
-                width: double.infinity,
-                height: 72,
-                child: Material(
-                  elevation: 7,
-                  shadowColor: Colors.black.withOpacity(0.9),
-                  borderRadius: BorderRadius.circular(26),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Law3()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.zero,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(26),
-                      ),
-                    ),
-                    child: Stack(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(26),
-                          child: Image.asset(
-                            'images/car 7.jpg',
-                            width: double.infinity,
-                            height: 72,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Container(
-                          alignment: Alignment.centerLeft,
-                          margin: EdgeInsets.only(left: 30),
-                          child: Text(
-                            'Laws 3',
-                            style: GoogleFonts.domine(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white,
+                        return Container(
+                          width: double.infinity,
+                          height: 72,
+                          child: Material(
+                            elevation: 7,
+                            shadowColor: Colors.black.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(26),
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Law3()));
+                              },
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.zero,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(26),
+                                ),
+                              ),
+                              child: Stack(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(26),
+                                    child: Image.asset(
+                                      'images/car 7.jpg',
+                                      width: double.infinity,
+                                      height: 72,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    margin: EdgeInsets.only(left: 30),
+                                    child: Text(
+                                      'Weights, Dimensions, and Inspection of Vehicles',
+                                      style: GoogleFonts.domine(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),// Law 3
+                        ); // Law 3
 
-              SizedBox(height: 20,),
+                      case 'Driving Licenses':
+                        // SizedBox(
+                        //   height: 20,
+                        // );
 
-              Container(
-                width: double.infinity,
-                height: 72,
-                child: Material(
-                  elevation: 7,
-                  shadowColor: Colors.black.withOpacity(0.9),
-                  borderRadius: BorderRadius.circular(26),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Law4()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.zero,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(26),
-                      ),
-                    ),
-                    child: Stack(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(26),
-                          child: Image.asset(
-                            'images/car 5.jpg',
-                            width: double.infinity,
-                            height: 72,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Container(
-                          alignment: Alignment.centerLeft,
-                          margin: EdgeInsets.only(left: 30),
-                          child: Text(
-                            'Laws 4',
-                            style: GoogleFonts.domine(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white,
+                        return Container(
+                          width: double.infinity,
+                          height: 72,
+                          child: Material(
+                            elevation: 7,
+                            shadowColor: Colors.black.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(26),
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Law4()));
+                              },
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.zero,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(26),
+                                ),
+                              ),
+                              child: Stack(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(26),
+                                    child: Image.asset(
+                                      'images/car 5.jpg',
+                                      width: double.infinity,
+                                      height: 72,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    margin: EdgeInsets.only(left: 30),
+                                    child: Text(
+                                      'Driving Licenses',
+                                      style: GoogleFonts.domine(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),// Law 4
+                        ); // Law 4
 
+                      case 'Rules of the Road':
+                        // SizedBox(
+                        //   height: 20,
+                        // );
 
-              SizedBox(height: 20,),
-
-              Container(
-                width: double.infinity,
-                height: 72,
-                child: Material(
-                  elevation: 7,
-                  shadowColor: Colors.black.withOpacity(0.9),
-                  borderRadius: BorderRadius.circular(26),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Law5()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.zero,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(26),
-                      ),
-                    ),
-                    child: Stack(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(26),
-                          child: Image.asset(
-                            'images/car 6.jpg',
-                            width: double.infinity,
-                            height: 72,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Container(
-                          alignment: Alignment.centerLeft,
-                          margin: EdgeInsets.only(left: 30),
-                          child: Text(
-                            'Laws 5',
-                            style: GoogleFonts.domine(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white,
+                        return Container(
+                          width: double.infinity,
+                          height: 72,
+                          child: Material(
+                            elevation: 7,
+                            shadowColor: Colors.black.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(26),
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Law5()));
+                              },
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.zero,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(26),
+                                ),
+                              ),
+                              child: Stack(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(26),
+                                    child: Image.asset(
+                                      'images/car 6.jpg',
+                                      width: double.infinity,
+                                      height: 72,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    margin: EdgeInsets.only(left: 30),
+                                    child: Text(
+                                      'Rules of the Road',
+                                      style: GoogleFonts.domine(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),// Law 5
+                        ); // Law 5
 
+                      case 'Accidents':
+                        // SizedBox(
+                        //   height: 20,
+                        // );
 
-              SizedBox(height: 20,),
-
-              Container(
-                width: double.infinity,
-                height: 72,
-                child: Material(
-                  elevation: 7,
-                  shadowColor: Colors.black.withOpacity(0.9),
-                  borderRadius: BorderRadius.circular(26),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Law6()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.zero,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(26),
-                      ),
-                    ),
-                    child: Stack(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(26),
-                          child: Image.asset(
-                            'images/car 8.jpg',
-                            width: double.infinity,
-                            height: 72,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Container(
-                          alignment: Alignment.centerLeft,
-                          margin: EdgeInsets.only(left: 30),
-                          child: Text(
-                            'Laws 6',
-                            style: GoogleFonts.domine(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white,
+                        return Container(
+                          width: double.infinity,
+                          height: 72,
+                          child: Material(
+                            elevation: 7,
+                            shadowColor: Colors.black.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(26),
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Law6()));
+                              },
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.zero,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(26),
+                                ),
+                              ),
+                              child: Stack(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(26),
+                                    child: Image.asset(
+                                      'images/car 8.jpg',
+                                      width: double.infinity,
+                                      height: 72,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    margin: EdgeInsets.only(left: 30),
+                                    child: Text(
+                                      'Accidents',
+                                      style: GoogleFonts.domine(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),// Law 6
+                        );
+                         // Law 6
+                      case 'Detecting and Recording Violations and Determining Penalties':
+                        // SizedBox(
+                        //   height: 20,
+                        // );
 
-
-              SizedBox(height: 20,),
-
-              Container(
-                width: double.infinity,
-                height: 72,
-                child: Material(
-                  elevation: 7,
-                  shadowColor: Colors.black.withOpacity(0.9),
-                  borderRadius: BorderRadius.circular(26),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Law7()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.zero,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(26),
-                      ),
-                    ),
-                    child: Stack(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(26),
-                          child: Image.asset(
-                            'images/car 9.jpg',
-                            width: double.infinity,
-                            height: 72,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Container(
-                          alignment: Alignment.centerLeft,
-                          margin: EdgeInsets.only(left: 30),
-                          child: Text(
-                            'Laws 7',
-                            style: GoogleFonts.domine(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white,
+                        return Container(
+                          width: double.infinity,
+                          height: 72,
+                          child: Material(
+                            elevation: 7,
+                            shadowColor: Colors.black.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(26),
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Law7()));
+                              },
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.zero,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(26),
+                                ),
+                              ),
+                              child: Stack(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(26),
+                                    child: Image.asset(
+                                      'images/car 9.jpg',
+                                      width: double.infinity,
+                                      height: 72,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    margin: EdgeInsets.only(left: 30),
+                                    child: Text(
+                                      'Detecting and Recording Violations',
+                                      style: GoogleFonts.domine(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),// Law 7
+                        ); // Law 7
 
+                      case 'General Provisions':
+                        // SizedBox(
+                        //   height: 20,
+                        // );
 
-              SizedBox(height: 20,),
-
-              Container(
-                width: double.infinity,
-                height: 72,
-                child: Material(
-                  elevation: 7,
-                  shadowColor: Colors.black.withOpacity(0.9),
-                  borderRadius: BorderRadius.circular(26),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Law8()));
-                    },
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.zero,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(26),
-                      ),
-                    ),
-                    child: Stack(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(26),
-                          child: Image.asset(
-                            'images/car 10.jpg',
-                            width: double.infinity,
-                            height: 72,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Container(
-                          alignment: Alignment.centerLeft,
-                          margin: EdgeInsets.only(left: 30),
-                          child: Text(
-                            'Laws 8',
-                            style: GoogleFonts.domine(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white,
+                        return Container(
+                          width: double.infinity,
+                          height: 72,
+                          child: Material(
+                            elevation: 7,
+                            shadowColor: Colors.black.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(26),
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Law8()));
+                              },
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.zero,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(26),
+                                ),
+                              ),
+                              child: Stack(
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(26),
+                                    child: Image.asset(
+                                      'images/car 10.jpg',
+                                      width: double.infinity,
+                                      height: 72,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.centerLeft,
+                                    margin: EdgeInsets.only(left: 30),
+                                    child: Text(
+                                      'General Provisions',
+                                      style: GoogleFonts.domine(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),// Law 8
+                        ); // Law 8
 
-              SizedBox(height: 20,),
+                      // default:
+                      //   return SizedBox.shrink();// Return an empty SizedBox as a placeholder
+                    };
+                  },
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
             ],
           ),
         ),
