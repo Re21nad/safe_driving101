@@ -168,6 +168,17 @@ class _signUpState extends State<signUp> {
     }
   }
 
+  // Future<void> addUserDetail(String name, String nickName, String email,
+  //     String birthDate, String gender, String city) async {
+  //   await FirebaseFirestore.instance.collection("Users").add({
+  //     'name': name,
+  //     'nick name': nickName,
+  //     'email': email,
+  //     'birth date': birthDate,
+  //     'gender': gender,
+  //     'city': city,
+  //   });
+
   Future<void> addUserDetail(String name, String nickName, String email,
       String birthDate, String gender, String city) async {
     await FirebaseFirestore.instance.collection("Users").add({
@@ -177,6 +188,7 @@ class _signUpState extends State<signUp> {
       'birth date': birthDate,
       'gender': gender,
       'city': city,
+      'levels': ['Beginner', 'Beginner', 'Beginner', 'Beginner', 'Beginner'],
     });
   }
 

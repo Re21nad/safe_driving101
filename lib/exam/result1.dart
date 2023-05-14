@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
@@ -5,13 +7,63 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:safe_driving101/exam/question1.dart';
 import 'package:safe_driving101/read%20data/homePage.dart';
 
+class Result1 extends StatefulWidget {
+  const Result1({Key? key}) : super(key: key);
 
-class Result1 extends StatelessWidget {
+  @override
+  State<Result1> createState() => _Result1State();
+}
 
+class _Result1State extends State<Result1> {
+
+  final users = FirebaseAuth.instance.currentUser!;
   List<Color> colors = [];
+  final CollectionReference usersCollection =
+  FirebaseFirestore.instance.collection('Users');
+
+  Future<void> updateLevels(List<String> results) async {
+    try {
+      final User? user = FirebaseAuth.instance.currentUser;
+      final String? userEmail = user?.email;
+
+      if (userEmail != null) {
+        // Query the Firestore collection to find the document with matching email
+        final QuerySnapshot snapshot = await usersCollection
+            .where('email', isEqualTo: userEmail)
+            .limit(1)
+            .get();
+
+        if (snapshot.size == 1) {
+          final DocumentSnapshot document = snapshot.docs.first;
+
+          // Update the 'levels' field in the document
+          await document.reference.update({
+            'levels': results,
+          });
+
+          print('Levels updated successfully');
+        } else {
+          print('User document not found');
+        }
+      } else {
+        print('User email is null');
+      }
+    } catch (e) {
+      print('Error updating levels: $e');
+    }
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
+
+    // Assuming you have the `results` list available here
+    List<String> result = [results[0], results[1], results[2], results[3], results[4]];
+
+    // Update levels in Firestore
+    updateLevels(result);
+
     for (int i = 0; i < 5; i++) {
       if (results[i] == "Beginner") {
         colors.add(Color(0x33ff0000));
