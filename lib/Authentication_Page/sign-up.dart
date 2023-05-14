@@ -64,39 +64,111 @@ class _signUpState extends State<signUp> {
     );
   }
 
-  Future sign_up() async {
+  Future<void> sign_up() async {
     showDialog(
-        context: context,
-        builder: (context) {
-          return Center(
-            child: CircularProgressIndicator(),
-          );
-        });
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Signing Up'),
+          content: Stack(
+            alignment: Alignment.center,
+            children: [
+              CircularProgressIndicator(),
+            ],
+          ),
+        );
+      },
+    );
+
     setState(() {
       loggedIn = true;
     });
 
     if (passwordConfirm()) {
-      await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: _emailController.text.trim(),
-        password: _passwordController.text.trim(),
-      );
+      try {
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          email: _emailController.text.trim(),
+          password: _passwordController.text.trim(),
+        );
 
+        addUserDetail(
+          _nameController.text.trim(),
+          _nickNameController.text.trim(),
+          _emailController.text.trim(),
+          _birthDateController.text.trim(),
+          _genderController.text.trim(),
+          _cityController.text.trim(),
+        );
 
-      addUserDetail(
-        _nameController.text.trim(),
-        _nickNameController.text.trim(),
-        _emailController.text.trim(),
-        _birthDateController.text.trim(),
-        _genderController.text.trim(),
-        _cityController.text.trim(),
+        Navigator.of(context).pop(); // Dismiss the loading dialog
+
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text('Sign Up Successful'),
+              content: Text('You have successfully signed up.'),
+              actions: [
+                TextButton(
+                  child: Text('OK'),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                    Navigator.pop(context);
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => LoginScreen()),
+                    // );
+                  },
+                ),
+              ],
+            );
+          },
+        );
+      } catch (error) {
+        Navigator.of(context).pop(); // Dismiss the loading dialog
+
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text('Sign Up Failed'),
+              content: Text('An error occurred while signing up: $error'),
+              actions: [
+                TextButton(
+                  child: Text('OK'),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            );
+          },
+        );
+      }
+    } else {
+      Navigator.of(context).pop(); // Dismiss the loading dialog
+
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Sign Up Failed'),
+            content: Text('Password confirmation does not match.'),
+            actions: [
+              TextButton(
+                child: Text('OK'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        },
       );
     }
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) => LoginScreen()));
   }
 
-  Future addUserDetail(String name, String nickName, String email,
+  Future<void> addUserDetail(String name, String nickName, String email,
       String birthDate, String gender, String city) async {
     await FirebaseFirestore.instance.collection("Users").add({
       'name': name,
@@ -115,6 +187,58 @@ class _signUpState extends State<signUp> {
     else
       return false;
   }
+
+  // Future sign_up() async {
+  //   showDialog(
+  //       context: context,
+  //       builder: (context) {
+  //         return Center(
+  //           child: CircularProgressIndicator(),
+  //         );
+  //       });
+  //   setState(() {
+  //     loggedIn = true;
+  //   });
+  //
+  //   if (passwordConfirm()) {
+  //     await FirebaseAuth.instance.createUserWithEmailAndPassword(
+  //       email: _emailController.text.trim(),
+  //       password: _passwordController.text.trim(),
+  //     );
+  //
+  //
+  //     addUserDetail(
+  //       _nameController.text.trim(),
+  //       _nickNameController.text.trim(),
+  //       _emailController.text.trim(),
+  //       _birthDateController.text.trim(),
+  //       _genderController.text.trim(),
+  //       _cityController.text.trim(),
+  //     );
+  //   }
+  //   Navigator.push(
+  //       context, MaterialPageRoute(builder: (context) => LoginScreen()));
+  // }
+  //
+  // Future addUserDetail(String name, String nickName, String email,
+  //     String birthDate, String gender, String city) async {
+  //   await FirebaseFirestore.instance.collection("Users").add({
+  //     'name': name,
+  //     'nick name': nickName,
+  //     'email': email,
+  //     'birth date': birthDate,
+  //     'gender': gender,
+  //     'city': city,
+  //   });
+  // }
+  //
+  // bool passwordConfirm() {
+  //   if (_passwordController.text.trim() ==
+  //       _confirmPasswordController.text.trim())
+  //     return true;
+  //   else
+  //     return false;
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -141,8 +265,7 @@ class _signUpState extends State<signUp> {
           icon: Icon(Icons.arrow_back),
           color: Colors.black,
           onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => LoginScreen()));
+            Navigator.pop(context);
           },
         ),
       ),

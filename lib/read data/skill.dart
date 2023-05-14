@@ -1,19 +1,41 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:safe_driving101/read%20data/pages/profile.dart';
 import '../exam/question1.dart';
 import 'package:safe_driving101/read%20data/homePage.dart';
 
+class Skill extends StatefulWidget {
+  const Skill({Key? key}) : super(key: key);
 
-// void main(){
-//   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Skill()));
-//
-// }
+  @override
+  State<Skill> createState() => _SkillState();
+}
 
-class Skill extends StatelessWidget {
-  //const Skill({Key? key}) : super(key: key);
+class _SkillState extends State<Skill> {
 
+  final users = FirebaseAuth.instance.currentUser!;
   List<Color> colors = [];
+  final CollectionReference usersCollection =
+  FirebaseFirestore.instance.collection('Users');
+
+  Future<void> updateLevels(List<String> results) async {
+    try {
+
+
+      final String userId = usersCollection.id; // Use 'uid' instead of 'email.toString()'
+
+      // Update the 'Levels' field in the Firebase document
+      await usersCollection.doc(userId).set({'Levels': results});
+
+      print(usersCollection.id);
+      print('Levels updated successfully');
+    } catch (e) {
+      print('Error updating levels: $e');
+    }
+    print(usersCollection.id);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +48,16 @@ class Skill extends StatelessWidget {
         colors.add(Color(0xffc6ffbd));
       }
     }
+    // // Call the updateLevels method passing the results list
+    // updateLevels(results).catchError((error) {
+    //   print('Error updating levels: $error');
+    // });
+    @override
+    void initState() {
+      super.initState();
+      List<String> result = [results[0], results[1], results[2], results[3], results[4]];
+      updateLevels(result);
+    }
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xfcffffff), // change to your desired color
@@ -33,7 +65,7 @@ class Skill extends StatelessWidget {
         elevation: 0.0,
 
         title: Text(
-          'Skills',
+          'Levels',
           textAlign: TextAlign.center,
           style: GoogleFonts.domine(
             fontSize: 25,
@@ -51,7 +83,7 @@ class Skill extends StatelessWidget {
           },
         ),
       ),
-      
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
           width: double.infinity,

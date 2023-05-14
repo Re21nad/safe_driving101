@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:safe_driving101/read%20data/Guides/Choose_car/choose_car1.dart';
 import 'package:safe_driving101/read%20data/Guides/Driving_license/driving_license.dart';
 import 'package:safe_driving101/read%20data/Guides/Guide1/tools1.dart';
+import 'package:safe_driving101/read%20data/Guides/Manage_dangers/manage_dangers.dart';
+import 'package:safe_driving101/read%20data/Guides/Traffic_Infraction/traffic_infraction.dart';
 
 class Guides extends StatefulWidget {
   const Guides({Key? key}) : super(key: key);
@@ -244,6 +246,10 @@ class _GuidesState extends State<Guides> {
                       child: ElevatedButton(
                         onPressed: () {
 
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Manage()),
+                          );
                         },
 
                         style: ElevatedButton.styleFrom(
@@ -290,7 +296,10 @@ class _GuidesState extends State<Guides> {
 
                     InkWell(
                       onTap: () {
-                        //Tools1();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Traffic()),
+                        );
                       },
                       child: Container(
                         // autogrouppgysF6d (BEu3KQ7h5sjLiRSs21PGys)

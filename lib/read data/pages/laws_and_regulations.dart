@@ -70,7 +70,7 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.only(left: 23, right: 23),
+          margin: EdgeInsets.only(left: 30, right: 30),
           width: double.infinity,
           height: 1150,
           child: Column(
@@ -79,9 +79,9 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                 height: 50,
               ),
               Container(
-                margin: EdgeInsets.only(left: 30, right: 30),
+                margin: EdgeInsets.only(left: 10, right: 10),
                 width: double.infinity,
-                height: 190,
+                height: 200,
                 //color: Colors.indigo,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(19),
@@ -145,7 +145,7 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                     ),
                     Container(
                       child: Text(
-                        '   _________________________________',
+                        '   ______________________________',
                         style: GoogleFonts.domine(
                           fontSize: 10,
                           fontWeight: FontWeight.w700,
@@ -163,7 +163,7 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
               Container(
                 margin: EdgeInsets.only(bottom: 20),
                 width: double.infinity,
-                height: 700,
+                height: 695,
                 child: ListView.separated(
                   separatorBuilder: (context, index) => Divider(),
                   // scrollDirection: Axis.vertical,

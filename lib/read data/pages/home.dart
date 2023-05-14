@@ -852,7 +852,7 @@ class _HomeState extends State<Home> {
                                     scrollDirection: Axis.horizontal,
                                     itemCount: recomended.length,
                                     separatorBuilder: (context, _) =>
-                                        SizedBox(width: 12),
+                                        SizedBox(width: 15),
                                     itemBuilder: (context, int index) {
                                       Widget buttonWidget;
                                       switch (searchResults[index]) {
@@ -1112,25 +1112,7 @@ class _HomeState extends State<Home> {
                                           );
                                           break;
                                         default:
-                                          buttonWidget = TextButton(
-                                            onPressed: () {
-                                              // Do something else
-                                            },
-                                            style: TextButton.styleFrom(
-                                              padding: EdgeInsets.zero,
-                                            ),
-                                            child: Container(
-                                              width: 200,
-                                              height: 200,
-                                              child: Text(''),
-                                              // Image.asset(
-                                              //   imagePaths[
-                                              //       recomended[index].lessonID],
-                                              //   width: 200,
-                                              //   height: 200,
-                                              // ),
-                                            ),
-                                          );
+                                          return SizedBox.shrink();
                                       }
                                       return Container(child: buttonWidget);
                                     },
@@ -1439,138 +1421,13 @@ class _HomeState extends State<Home> {
                                         );
                                         break;
                                       default:
-                                        buttonWidget = TextButton(
-                                          onPressed: () {
-                                            // Do something else
-                                          },
-                                          style: TextButton.styleFrom(
-                                            padding: EdgeInsets.zero,
-                                          ),
-                                          child: Container(
-                                            width: 200,
-                                            height: 200,
-                                            child: Text('')
-                                            // Image.asset(
-                                            //   imagePaths[
-                                            //   recomended[index].lessonID],
-                                            //   width: 200,
-                                            //   height: 200,
-                                            // ),
-                                          ),
-                                        );
+                                        return SizedBox.shrink();
                                     }
                                     return Container(child: buttonWidget);
                                   },
                                 ),
                               ),
 
-
-
-                              // Container(
-                              //   height: 140,
-                              //   child: ListView.separated(
-                              //       scrollDirection: Axis.horizontal,
-                              //       itemCount: completed.length,
-                              //       separatorBuilder: (context, _) =>
-                              //           SizedBox(width: 12),
-                              //       itemBuilder: (context, int index) {
-                              //         return Container(
-                              //           child: TextButton(
-                              //             onPressed: () {
-                              //               switch (completed[index].lessonID) {
-                              //                 case 0:
-                              //                   {
-                              //                     Navigator.push(
-                              //                       context,
-                              //                       MaterialPageRoute(
-                              //                           builder: (context) =>
-                              //                               Test()),
-                              //                     );
-                              //                   }
-                              //                   break;
-                              //
-                              //                 case 1:
-                              //                   {
-                              //                     //statements;
-                              //                     Navigator.push(
-                              //                       context,
-                              //                       MaterialPageRoute(
-                              //                           builder: (context) =>
-                              //                               Result1()),
-                              //                     );
-                              //                   }
-                              //                   break;
-                              //                 case 2:
-                              //                   {
-                              //                     //statements;
-                              //                     Navigator.push(
-                              //                       context,
-                              //                       MaterialPageRoute(
-                              //                           builder: (context) =>
-                              //                               Result1()),
-                              //                     );
-                              //                   }
-                              //                   break;
-                              //                 case 3:
-                              //                   {
-                              //                     //statements;
-                              //                     Navigator.push(
-                              //                       context,
-                              //                       MaterialPageRoute(
-                              //                           builder: (context) =>
-                              //                               Result1()),
-                              //                     );
-                              //                   }
-                              //                   break;
-                              //                 case 4:
-                              //                   {
-                              //                     //statements;
-                              //                     Navigator.push(
-                              //                       context,
-                              //                       MaterialPageRoute(
-                              //                           builder: (context) =>
-                              //                               Result1()),
-                              //                     );
-                              //                   }
-                              //                   break;
-                              //               }
-                              //             },
-                              //             style: TextButton.styleFrom(
-                              //               padding: EdgeInsets.zero,
-                              //             ),
-                              //             child: Container(
-                              //               width: 200,
-                              //               height: 200,
-                              //               child: Image.asset(
-                              //                 //recomended[index].imagePath
-                              //                 imagePaths[
-                              //                     completed[index].lessonID],
-                              //                 width: 200,
-                              //                 height: 200,
-                              //               ),
-                              //             ),
-                              //           ),
-                              //         );
-                              //       }),
-                              // ),
-
-                              // Container(
-                              //   margin: EdgeInsets.only(left: 40),
-                              //   width: double.infinity,
-                              //   height: 130,
-                              //   color: Colors.grey[100],
-                              //   child: Container(
-                              //     margin: EdgeInsets.symmetric(horizontal: 13),
-                              //     child: Center(
-                              //         child: Text(
-                              //       'There is no lessons that you completed',
-                              //       textAlign: TextAlign.center,
-                              //       style: GoogleFonts.domine(
-                              //         fontSize: 15,
-                              //       ),
-                              //     )),
-                              //   ),
-                              // ),
                             ],
                           ),
                         ),

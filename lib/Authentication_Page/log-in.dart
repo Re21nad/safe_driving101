@@ -21,19 +21,75 @@ class _LoginScreenState extends State<LoginScreen> {
   final _emailController = TextEditingController();
   final _passController = TextEditingController();
 
-  Future signIn() async{
 
-    showDialog(context: context, builder: (context){
-      return Center(child: CircularProgressIndicator(),);
-    });
+    Future<void> signIn() async {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Logging In'),
+            content: Stack(
+              alignment: Alignment.center,
+              children: [
+                CircularProgressIndicator(),
+              ],
+            ),
+          );
+        },
+      );
 
-    loggedIn = true;
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
-      email: _emailController.text.trim(),
-      password: _passController.text.trim(),);
+      try {
+        loggedIn = true;
+        await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: _emailController.text.trim(),
+          password: _passController.text.trim(),
+        );
+        Navigator.of(context).pop(); // Dismiss the loading dialog
+      } catch (error) {
+        Navigator.of(context).pop(); // Dismiss the loading dialog
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text('Login Failed'),
+              content: Text('An error occurred while logging in: $error'),
+              actions: [
+                TextButton(
+                  child: Text('OK'),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            );
+          },
+        );
+      }
+    }
 
-    Navigator.of(context).pop();
-  }
+    // showDialog(
+    //   context: context,
+    //   builder: (BuildContext context) {
+    //     return AlertDialog(
+    //       title: Text('Successful LogIn'),
+    //       content: Stack(
+    //         alignment: Alignment.center,
+    //         children: [
+    //           CircularProgressIndicator(),
+    //           // Text('Loading...'),
+    //         ],
+    //       ),
+    //     );
+    //   },
+    // );
+
+    // loggedIn = true;
+    // await FirebaseAuth.instance.signInWithEmailAndPassword(
+    //   email: _emailController.text.trim(),
+    //   password: _passController.text.trim(),);
+    //
+    // Navigator.of(context).pop();
+
 
   @override
   void dispose() {

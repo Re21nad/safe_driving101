@@ -10,78 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aca00ca-39dd-40df-bc52-5e3968c15edc" name="Changes" comment="Final Code">
-      <change afterPath="$PROJECT_DIR$/lib/testing/SearchEngine.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/testing/search.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/testing/alart.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/testing/alart1.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/auth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/auth.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/date_.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/date_.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/hello.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/hello.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/hello1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/hello1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/hello2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/hello2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/hello4.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/hello4.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/hello5.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/hello5.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/introduction_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/introduction_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/log-in.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/log-in.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/reset-password.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/reset-password.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/sign-up.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/sign-up.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/exam/question1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/exam/question1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/exam/result1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/exam/result1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Choose_car/automatic.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Choose_car/automatic.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Choose_car/choose_car1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Choose_car/choose_car1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Choose_car/manual.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Choose_car/manual.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/driving_license.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/driving_license.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/heavy_equipment.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/heavy_equipment.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/motorcycle_license.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/motorcycle_license.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/private_license.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/private_license.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/public_license.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/public_license.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/temporary_license.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Driving_license/temporary_license.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Guide1/padels.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Guide1/padels.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Guide1/tools1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Guide1/tools1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Guide1/toolsView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Guide1/toolsView.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Guide1/transmissions.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Guide1/transmissions.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving3.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving3.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving4.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving4.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving5.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving5.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving6.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving6.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving7.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Different_conditions/driving7.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Mechanical/mechanicalView.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/Mechanical/mechanicalView.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/abs.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/abs.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/animal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/animal.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/control.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/control2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/control2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/driving.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/driving.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/emergency_equipment.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/emergency_equipment.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/manage_dangers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/manage_dangers.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/mechanical_failures.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/mechanical_failures.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/traffic_infraction.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Traffic_Infraction/traffic_infraction.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law1/law1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law1/law1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law2/law2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law2/law2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law3/law3.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law3/law3.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law4/law4.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law4/law4.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law5/law5.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law5/law5.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law6/law6.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law6/law6.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law7/law7.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law7/law7.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law8/law8.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Laws_and_Regulations/Law8/law8.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/edit_profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/edit_profile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/get_user_name.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/get_user_name.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/homePage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/homePage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/read data/pages/guides.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/guides.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/read data/pages/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/home.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/read data/pages/laws_and_regulations.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/laws_and_regulations.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/pages/profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/profile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/pages/test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/read data/skill.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/skill.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/users.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/users.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/users_.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/users_.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe_driving101.iml" beforeDir="false" afterPath="$PROJECT_DIR$/safe_driving101.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,20 +47,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "com.google.services.firebase.aqiPopupShown": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "C:/Users/asus/src/safe_driving101/images",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/asus/src/safe_driving101/images&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\asus\src\safe_driving101\images" />
@@ -145,6 +82,14 @@
       <option name="filePath" value="$PROJECT_DIR$/lib/testing/SearchEngine.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="alart1.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/testing/alart1.dart" />
+      <method v="2" />
+    </configuration>
+    <configuration name="alart.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/testing/alart.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/Authentication_Page/main.dart" />
       <method v="2" />
@@ -153,27 +98,18 @@
       <option name="filePath" value="$PROJECT_DIR$/lib/testing/search.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="swappable.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/testing/swappable.dart" />
-      <method v="2" />
-    </configuration>
     <configuration name="tests in SearchEngine.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
       <option name="testFile" value="$PROJECT_DIR$/lib/testing/SearchEngine.dart" />
       <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="tests in swappable.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testFile" value="$PROJECT_DIR$/lib/testing/swappable.dart" />
-      <option name="useRegexp" value="false" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.alart1.dart" />
+        <item itemvalue="Flutter.alart.dart" />
         <item itemvalue="Flutter.search.dart" />
         <item itemvalue="Flutter.SearchEngine.dart" />
         <item itemvalue="Flutter Test.tests in SearchEngine.dart" />
-        <item itemvalue="Flutter.swappable.dart" />
-        <item itemvalue="Flutter Test.tests in swappable.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -382,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683758290294</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Final Code">
+      <created>1684009207487</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1684009207487</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
