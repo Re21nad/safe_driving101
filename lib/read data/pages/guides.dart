@@ -114,10 +114,10 @@ class _GuidesState extends State<Guides> {
 
                           child: Align(
                             // toolsusinginthecarj1o (1:68)
-                            alignment: Alignment.topCenter,
+                            alignment: Alignment.topLeft,
                             child: SizedBox(
                               child: Container(
-                                margin: EdgeInsets.only(left: 15),
+                                margin: EdgeInsets.only(left: 15, top: 15),
                                 child: Text(
                                   'Tools using\nin the car',
                                   style: GoogleFonts.domine(
@@ -126,6 +126,7 @@ class _GuidesState extends State<Guides> {
                                     height: 1.35,
                                     color: Color(0xfcffffff),
                                   ),
+                                  textAlign: TextAlign.left,
                                 ),
                               ),
                             ),

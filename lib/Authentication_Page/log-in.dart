@@ -17,10 +17,16 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
 
+  bool _passwordVisible = false;
   bool loggedIn = false;
   final _emailController = TextEditingController();
   final _passController = TextEditingController();
 
+  void _togglePasswordVisibility() {
+    setState(() {
+      _passwordVisible = !_passwordVisible;
+    });
+  }
 
     Future<void> signIn() async {
       showDialog(
@@ -66,29 +72,6 @@ class _LoginScreenState extends State<LoginScreen> {
         );
       }
     }
-
-    // showDialog(
-    //   context: context,
-    //   builder: (BuildContext context) {
-    //     return AlertDialog(
-    //       title: Text('Successful LogIn'),
-    //       content: Stack(
-    //         alignment: Alignment.center,
-    //         children: [
-    //           CircularProgressIndicator(),
-    //           // Text('Loading...'),
-    //         ],
-    //       ),
-    //     );
-    //   },
-    // );
-
-    // loggedIn = true;
-    // await FirebaseAuth.instance.signInWithEmailAndPassword(
-    //   email: _emailController.text.trim(),
-    //   password: _passController.text.trim(),);
-    //
-    // Navigator.of(context).pop();
 
 
   @override
@@ -168,23 +151,24 @@ class _LoginScreenState extends State<LoginScreen> {
                             //Color(0xffc2c5bc),
                             textStyle: TextStyle(
                               fontSize: 17.0, // Set font size
-
                             ),
                           ),
-
+                          keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
+                            labelText: 'E-mail',
+
+                            //labelStyle: TextStyle(color: Color(0xfcec255a)),
+                            //hintStyle: TextStyle(color: Colors.grey),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color(0xff1d1a20)),
+                              borderSide: BorderSide(color: Color(0xff1d1a20)),
                               borderRadius: BorderRadius.circular(10),
                               //color: Color(0xffffffff),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color(0xfcec255a)),
+                              borderSide: BorderSide(color: Color(0xfcec255a)),
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            hintText: 'E-mail',
+                            //hintText: 'E-mail',
                             fillColor: Color(0xffffffff),
                             filled: true,
                           ),
@@ -197,29 +181,31 @@ class _LoginScreenState extends State<LoginScreen> {
                         padding: const EdgeInsets.symmetric(horizontal: 26.0),
                         height: 50,
                         child: TextField(
-                          obscureText: true,
+                          // obscureText: true,
                           controller: _passController,
+                          obscureText: !_passwordVisible,
                           style: GoogleFonts.rokkitt(
                             //Color(0xffc2c5bc),
                             textStyle: TextStyle(
                               fontSize: 17.0, // Set font size
-
                             ),
                           ),
-
                           decoration: InputDecoration(
+                            labelText: 'Password',
+                            suffixIcon: IconButton(
+                              icon: Icon(_passwordVisible ? Icons.visibility : Icons.visibility_off),
+                              onPressed: _togglePasswordVisibility,
+                            ),
                             enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color(0xff1d1a20)),
+                              borderSide: BorderSide(color: Color(0xff1d1a20)),
                               borderRadius: BorderRadius.circular(10),
                               //color: Color(0xffffffff),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                  color: Color(0xfcec255a)),
+                              borderSide: BorderSide(color: Color(0xfcec255a)),
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            hintText: 'Password',
+                            //hintText: 'Password',
                             fillColor: Color(0xffffffff),
                             filled: true,
                           ),

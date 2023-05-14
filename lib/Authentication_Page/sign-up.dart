@@ -21,6 +21,8 @@ class signUp extends StatefulWidget {
 }
 
 class _signUpState extends State<signUp> {
+  bool _passwordVisible = false;
+  bool _confirmPasswordVisible = false;
   String? valueChoice1 = 'Gender';
   List<String> listItems1 = ['Gender', 'Male', 'Female'];
   String? valueChoice2 = 'City';
@@ -36,6 +38,16 @@ class _signUpState extends State<signUp> {
   final _cityController = TextEditingController();
   bool loggedIn = false;
 
+  void _togglePasswordVisibility() {
+    setState(() {
+      _passwordVisible = !_passwordVisible;
+    });
+  }
+  void _toggleConfirmPasswordVisibility() {
+    setState(() {
+      _confirmPasswordVisible = !_confirmPasswordVisible;
+    });
+  }
   @override
   void dispose() {
     _nameController.dispose();
@@ -200,58 +212,6 @@ class _signUpState extends State<signUp> {
       return false;
   }
 
-  // Future sign_up() async {
-  //   showDialog(
-  //       context: context,
-  //       builder: (context) {
-  //         return Center(
-  //           child: CircularProgressIndicator(),
-  //         );
-  //       });
-  //   setState(() {
-  //     loggedIn = true;
-  //   });
-  //
-  //   if (passwordConfirm()) {
-  //     await FirebaseAuth.instance.createUserWithEmailAndPassword(
-  //       email: _emailController.text.trim(),
-  //       password: _passwordController.text.trim(),
-  //     );
-  //
-  //
-  //     addUserDetail(
-  //       _nameController.text.trim(),
-  //       _nickNameController.text.trim(),
-  //       _emailController.text.trim(),
-  //       _birthDateController.text.trim(),
-  //       _genderController.text.trim(),
-  //       _cityController.text.trim(),
-  //     );
-  //   }
-  //   Navigator.push(
-  //       context, MaterialPageRoute(builder: (context) => LoginScreen()));
-  // }
-  //
-  // Future addUserDetail(String name, String nickName, String email,
-  //     String birthDate, String gender, String city) async {
-  //   await FirebaseFirestore.instance.collection("Users").add({
-  //     'name': name,
-  //     'nick name': nickName,
-  //     'email': email,
-  //     'birth date': birthDate,
-  //     'gender': gender,
-  //     'city': city,
-  //   });
-  // }
-  //
-  // bool passwordConfirm() {
-  //   if (_passwordController.text.trim() ==
-  //       _confirmPasswordController.text.trim())
-  //     return true;
-  //   else
-  //     return false;
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -297,21 +257,27 @@ class _signUpState extends State<signUp> {
                     child: TextField(
                       controller: _nameController,
                       style: GoogleFonts.rokkitt(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w400,
-                        height: 1.1375,
-                        color: Colors.black,
+                        //Color(0xffc2c5bc),
+                        textStyle: TextStyle(
+                          fontSize: 17.0, // Set font size
+                        ),
                       ),
+                      keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
+                        labelText: 'Name',
+
+                        //labelStyle: TextStyle(color: Color(0xfcec255a)),
+                        //hintStyle: TextStyle(color: Colors.grey),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Color(0xff1d1a20)),
                           borderRadius: BorderRadius.circular(10),
+                          //color: Color(0xffffffff),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Color(0xfcec255a)),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        hintText: 'Name',
+                        //hintText: 'E-mail',
                         fillColor: Color(0xffffffff),
                         filled: true,
                       ),
@@ -324,21 +290,27 @@ class _signUpState extends State<signUp> {
                     child: TextField(
                       controller: _nickNameController,
                       style: GoogleFonts.rokkitt(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w400,
-                        height: 1.1375,
-                        color: Colors.black,
+                        //Color(0xffc2c5bc),
+                        textStyle: TextStyle(
+                          fontSize: 17.0, // Set font size
+                        ),
                       ),
+                      keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
+                        labelText: 'Nick Name',
+
+                        //labelStyle: TextStyle(color: Color(0xfcec255a)),
+                        //hintStyle: TextStyle(color: Colors.grey),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Color(0xff1d1a20)),
                           borderRadius: BorderRadius.circular(10),
+                          //color: Color(0xffffffff),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Color(0xfcec255a)),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        hintText: 'Nick Name',
+                        //hintText: 'E-mail',
                         fillColor: Color(0xffffffff),
                         filled: true,
                       ),
@@ -357,21 +329,27 @@ class _signUpState extends State<signUp> {
               child: TextField(
                 controller: _emailController,
                 style: GoogleFonts.rokkitt(
-                  fontSize: 17,
-                  fontWeight: FontWeight.w400,
-                  height: 1.1375,
-                  color: Colors.black,
+                  //Color(0xffc2c5bc),
+                  textStyle: TextStyle(
+                    fontSize: 17.0, // Set font size
+                  ),
                 ),
+                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
+                  labelText: 'E-mail',
+
+                  //labelStyle: TextStyle(color: Color(0xfcec255a)),
+                  //hintStyle: TextStyle(color: Colors.grey),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Color(0xff1d1a20)),
                     borderRadius: BorderRadius.circular(10),
+                    //color: Color(0xffffffff),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Color(0xfcec255a)),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  hintText: 'Email',
+                  //hintText: 'E-mail',
                   fillColor: Color(0xffffffff),
                   filled: true,
                 ),
@@ -385,24 +363,31 @@ class _signUpState extends State<signUp> {
               height: 50,
               width: double.infinity,
               child: TextField(
-                obscureText: true,
+                // obscureText: true,
                 controller: _passwordController,
+                obscureText: !_passwordVisible,
                 style: GoogleFonts.rokkitt(
-                  fontSize: 17,
-                  fontWeight: FontWeight.w400,
-                  height: 1.1375,
-                  color: Colors.black,
+                  //Color(0xffc2c5bc),
+                  textStyle: TextStyle(
+                    fontSize: 17.0, // Set font size
+                  ),
                 ),
                 decoration: InputDecoration(
+                  labelText: 'Password',
+                  suffixIcon: IconButton(
+                    icon: Icon(_passwordVisible ? Icons.visibility : Icons.visibility_off),
+                    onPressed: _togglePasswordVisibility,
+                  ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Color(0xff1d1a20)),
                     borderRadius: BorderRadius.circular(10),
+                    //color: Color(0xffffffff),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Color(0xfcec255a)),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  hintText: 'Password',
+                  //hintText: 'Password',
                   fillColor: Color(0xffffffff),
                   filled: true,
                 ),
@@ -416,24 +401,31 @@ class _signUpState extends State<signUp> {
               height: 50,
               width: double.infinity,
               child: TextField(
-                obscureText: true,
+                // obscureText: true,
                 controller: _confirmPasswordController,
+                obscureText: !_confirmPasswordVisible,
                 style: GoogleFonts.rokkitt(
-                  fontSize: 17,
-                  fontWeight: FontWeight.w400,
-                  height: 1.1375,
-                  color: Colors.black,
+                  //Color(0xffc2c5bc),
+                  textStyle: TextStyle(
+                    fontSize: 17.0, // Set font size
+                  ),
                 ),
                 decoration: InputDecoration(
+                  labelText: 'Confirm Password',
+                  suffixIcon: IconButton(
+                    icon: Icon(_confirmPasswordVisible ? Icons.visibility : Icons.visibility_off),
+                    onPressed: _toggleConfirmPasswordVisibility,
+                  ),
                   enabledBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Color(0xff1d1a20)),
                     borderRadius: BorderRadius.circular(10),
+                    //color: Color(0xffffffff),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Color(0xfcec255a)),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  hintText: 'Confirm Password',
+                  //hintText: 'Password',
                   fillColor: Color(0xffffffff),
                   filled: true,
                 ),

@@ -10,11 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aca00ca-39dd-40df-bc52-5e3968c15edc" name="Changes" comment="Final Code">
+      <change afterPath="$PROJECT_DIR$/lib/testing/login_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/log-in.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/log-in.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/sign-up.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/sign-up.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/exam/result1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/exam/result1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/pages/guides1.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/skill.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/skill.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/pages/guides.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/guides.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,10 +74,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Flutter.main.dart">
-    <configuration name="SearchEngine.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/testing/SearchEngine.dart" />
-      <method v="2" />
-    </configuration>
     <configuration name="alart1.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/testing/alart1.dart" />
       <method v="2" />
@@ -90,6 +86,10 @@
       <option name="filePath" value="$PROJECT_DIR$/lib/read data/pages/guides1.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="login_test.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/testing/login_test.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/Authentication_Page/main.dart" />
       <method v="2" />
@@ -100,11 +100,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.login_test.dart" />
         <item itemvalue="Flutter.guides1.dart" />
         <item itemvalue="Flutter.alart1.dart" />
         <item itemvalue="Flutter.alart.dart" />
         <item itemvalue="Flutter.search.dart" />
-        <item itemvalue="Flutter.SearchEngine.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -341,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684044293496</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Final Code">
+      <created>1684099827143</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1684099827143</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
