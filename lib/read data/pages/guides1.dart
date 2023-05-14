@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:safe_driving101/read%20data/Guides/Choose_car/choose_car1.dart';
-import 'package:safe_driving101/read%20data/Guides/Driving_license/driving_license.dart';
 import 'package:safe_driving101/read%20data/Guides/Guide1/tools1.dart';
-import 'package:safe_driving101/read%20data/Guides/Manage_dangers/manage_dangers.dart';
-import 'package:safe_driving101/read%20data/Guides/Traffic_Infraction/traffic_infraction.dart';
-//
-// void main() {
-//   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Guides1()));
-// }
 
-class Guides extends StatefulWidget {
-  // const Guides({Key? key}) : super(key: key);
-
-  @override
-  State<Guides> createState() => _GuidesState();
+void main() {
+  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Guides1()));
 }
 
-class _GuidesState extends State<Guides> {
+class Guides1 extends StatefulWidget {
+  const Guides1({Key? key}) : super(key: key);
+
+  @override
+  State<Guides1> createState() => _Guides1State();
+}
+
+class _Guides1State extends State<Guides1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,18 +86,16 @@ class _GuidesState extends State<Guides> {
                       SizedBox(width: 10,),
                       InkWell(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Tools1()),
-                          );
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(builder: (context) => Tools1()),
+                          // );
                         },
                         child: Container(
                           // autogrouppgysF6d (BEu3KQ7h5sjLiRSs21PGys)
-                          // margin: EdgeInsets.fromLTRB(0, 0, 13, 0),
-                          // padding: EdgeInsets.fromLTRB(5, 23, 15, 23),
-                          // height: double.infinity,
-                          width: 157,
-                          height: 167,
+                          margin: EdgeInsets.fromLTRB(0, 0, 13, 0),
+                          padding: EdgeInsets.fromLTRB(5, 23, 15, 23),
+                          height: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(26),
                             image: DecorationImage(
@@ -117,9 +111,11 @@ class _GuidesState extends State<Guides> {
                             alignment: Alignment.topCenter,
                             child: SizedBox(
                               child: Container(
-                                margin: EdgeInsets.only(left: 15),
+                                // constraints: BoxConstraints(
+                                //   maxWidth: 143,
+                                // ),
                                 child: Text(
-                                  'Tools using\nin the car',
+                                  'Tools using in \nthe car',
                                   style: GoogleFonts.domine(
                                     fontSize: 15,
                                     fontWeight: FontWeight.w700,
@@ -133,15 +129,15 @@ class _GuidesState extends State<Guides> {
                         ),
                       ),
 
-                      SizedBox(width: 20,),
+                      SizedBox(width: 10,),
 
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => ChooseCar()));
+                          // Navigator.push(context,
+                          //     MaterialPageRoute(builder: (context) => ChooseCar()));
                         },
                         style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.fromLTRB(10, 8, 13, 0),
+                          padding: EdgeInsets.fromLTRB(10, 8, 10, 0),
                           primary: Color(0xfcc4eaf6),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(26),
@@ -152,7 +148,7 @@ class _GuidesState extends State<Guides> {
                           children: [
                             Container(
                               // choosingacarnuB (1:76)
-                              margin: EdgeInsets.fromLTRB(0, 15, 0, 15),
+                              margin: EdgeInsets.fromLTRB(0, 15, 0, 10),
                               child: Text(
                                 'Choosing a car',
                                 style: GoogleFonts.domine(
@@ -189,10 +185,10 @@ class _GuidesState extends State<Guides> {
                     SizedBox(width: 10,),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Driving_license()),
-                        );
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(builder: (context) => Driving_license()),
+                        // );
                       },
                       style: ElevatedButton.styleFrom(
                         primary: Color(0xfcfee0e0),
@@ -235,16 +231,16 @@ class _GuidesState extends State<Guides> {
 
                     SizedBox(width: 20,),
                     Container(
-
+                      // width: double.infinity,
                       child: Column(
                         children: [
                           ElevatedButton(
                             onPressed: () {
 
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => Manage()),
-                              );
+                              // Navigator.push(
+                              //   context,
+                              //   MaterialPageRoute(builder: (context) => Manage()),
+                              // );
                             },
 
                             style: ElevatedButton.styleFrom(
@@ -261,7 +257,7 @@ class _GuidesState extends State<Guides> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Container(
-
+                                    // choosingacarnuB (1:76)
                                     margin: EdgeInsets.only(top: 20),
                                     child: Text(
                                       'Manage \ndangers',
@@ -292,10 +288,10 @@ class _GuidesState extends State<Guides> {
 
                           InkWell(
                             onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => Traffic()),
-                              );
+                              // Navigator.push(
+                              //   context,
+                              //   MaterialPageRoute(builder: (context) => Tools1()),
+                              // );
                             },
                             child: Container(
 
@@ -312,19 +308,19 @@ class _GuidesState extends State<Guides> {
                                 ),
                               ),
 
-                              child: Container(
-                                margin: EdgeInsets.only(left: 15,top: 15),
-                                child: Text(
-                                  'Traffic\ninfraction ',
-                                  style: GoogleFonts.domine(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w700,
-                                    height: 1.35,
-                                    color: Color(0xfcffffff),
-                                  ),
-                                  textAlign: TextAlign.left,
-                                ),
-                              ),
+                                    child: Container(
+                                      margin: EdgeInsets.only(left: 15,top: 15),
+                                      child: Text(
+                                        'Traffic\ninfraction ',
+                                        style: GoogleFonts.domine(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w700,
+                                          height: 1.35,
+                                          color: Color(0xfcffffff),
+                                        ),
+                                        textAlign: TextAlign.left,
+                                      ),
+                                    ),
 
                             ),
                           ),
@@ -334,8 +330,7 @@ class _GuidesState extends State<Guides> {
                     )
                   ],
                 ),
-              ),
-              SizedBox(height: 20,),
+              )
 
             ],
           ),
