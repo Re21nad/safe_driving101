@@ -10,11 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aca00ca-39dd-40df-bc52-5e3968c15edc" name="Changes" comment="Final Code">
-      <change afterPath="$PROJECT_DIR$/lib/testing/login_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/testing/reset_password_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/log-in.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/log-in.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/sign-up.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/sign-up.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/reset-password.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/reset-password.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/exam/question1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/exam/question1.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/read data/pages/guides.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/guides.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/pages/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/pages/laws_and_regulations.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/laws_and_regulations.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/read data/skill.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/skill.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,20 +46,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true",
-    "com.google.services.firebase.aqiPopupShown": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "C:/Users/asus/src/safe_driving101/images",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/asus/src/safe_driving101/images&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\asus\src\safe_driving101\images" />
@@ -94,17 +97,17 @@
       <option name="filePath" value="$PROJECT_DIR$/lib/Authentication_Page/main.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="search.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/testing/search.dart" />
+    <configuration name="reset_password_test.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/testing/reset_password_test.dart" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.reset_password_test.dart" />
         <item itemvalue="Flutter.login_test.dart" />
         <item itemvalue="Flutter.guides1.dart" />
         <item itemvalue="Flutter.alart1.dart" />
         <item itemvalue="Flutter.alart.dart" />
-        <item itemvalue="Flutter.search.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -348,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684099827143</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Final Code">
+      <created>1684102684205</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1684102684205</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

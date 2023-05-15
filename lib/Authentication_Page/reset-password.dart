@@ -4,10 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:safe_driving101/Authentication_Page/log-in.dart';
 
 
-// void main(){
-//   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: ResetPass()));
-// }
-
 class ResetPass extends StatefulWidget {
   const ResetPass({Key? key}) : super(key: key);
 
@@ -17,39 +13,44 @@ class ResetPass extends StatefulWidget {
 
 class _ResetPassState extends State<ResetPass> {
 
-  final _formKey = GlobalKey<FormState>();
-  final _emailController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+
+  // void _resetPassword() {
+  //   String email = _emailController.text;
+  //   (email);
+  // }
 
   @override
-  void dispose(){
+  void dispose() {
     _emailController.dispose();
     super.dispose();
   }
 
-  Future passwordReset() async{
-    try{
-      await FirebaseAuth.instance.sendPasswordResetEmail(
-          email: _emailController.text.trim());
+  void _resetPassword() async {
+    String email = _emailController.text;
+
+    try {
+      await FirebaseAuth.instance.sendPasswordResetEmail(email: email);
       showDialog(
-          context: context,
-          builder: (context){
-            return AlertDialog(
-              content: Text('Password reset link sent! Check your email'),
-            );
-          },
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            content: Text('Password reset link sent! Check your email.'),
+          );
+        },
       );
-    } on FirebaseAuthException catch (e){
-      print(e);
+    } catch (e) {
       showDialog(
-          context: context,
-          builder: (context){
-            return AlertDialog(
-              content: Text(e.message.toString()),
-            );
-          },
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            content: Text('Error: ${e.toString()}'),
+          );
+        },
       );
     }
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -75,14 +76,13 @@ class _ResetPassState extends State<ResetPass> {
           icon: Icon(Icons.arrow_back),
           color: Colors.black,
           onPressed: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => LoginScreen()));
+            Navigator.pop(context);
           },
         ),
       ),
       body: SingleChildScrollView(
         child: Form(
-          key: _formKey,
+          // key: _formKey,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -144,7 +144,7 @@ class _ResetPassState extends State<ResetPass> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 50),
                 child: GestureDetector(
-                  onTap: passwordReset,
+                  onTap: _resetPassword,
                   child: Container(
                     padding: EdgeInsets.all(16),
                     decoration: BoxDecoration(

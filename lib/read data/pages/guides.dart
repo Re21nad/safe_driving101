@@ -47,36 +47,36 @@ class _GuidesState extends State<Guides> {
           width: double.infinity,
           child: Column(
             children: [
-              SizedBox(height: 50,),
+              SizedBox(height: 60,),
 
-              Container(
-                // margin: EdgeInsets.only(top: 50),
-                width: double.infinity,
-                height: 50,
-
-                child: TextField(
-                  style: GoogleFonts.rokkitt(
-                    //Color(0xffc2c5bc),
-                    textStyle: TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.grey[900],
-                    ),
-                  ),
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Color(0x3fdadada),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(100),
-                      borderSide: BorderSide.none,
-                    ),
-                    hintText: "eg: Traffic infraction",
-                    prefixIcon: Icon(Icons.search),
-                    prefixIconColor: Colors.grey,
-
-                  ),
-                ),
-              ),
-              SizedBox(height: 30,),
+              // Container(
+              //   // margin: EdgeInsets.only(top: 50),
+              //   width: double.infinity,
+              //   height: 50,
+              //
+              //   child: TextField(
+              //     style: GoogleFonts.rokkitt(
+              //       //Color(0xffc2c5bc),
+              //       textStyle: TextStyle(
+              //         fontSize: 15.0,
+              //         color: Colors.grey[900],
+              //       ),
+              //     ),
+              //     decoration: InputDecoration(
+              //       filled: true,
+              //       fillColor: Color(0x3fdadada),
+              //       border: OutlineInputBorder(
+              //         borderRadius: BorderRadius.circular(100),
+              //         borderSide: BorderSide.none,
+              //       ),
+              //       hintText: "eg: Traffic infraction",
+              //       prefixIcon: Icon(Icons.search),
+              //       prefixIconColor: Colors.grey,
+              //
+              //     ),
+              //   ),
+              // ),
+              // SizedBox(height: 30,),
 
               Container(
                 // autogroupyxn5XgR (BEu2v5TDdPUCapmWXeyXN5)

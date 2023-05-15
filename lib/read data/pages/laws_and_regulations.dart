@@ -70,7 +70,7 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.only(left: 30, right: 30),
+          margin: EdgeInsets.only(left: 33, right: 33),
           width: double.infinity,
           height: 1150,
           child: Column(
@@ -79,7 +79,7 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                 height: 50,
               ),
               Container(
-                margin: EdgeInsets.only(left: 10, right: 10),
+                margin: EdgeInsets.only(left: 5, right: 5),
                 width: double.infinity,
                 height: 200,
                 //color: Colors.indigo,

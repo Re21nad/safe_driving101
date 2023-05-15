@@ -618,14 +618,6 @@ class _HomeState extends State<Home> {
   }
 
 
-  // List<String> imagePaths = [
-  //   'images/car1.jpg',
-  //   'images/car 2.jpg',
-  //   'images/car 3.jpg',
-  //   'images/car 4.jpg',
-  //   'images/car 5.jpg'
-  // ];
-
   void signOut() {
     setState(() {
       loggedIn = false;
@@ -681,23 +673,7 @@ class _HomeState extends State<Home> {
             color: Color(0xff000000),
           ),
         ),
-        // actions: [
-        //   GestureDetector(
-        //     onTap: () {
-        //       FirebaseAuth.instance.signOut();
-        //     },
-        //     child: Icon(
-        //       Icons.logout,
-        //       color: Colors.black,
-        //     ),
-        //   )
-        // ],
 
-        // leading: IconButton(
-        //   icon: Icon(Icons.logout,),
-        //   color: Colors.black,
-        //   onPressed: signOut,
-        // ),
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -750,25 +726,7 @@ class _HomeState extends State<Home> {
                                       color: Color(0xFFEC255A),
                                     ),
                                   )
-                                  // FutureBuilder(
-                                  //   future: getDocId(),
-                                  //   builder: (context, snapshot) {
-                                  //     if (snapshot.connectionState ==
-                                  //         ConnectionState.done) {
-                                  //       return ListTile(
-                                  //         title: GetUserName(
-                                  //           documentId: docIDs[0],
-                                  //           style: GoogleFonts.rokkitt(
-                                  //             fontWeight: FontWeight.bold,
-                                  //             fontSize: 20,
-                                  //             color: Color(0xFFEC255A),
-                                  //           ),
-                                  //         ),
-                                  //       );
-                                  //     }
-                                  //     return Text('leading...');
-                                  //   },
-                                  // ),
+
                                   ),
                               Container(
                                 margin: EdgeInsets.only(left: 23),
@@ -782,7 +740,7 @@ class _HomeState extends State<Home> {
                                   ),
                                 ),
                               ),
-                              //SizedBox(height: 5,),
+
                               Container(
                                 margin: EdgeInsets.only(left: 23, right: 23),
                                 width: double.infinity,
