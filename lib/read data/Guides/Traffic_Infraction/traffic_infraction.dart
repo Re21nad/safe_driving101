@@ -11,36 +11,14 @@ class Traffic extends StatefulWidget {
 
 class _TrafficState extends State<Traffic> {
 
+  // Function to navigate back
+  void _navigateBack(BuildContext context) {
+    Navigator.of(context).maybePop();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Color(0xfcffffff),
-      //   // change to your desired color
-      //   centerTitle: true,
-      //   elevation: 0.0,
-      //   title: Text(
-      //     'Traffic Infraction',
-      //     textAlign: TextAlign.left,
-      //     style: GoogleFonts.domine(
-      //       fontSize: 19,
-      //       fontWeight: FontWeight.w700,
-      //       height: 1.14,
-      //       letterSpacing: -0.7000000834,
-      //       color: Color(0xff000000),
-      //     ),
-      //   ),
-      //
-      //   leading: IconButton(
-      //     icon: Icon(
-      //       Icons.arrow_back,
-      //       color: Colors.black,
-      //     ),
-      //     onPressed: () {
-      //       Navigator.pop(context);
-      //     },
-      //   ),
-      // ),
+
       backgroundColor: Colors.white,
       body: LiquidSwipe(
         pages: pages_,
@@ -65,16 +43,31 @@ class _TrafficState extends State<Traffic> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(height: 45,),
-          Center(
-            child: Text(
-              'Infractions No. 1',
-              style: GoogleFonts.domine(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                height: 1.35,
-                color: Colors.black, // Changing the text color to white for better visibility
-              ),
-              textAlign: TextAlign.center,
+          Container(
+            child: Row(
+              children: [
+                IconButton(
+                  icon: Icon(
+                    Icons.arrow_back,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {
+                    // _navigateBack(context);
+                  },
+                ),
+                Center(
+                  child: Text(
+                    'Infractions No. 1',
+                    style: GoogleFonts.domine(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      height: 1.35,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
             ),
           ),
 

@@ -101,6 +101,17 @@ class Driving7 extends StatelessWidget {
                   color: Color(0xff000000),
                 ),
               ),
+
+              SizedBox(height: 25,),
+              Center(
+                child: Image.asset(
+                  'images/traffic.png',
+                  width: 200,
+                  height: 150,
+                  fit: BoxFit.cover,
+                  // alignment: Alignment.center,
+                ),
+              ),
             ],
           ),
         ),

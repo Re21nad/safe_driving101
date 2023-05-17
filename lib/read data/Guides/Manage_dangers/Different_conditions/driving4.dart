@@ -126,6 +126,16 @@ class Driving4 extends StatelessWidget {
                 ),
               ),
 
+              SizedBox(height: 30,),
+              Center(
+                child: Image.asset(
+                  'images/rain.png',
+                  width: 200,
+                  height: 150,
+                  fit: BoxFit.cover,
+                  // alignment: Alignment.center,
+                ),
+              ),
             ],
           ),
         ),

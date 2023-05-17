@@ -78,6 +78,15 @@ class Driving6 extends StatelessWidget {
                 ),
               ),
 
+              Center(
+                child: Image.asset(
+                  'images/sun.png',
+                  width: 240,
+                  height: 180,
+                  fit: BoxFit.cover,
+                  // alignment: Alignment.center,
+                ),
+              ),
             ],
           ),
         ),

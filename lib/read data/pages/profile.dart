@@ -13,28 +13,95 @@ class Profile_ extends StatefulWidget {
 class _Profile_State extends State<Profile_> {
   final users = FirebaseAuth.instance.currentUser!;
 
+  // @override
+  // Widget build(BuildContext context) {
+  //   return Scaffold(
+  //     backgroundColor: Colors.white,
+  //     appBar: AppBar(
+  //       backgroundColor: Color(0xfcffffff),
+  //       // change to your desired color
+  //       centerTitle: true,
+  //       elevation: 0.0,
+  //       title: Text(
+  //         'Profile',
+  //         textAlign: TextAlign.center,
+  //         style: GoogleFonts.domine(
+  //           fontSize: 25,
+  //           fontWeight: FontWeight.w700,
+  //           height: 1.14,
+  //           letterSpacing: -0.7000000834,
+  //           color: Color(0xff000000),
+  //         ),
+  //       ),
+  //     ),
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Color(0xfcffffff),
-        // change to your desired color
         centerTitle: true,
         elevation: 0.0,
-        title: Text(
-          'Profile',
-          textAlign: TextAlign.center,
-          style: GoogleFonts.domine(
-            fontSize: 25,
-            fontWeight: FontWeight.w700,
-            height: 1.14,
-            letterSpacing: -0.7000000834,
-            color: Color(0xff000000),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 73),
+              child: Text(
+                'Profile',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.domine(
+                  fontSize: 25,
+                  fontWeight: FontWeight.w700,
+                  height: 1.14,
+                  letterSpacing: -0.7000000834,
+                  color: Color(0xff000000),
+                ),
+              ),
+            ),
+            // Spacer(),
+      Container(
+        margin: EdgeInsets.only(left: 85),
+        child: IconButton(
+          onPressed: () {
+            showDialog(
+              context: context,
+              builder: (BuildContext context) {
+                return AlertDialog(
+                  title: Text('Confirmation'),
+                  content: Text('Are you sure you want to sign out?'),
+                  actions: [
+                    TextButton(
+                      child: Text('Cancel'),
+                      onPressed: () {
+                        Navigator.of(context).pop(); // Close the dialog
+                      },
+                    ),
+                    TextButton(
+                      child: Text('Sign Out'),
+                      onPressed: () {
+                        // Perform the sign out action
+                        FirebaseAuth.instance.signOut();
+                        Navigator.of(context).pop(); // Close the dialog
+                      },
+                    ),
+                  ],
+                );
+              },
+            );
+          },
+          icon: Icon(
+            Icons.logout,
+            color: Colors.black,
           ),
         ),
       ),
-      body: StreamBuilder(
+
+      ],
+        ),
+      ),
+
+  body: StreamBuilder(
         stream: FirebaseFirestore.instance
             .collection('Users')
             .where("email", isEqualTo: users.email)
@@ -53,7 +120,7 @@ class _Profile_State extends State<Profile_> {
                   child: Column(
                     children: [
                       SizedBox(
-                        height: 30,
+                        height: 10,
                       ),
                       Container(
                         width: double.infinity,
@@ -69,7 +136,7 @@ class _Profile_State extends State<Profile_> {
                       ),
 
                       SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       Container(
                         width: 200,
@@ -164,7 +231,7 @@ class _Profile_State extends State<Profile_> {
                         margin: EdgeInsets.only(left: 30, right: 30),
                         //padding: EdgeInsets.fromLTRB(14, 15, 14, 20),
                         width: double.infinity,
-                        height: 102,
+                        height: 207,
                         decoration: BoxDecoration(
                           border: Border.all(color: Color(0xffafafaf)),
                           color: Color(0xffffffff),
@@ -179,7 +246,9 @@ class _Profile_State extends State<Profile_> {
                         ),
 
                         child: Container(
+                          // margin: EdgeInsets.only(left: 5),
                           child: Column(children: [
+                            SizedBox(height: 10,),
                             Container(
                               child: Row(
                                 children: [
@@ -187,27 +256,26 @@ class _Profile_State extends State<Profile_> {
                                     width: 10,
                                   ),
                                   Container(
-                                    width: 30,
-                                    height: 30,
+                                    width: 30, // Adjust the width as per your need
+                                    height: 30, // Adjust the height as per your need
                                     decoration: BoxDecoration(
                                       image: DecorationImage(
-                                        image:
-                                            AssetImage('images/image-10.png'),
-                                        fit: BoxFit.fill,
+                                        image: AssetImage('images/language.png'),
+                                        fit: BoxFit.cover, // Adjust the fit property as needed (e.g., cover, contain, fill)
                                       ),
                                     ),
                                   ),
                                   SizedBox(
-                                    width: 15,
+                                    width: 20,
                                   ),
                                   Container(
-                                    width: 60,
+                                    width: 100,
                                     height: 50,
                                     child: Padding(
                                       padding:
                                           EdgeInsets.only(top: 15, right: 20),
                                       child: Text(
-                                        'Goal',
+                                        'Language',
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.domine(
                                           fontSize: 12,
@@ -217,7 +285,7 @@ class _Profile_State extends State<Profile_> {
                                     ),
                                   ),
                                   SizedBox(
-                                    width: 110,
+                                    width: 65,
                                   ),
                                   Container(
                                     width: 100,
@@ -226,11 +294,12 @@ class _Profile_State extends State<Profile_> {
                                       padding:
                                           EdgeInsets.only(top: 10, right: 5),
                                       child: Text(
-                                        '30 Hours',
+                                        'English',
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.domine(
                                           fontSize: 12,
                                           fontWeight: FontWeight.w700,
+                                          color: Color(0xFFEC255A),
                                         ),
                                       ),
                                     ),
@@ -249,7 +318,7 @@ class _Profile_State extends State<Profile_> {
                                   height: 30,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
-                                      image: AssetImage('images/image-11.png'),
+                                      image: AssetImage('images/level.png'),
                                       fit: BoxFit.fill,
                                     ),
                                   ),
@@ -261,10 +330,10 @@ class _Profile_State extends State<Profile_> {
                                   height: 40,
                                   child: Padding(
                                     padding:
-                                        EdgeInsets.only(top: 10, right: 25),
+                                        EdgeInsets.only(left: 25,top: 10, right: 25),
                                     child: Text(
-                                      'Remaining Hours',
-                                      textAlign: TextAlign.center,
+                                      'Level',
+                                      textAlign: TextAlign.left,
                                       style: GoogleFonts.domine(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w700,
@@ -281,8 +350,49 @@ class _Profile_State extends State<Profile_> {
                                     padding:
                                         EdgeInsets.only(top: 10, right: 13),
                                     child: Text(
-                                      '19 Hours',
+                                      'Bigenner',
                                       textAlign: TextAlign.center,
+                                      style: GoogleFonts.domine(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w700,
+                                        color: Color(0xFFEC255A),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+
+
+
+                              ]),
+                            ),
+
+                            SizedBox(height: 5,),
+                            Container(
+                              child: Row(children: [
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Container(
+                                  width: 30,
+                                  height: 30,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage('images/gender (1).png'),
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                ),
+
+                                //SizedBox(width: 5,),
+                                Container(
+                                  width: 190,
+                                  height: 40,
+                                  child: Padding(
+                                    padding:
+                                    EdgeInsets.only(left: 25,top: 10, right: 25),
+                                    child: Text(
+                                      'Gender',
+                                      textAlign: TextAlign.left,
                                       style: GoogleFonts.domine(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w700,
@@ -290,8 +400,91 @@ class _Profile_State extends State<Profile_> {
                                     ),
                                   ),
                                 ),
+
+                                //SizedBox(width: 5,),
+                                Container(
+                                  width: 100,
+                                  height: 40,
+                                  child: Padding(
+                                    padding:
+                                    EdgeInsets.only(top: 10, right: 13),
+                                    child: Text(
+                                      document['gender'],
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.domine(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w700,
+                                        color: Color(0xFFEC255A),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+
+
+
                               ]),
                             ),
+
+                            SizedBox(height: 5,),
+                            Container(
+                              child: Row(children: [
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Container(
+                                  width: 30,
+                                  height: 30,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage('images/office-building.png'),
+                                      fit: BoxFit.fill,
+                                    ),
+                                  ),
+                                ),
+
+                                //SizedBox(width: 5,),
+                                Container(
+                                  width: 190,
+                                  height: 40,
+                                  child: Padding(
+                                    padding:
+                                    EdgeInsets.only(left: 25,top: 10, right: 25),
+                                    child: Text(
+                                      'City',
+                                      textAlign: TextAlign.left,
+                                      style: GoogleFonts.domine(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w700,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+
+                                //SizedBox(width: 5,),
+                                Container(
+                                  width: 100,
+                                  height: 40,
+                                  child: Padding(
+                                    padding:
+                                    EdgeInsets.only(top: 10, right: 13),
+                                    child: Text(
+                                      document['city'],
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.domine(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w700,
+                                        color: Color(0xFFEC255A),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+
+
+
+                              ]),
+                            ),
+
+
                           ]),
                         ),
                       ),
@@ -332,36 +525,37 @@ class _Profile_State extends State<Profile_> {
                         ),
                       ),
 
+                      SizedBox(height: 10,),
 
-                      SizedBox(height: 15,),
-                      Container(
-                        width: 320,
-                        height: 50,
-                        child: ElevatedButton(
-
-                          child: Text(
-                            'Sign out',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.rokkitt(
-                              fontSize: 25,
-                              fontWeight: FontWeight.w700,
-                              height: 1.1375,
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-
-                          style: ElevatedButton.styleFrom(
-
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20), // Adjust border radius as per your need
-                            ),
-                            primary: Color(0xfc161853), // Set the background color of the button
-                          ),
-                          onPressed: () {
-                            FirebaseAuth.instance.signOut();
-                          },
-                        ),
-                      ),
+                      // SizedBox(height: 15,),
+                      // Container(
+                      //   width: 320,
+                      //   height: 50,
+                      //   child: ElevatedButton(
+                      //
+                      //     child: Text(
+                      //       'Sign out',
+                      //       textAlign: TextAlign.center,
+                      //       style: GoogleFonts.rokkitt(
+                      //         fontSize: 25,
+                      //         fontWeight: FontWeight.w700,
+                      //         height: 1.1375,
+                      //         color: Color(0xffffffff),
+                      //       ),
+                      //     ),
+                      //
+                      //     style: ElevatedButton.styleFrom(
+                      //
+                      //       shape: RoundedRectangleBorder(
+                      //         borderRadius: BorderRadius.circular(20), // Adjust border radius as per your need
+                      //       ),
+                      //       primary: Color(0xfc161853), // Set the background color of the button
+                      //     ),
+                      //     onPressed: () {
+                      //       FirebaseAuth.instance.signOut();
+                      //     },
+                      //   ),
+                      // ),
 
                     ],
                   ),
@@ -376,36 +570,3 @@ class _Profile_State extends State<Profile_> {
     );
   }
 }
-
-//final String name = userData['name']?.toString() ?? '';
-//final String email = userData['email']?.toString() ?? '';
-//       return Scaffold(
-//         appBar: AppBar(
-//           title: Text('Profile'),
-//         ),
-//         body: Center(
-//           child: Column(
-//             mainAxisAlignment: MainAxisAlignment.center,
-//             children: [
-//               // CircleAvatar(
-//               //   radius: 50,
-//               //   backgroundImage: NetworkImage(userData['avatarUrl']),
-//               // ),
-//               SizedBox(height: 16),
-//               Text(
-//                 userData['name'],
-//                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-//               ),
-//               SizedBox(height: 8),
-//               Text(
-//                 userData['email'],
-//                 style: TextStyle(fontSize: 16),
-//               ),
-//             ],
-//           ),
-//         ),
-//       );
-//     },
-//     );
-//   }
-// }

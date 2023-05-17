@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:safe_driving101/read%20data/Guides/Guide1/manual_trans.dart';
 import 'package:safe_driving101/read%20data/Guides/Guide1/transmissions.dart';
 
 class Padels extends StatelessWidget {
@@ -76,32 +77,39 @@ class Padels extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      width: 130,
-                      height: 90,
                       margin: EdgeInsets.symmetric(vertical: 60),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.grey[100],
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color(0x3f000000),
-                            offset: Offset(1, 3),
-                            blurRadius: 2,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Transmissions()),);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          // padding: EdgeInsets.symmetric(vertical: 60),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
                           ),
-                        ],
-                      ),
-                      child: Text(
-                        'Automatic transmission',
-                        style: GoogleFonts.rokkitt(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          height: 1.35,
-                          color: Colors.black, // Changing the text color to white for better visibility
+                          primary: Colors.grey[100],
+                          onPrimary: Colors.black,
+                          elevation: 3,
                         ),
-                        textAlign: TextAlign.center, // Centering the text within the container
+                        child: Container(
+                          width: 100,
+                          height: 90,
+                          alignment: Alignment.center,
+                          child: Text(
+                            'Automatic transmission',
+                            style: GoogleFonts.rokkitt(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              height: 1.35,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
                       ),
                     ),
+
 
                     SizedBox(width: 20,),
                     Text(
@@ -127,30 +135,36 @@ class Padels extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      width: 130,
-                      height: 90,
                       margin: EdgeInsets.symmetric(vertical: 60),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.grey[100],
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color(0x3f000000),
-                            offset: Offset(1, 3),
-                            blurRadius: 2,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => ManualTrans()),);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          // padding: EdgeInsets.symmetric(vertical: 60),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
                           ),
-                        ],
-                      ),
-                      child: Text(
-                        'Manual transmission',
-                        style: GoogleFonts.rokkitt(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          height: 1.35,
-                          color: Colors.black, // Changing the text color to white for better visibility
+                          primary: Colors.grey[100],
+                          onPrimary: Colors.black,
+                          elevation: 3,
                         ),
-                        textAlign: TextAlign.center, // Centering the text within the container
+                        child: Container(
+                          width: 100,
+                          height: 90,
+                          alignment: Alignment.center,
+                          child: Text(
+                            'Manual transmission',
+                            style: GoogleFonts.rokkitt(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              height: 1.35,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
                       ),
                     ),
 
@@ -169,38 +183,6 @@ class Padels extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 20,),
-              Center(
-                child: Container(
-                  width: 320,
-                  height: 50,
-                  child: ElevatedButton(
-                    child: Text(
-                      'Next',
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.rokkitt(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w700,
-                        height: 1.1375,
-                        color: Color(0xffffffff),
-                      ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                            20), // Adjust border radius as per your need
-                      ),
-                      primary:
-                      Color(0xfc161853), // Set the background color of the button
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Transmissions()),);
-                    },
-                  ),
-                ),
-              ),
               SizedBox(
                 height: 30,
               ),

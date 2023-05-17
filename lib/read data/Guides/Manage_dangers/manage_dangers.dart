@@ -55,9 +55,9 @@ class _ManageState extends State<Manage> {
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 23),
           width: double.infinity,
-          height: 900,
+
           child: Column(
-            //mainAxisAlignment: MainAxisAlignment.center,
+
             children: [
               SizedBox(height: 30,),
               Text(
@@ -87,14 +87,14 @@ class _ManageState extends State<Manage> {
                       },
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
-                        primary: Color(0xfcc4eaf6),
+                        primary: Colors.grey[100],
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(26),
                         ),
                       ),
                       child:
                       Container(
-                        // choosingacarnuB (1:76)
+                        padding: EdgeInsets.symmetric(horizontal: 80),
                         margin: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                         child: Text(
                           'ABS',
@@ -118,14 +118,14 @@ class _ManageState extends State<Manage> {
                       },
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
-                        primary: Color(0xfcc4eaf6),
+                        primary: Colors.grey[100],
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(26),
                         ),
                       ),
                       child:
                       Container(
-                        // choosingacarnuB (1:76)
+
                         margin: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                         child: Text(
                           'Vehicle Loss of Control',
@@ -149,14 +149,14 @@ class _ManageState extends State<Manage> {
                       },
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
-                        primary: Color(0xfcc4eaf6),
+                        primary: Colors.grey[100],
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(26),
                         ),
                       ),
                       child:
                       Container(
-                        // choosingacarnuB (1:76)
+                        padding: EdgeInsets.symmetric(horizontal: 12),
                         margin: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                         child: Text(
                           'Mechanical Failures',
@@ -179,15 +179,15 @@ class _ManageState extends State<Manage> {
                             MaterialPageRoute(builder: (context) => Driving()));
                       },
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
-                        primary: Color(0xfcc4eaf6),
+                        padding: EdgeInsets.symmetric(horizontal: 20,vertical: 7),
+                        primary: Colors.grey[100],
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(26),
                         ),
                       ),
                       child:
                       Container(
-                        // choosingacarnuB (1:76)
+                        padding: EdgeInsets.symmetric(horizontal: 11),
                         margin: EdgeInsets.symmetric(horizontal: 3,vertical: 20),
                         child: Text(
                           'Driving in Different Conditions',
@@ -209,15 +209,15 @@ class _ManageState extends State<Manage> {
                             MaterialPageRoute(builder: (context) => emergencyEquipment()));
                       },
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
-                        primary: Color(0xfcc4eaf6),
+                        padding: EdgeInsets.symmetric(horizontal: 20,vertical: 7),
+                        primary: Colors.grey[100],
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(26),
                         ),
                       ),
                       child:
                       Container(
-                        // choosingacarnuB (1:76)
+                        padding: EdgeInsets.symmetric(horizontal: 12),
                         margin: EdgeInsets.symmetric(horizontal: 3,vertical: 20),
                         child: Text(
                           'Use of Emergency Equipment',
@@ -241,14 +241,14 @@ class _ManageState extends State<Manage> {
                       },
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
-                        primary: Color(0xfcc4eaf6),
+                        primary: Colors.grey[100],
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(26),
                         ),
                       ),
                       child:
                       Container(
-                        // choosingacarnuB (1:76)
+                        padding: EdgeInsets.symmetric(horizontal: 12),
                         margin: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                         child: Text(
                           'Animal Transgenes',

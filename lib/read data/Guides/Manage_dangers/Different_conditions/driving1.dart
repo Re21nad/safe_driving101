@@ -89,6 +89,16 @@ class Driving1 extends StatelessWidget {
                   color: Color(0xff000000),
                 ),
               ),
+              SizedBox(height: 20,),
+              Center(
+                child: Image.asset(
+                  'images/night.png',
+                  width: 300,
+                  height: 250,
+                  fit: BoxFit.cover,
+                  // alignment: Alignment.center,
+                ),
+              ),
 
             ],
           ),

@@ -98,6 +98,15 @@ flutter:
      - images/automatic.jpg
      - images/private license.png
      - images/taxis.jpg
+     - images/office-building.png
+     - images/gender (1).png
+     - images/level.png
+     - images/language.png
+     - images/traffic.png
+     - images/sun.png
+     - images/rain.png
+     - images/night.png
+     - images/manual_tran.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
