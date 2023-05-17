@@ -266,18 +266,14 @@ class _signUpState extends State<signUp> {
                       decoration: InputDecoration(
                         labelText: 'Name',
 
-                        //labelStyle: TextStyle(color: Color(0xfcec255a)),
-                        //hintStyle: TextStyle(color: Colors.grey),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Color(0xff1d1a20)),
                           borderRadius: BorderRadius.circular(10),
-                          //color: Color(0xffffffff),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Color(0xfcec255a)),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        //hintText: 'E-mail',
                         fillColor: Color(0xffffffff),
                         filled: true,
                       ),

@@ -10,8 +10,11 @@ class EditProfilePage extends StatefulWidget {
 }
 
 class _EditProfilePageState extends State<EditProfilePage> {
+  final CollectionReference usersCollection =
+  FirebaseFirestore.instance.collection('Users');
   final users = FirebaseAuth.instance.currentUser!;
 
+  DateTime date = DateTime.now();
   final _nameController = TextEditingController(text: '');
   final _nickNameController = TextEditingController(text: '');
   final _emailController = TextEditingController(text: '');
@@ -30,53 +33,50 @@ class _EditProfilePageState extends State<EditProfilePage> {
     super.dispose();
   }
 
-  Future<void>updateUserData(String name, String nickName, String email,
-      String birthDate, String gender, String city) async {
-    CollectionReference userRef = FirebaseFirestore.instance.collection("Users");
+  Future<void> updateProfile({
+    required String name,
+    required String nickname,
+    required String email,
+    required String birthDate,
+    required String gender,
+    required String city,
+  }) async {
+    try {
+      final User? user = FirebaseAuth.instance.currentUser;
+      final String? userEmail = user?.email;
 
-    await userRef.doc(users.uid.toString()).set({
-      "name": name,
-      "nick name": nickName,
-      "email": email,
-      "birth date": birthDate,
-      "gender": gender,
-      "city": city
-    })
-        .then((value) => print("User data updated"))
-        .catchError((error) => print("Failed to update user data: $error"));
+      if (userEmail != null) {
+        // Query the Firestore collection to find the document with matching email
+        final QuerySnapshot snapshot = await usersCollection
+            .where('email', isEqualTo: userEmail)
+            .limit(1)
+            .get();
+
+        if (snapshot.size == 1) {
+          final DocumentSnapshot document = snapshot.docs.first;
+
+          // Update the profile fields in the document
+          await document.reference.update({
+            'name': name,
+            'nick name': nickname,
+            'email': email,
+            'birth date': birthDate,
+            'gender': gender,
+            'city': city,
+          });
+
+          print('Profile updated successfully');
+        } else {
+          print('User document not found');
+        }
+      } else {
+        print('User email is null');
+      }
+    } catch (e) {
+      print('Error updating profile: $e');
+    }
   }
 
-  // Future<void> updateUserData(String name, String nickName, String email, String birthDate, String gender, String city) async {
-  //   try {
-  //     final userRef = FirebaseFirestore.instance.collection("Users");
-  //     final userDoc = userRef.doc(users.uid!);
-  //     final userDocSnapshot = await userDoc.get();
-  //
-  //     if (!userDocSnapshot.exists) {
-  //       // Document does not exist
-  //       print("Error: Document does not exist");
-  //       return;
-  //     }
-  //
-  //     final dataToUpdate = {
-  //       "name": name,
-  //       "nick name": nickName,
-  //       "email": email,
-  //       "birth date": birthDate,
-  //       "gender": gender,
-  //       "city": city
-  //     };
-  //
-  //     // Only update fields that are not null
-  //     dataToUpdate.removeWhere((key, value) => value == null);
-  //
-  //     await userDoc.set(dataToUpdate);
-  //
-  //     print("User data updated successfully");
-  //   } catch (e) {
-  //     print("Error updating user data: $e");
-  //   }
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -132,19 +132,28 @@ class _EditProfilePageState extends State<EditProfilePage> {
                 _cityController.text = document['city'];
 
                 return Container(
+                  margin: EdgeInsets.symmetric(horizontal: 25),
+                  width: double.infinity,
                   child: Column(
                     children: [
                       SizedBox(
                         height: 30,
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 30, right: 30),
+
                         height: 50,
-                        width: double.infinity,
                         child: TextField(
-                          //controller: _nameController,
                           controller: _nameController,
+                          style: GoogleFonts.rokkitt(
+                            //Color(0xffc2c5bc),
+                            textStyle: TextStyle(
+                              fontSize: 17.0, // Set font size
+                            ),
+                          ),
+                          keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
+                            labelText: 'Name',
+
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Color(0xff1d1a20)),
                               borderRadius: BorderRadius.circular(10),
@@ -153,29 +162,30 @@ class _EditProfilePageState extends State<EditProfilePage> {
                               borderSide: BorderSide(color: Color(0xfcec255a)),
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            labelText: 'Name',
-                            labelStyle: TextStyle(
-                              color: Colors.black,
-                            ),
                             fillColor: Color(0xffffffff),
                             filled: true,
                           ),
-                          //  onChanged: print(_nameController.text);
                         ),
                       ), // Name Field
-
-
 
                       SizedBox(
                         height: 20,
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 30, right: 30),
+
                         height: 50,
-                        width: double.infinity,
                         child: TextField(
                           controller: _nickNameController,
+                          style: GoogleFonts.rokkitt(
+                            //Color(0xffc2c5bc),
+                            textStyle: TextStyle(
+                              fontSize: 17.0, // Set font size
+                            ),
+                          ),
+                          keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
+                            labelText: 'Nick Name',
+
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Color(0xff1d1a20)),
                               borderRadius: BorderRadius.circular(10),
@@ -184,15 +194,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
                               borderSide: BorderSide(color: Color(0xfcec255a)),
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            //hintText: 'Name',
-                            labelText: 'Nick Name',
-                            labelStyle: TextStyle(
-                              color: Colors.black,
-                            ),
                             fillColor: Color(0xffffffff),
                             filled: true,
                           ),
-
                         ),
                       ), // Nick Name Field
 
@@ -200,13 +204,22 @@ class _EditProfilePageState extends State<EditProfilePage> {
                       SizedBox(
                         height: 20,
                       ),
+
                       Container(
-                        margin: EdgeInsets.only(left: 30, right: 30),
+
                         height: 50,
-                        width: double.infinity,
                         child: TextField(
                           controller: _emailController,
+                          style: GoogleFonts.rokkitt(
+
+                            textStyle: TextStyle(
+                              fontSize: 17.0, // Set font size
+                            ),
+                          ),
+                          keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
+                            labelText: 'Email',
+
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Color(0xff1d1a20)),
                               borderRadius: BorderRadius.circular(10),
@@ -214,11 +227,6 @@ class _EditProfilePageState extends State<EditProfilePage> {
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(color: Color(0xfcec255a)),
                               borderRadius: BorderRadius.circular(10),
-                            ),
-                            //hintText: 'Name',
-                            labelText: 'Email',
-                            labelStyle: TextStyle(
-                              color: Colors.black,
                             ),
                             fillColor: Color(0xffffffff),
                             filled: true,
@@ -231,38 +239,73 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         height: 20,
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 30, right: 30),
-                        child: Row(children: [
-                          Container(
-                            width: 154,
-                            height: 50,
-                            child: TextField(
-                              controller: _birthDateController,
-                              decoration: InputDecoration(
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xff1d1a20)),
-                                  borderRadius: BorderRadius.circular(10),
+                        // margin: EdgeInsets.only(left: 30, right: 30),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+
+                              Container(
+                                width: 154,
+                                height: 50,
+                                child: TextField(
+                                  controller: _birthDateController,
+                                  style: GoogleFonts.rokkitt(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                    height: 1.1375,
+                                    color: Colors.black,
+                                  ),
+                                  decoration: InputDecoration(
+                                      labelText: 'Birth Date',
+                                    enabledBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(color: Color(0xff1d1a20)),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    focusedBorder: OutlineInputBorder(
+                                      borderSide: BorderSide(color: Color(0xfcec255a)),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+
+                                    fillColor: Color(0xffffffff),
+                                    filled: true,
+                                    suffixIcon: SizedBox(
+                                      width: 5,
+                                      height: 5,
+                                      child: GestureDetector(
+                                        onTap: () async {
+                                          final selectedDate = await showDatePicker(
+                                            context: context,
+                                            initialDate: DateTime.now(),
+                                            firstDate: DateTime(1900),
+                                            lastDate: DateTime(2100),
+                                          );
+                                          if (selectedDate != null) {
+                                            setState(() {
+                                              date = selectedDate;
+                                            });
+                                            final formattedDate =
+                                                '${date.day}/${date.month}/${date.year}';
+                                            _birthDateController.text = formattedDate;
+                                          }
+                                        },
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(right: 8),
+                                          child: Image.asset(
+                                            'images/datetoday.png',
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
                                 ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Color(0xfcec255a)),
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                //hintText: 'Name',
-                                labelText: 'Birth Date',
-                                labelStyle: TextStyle(
-                                  color: Colors.black,
-                                ),
-                                fillColor: Color(0xffffffff),
-                                filled: true,
                               ),
-                            ), // Birth Date Feild
-                          ),
-                          SizedBox(
+
+                              SizedBox(
                             width: 23,
                           ),
                           Container(
                             //margin: EdgeInsets.only(left: 23),
-                            width: 154,
+                            width: 159,
                             height: 50,
 
                             child: TextField(
@@ -295,10 +338,10 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         height: 20,
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 30, right: 30),
-                        child: Row(children: [
+                        // margin: EdgeInsets.only(left: 30, right: 30),
+                        child: Row(mainAxisAlignment:MainAxisAlignment.center,children: [
                           Container(
-                            width: 154,
+                            width: 159,
                             height: 50,
                             child: TextField(
                               controller: _cityController,
@@ -327,7 +370,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                           ),
                           Container(
                             //margin: EdgeInsets.only(left: 23),
-                            width: 154,
+                            width: 159,
                             height: 50,
 
                             child: TextFormField(
@@ -359,10 +402,11 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         height: 20,
                       ),
                       Container(
-                        margin: EdgeInsets.only(left: 30, right: 30),
-                        child: Row(children: [
+                        // margin: EdgeInsets.only(left: 30, right: 30),
+                        child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
                           Container(
-                            width: 154,
+                            width: 159,
                             height: 50,
                             child: TextFormField(
                               initialValue: '30 Hours',
@@ -375,7 +419,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                                   borderSide: BorderSide(color: Color(0xfcec255a)),
                                   borderRadius: BorderRadius.circular(10),
                                 ),
-                                //hintText: 'Name',
+
                                 labelText: 'Goal Hours',
                                 labelStyle: TextStyle(
                                   color: Colors.black,
@@ -390,7 +434,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                           ),
                           Container(
                             //margin: EdgeInsets.only(left: 23),
-                            width: 154,
+                            width: 159,
                             height: 50,
 
                             child: TextFormField(
@@ -420,7 +464,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
 
                       SizedBox(height: 35,),
                       Container(
-                        margin: EdgeInsets.only(left: 35,right: 35),
+                        // margin: EdgeInsets.only(left: 35,right: 35),
                         width: double.infinity,
                         height: 48,
                         child: ElevatedButton(
@@ -443,34 +487,47 @@ class _EditProfilePageState extends State<EditProfilePage> {
                             ),
                             primary: Color(0xfc161853), // Set the background color of the button
                           ),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => Profile_()),
-                            );
+                          onPressed: () async {
+                            try {
+                              await updateProfile(
+                                name: _nameController.text,
+                                nickname: _nickNameController.text,
+                                email: _emailController.text,
+                                birthDate: _birthDateController.text,
+                                gender: _genderController.text,
+                                city: _cityController.text,
+                              );
+
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Profile updated successfully!'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () => Navigator.of(context).pop(),
+                                      child: Text('OK'),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            } catch (e) {
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: Text('Error updating profile'),
+                                  content: Text('An error occurred while updating the profile: $e'),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () => Navigator.of(context).pop(),
+                                      child: Text('OK'),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            }
                           },
                         ),
                       ), // Confirm Feild
-
-                      ElevatedButton(
-                        onPressed: () async {
-                          try {
-                            updateUserData(_nameController.text, _nickNameController.text,
-                                _emailController.text, _birthDateController.text,
-                                _genderController.text, _cityController.text);
-
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(content: Text('Profile updated successfully!')),
-                            );
-                          } catch (e) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(content: Text('Error updating profile: $e')),
-                            );
-                          }
-                        },
-                        child: Text('Save'),
-                      ),
-
 
                     ],
                   ),
