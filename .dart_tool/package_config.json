@@ -8,6 +8,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "animations",
+      "rootUri": "file:///C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/animations-2.0.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "async",
       "rootUri": "file:///C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.10.0",
       "packageUri": "lib/",
@@ -64,6 +70,12 @@
     {
       "name": "cupertino_icons",
       "rootUri": "file:///C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "day_night_switcher",
+      "rootUri": "file:///C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/day_night_switcher-0.2.0+1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -198,6 +210,12 @@
       "rootUri": "file:///C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/liquid_swipe-3.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "loading_animation_widget",
+      "rootUri": "file:///C:/Users/asus/AppData/Local/Pub/Cache/hosted/pub.dev/loading_animation_widget-1.2.0+4",
+      "packageUri": "lib/",
+      "languageVersion": "2.16"
     },
     {
       "name": "matcher",
@@ -374,7 +392,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-05-17T12:44:26.811997Z",
+  "generated": "2023-05-19T15:46:08.470309Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }

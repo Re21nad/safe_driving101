@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:safe_driving101/read%20data/Guides/Manage_dangers/abs.dart';
@@ -82,8 +83,24 @@ class _ManageState extends State<Manage> {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => ABS()));
+                        // Navigator.push(context,
+                        //     MaterialPageRoute(builder: (context) => ABS()));
+                        Navigator.of(context).push(
+                          PageRouteBuilder(
+                            pageBuilder: (context, animation, secondaryAnimation) {
+                              return ABS();
+                            },
+                            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                              // Use SharedAxisTransition for the transition animation
+                              return SharedAxisTransition(
+                                animation: animation,
+                                transitionType: SharedAxisTransitionType.horizontal, // Choose the desired transition type
+                                secondaryAnimation: secondaryAnimation,
+                                child: child,
+                              );
+                            },
+                          ),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
@@ -113,8 +130,24 @@ class _ManageState extends State<Manage> {
 
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Control()));
+                        // Navigator.push(context,
+                        //     MaterialPageRoute(builder: (context) => Control()));
+                        Navigator.of(context).push(
+                          PageRouteBuilder(
+                            pageBuilder: (context, animation, secondaryAnimation) {
+                              return Control();
+                            },
+                            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                              // Use SharedAxisTransition for the transition animation
+                              return SharedAxisTransition(
+                                animation: animation,
+                                transitionType: SharedAxisTransitionType.horizontal, // Choose the desired transition type
+                                secondaryAnimation: secondaryAnimation,
+                                child: child,
+                              );
+                            },
+                          ),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
@@ -144,8 +177,24 @@ class _ManageState extends State<Manage> {
 
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => mechanicalFailure()));
+                        // Navigator.push(context,
+                        //     MaterialPageRoute(builder: (context) => mechanicalFailure()));
+                        Navigator.of(context).push(
+                          PageRouteBuilder(
+                            pageBuilder: (context, animation, secondaryAnimation) {
+                              return mechanicalFailure();
+                            },
+                            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                              // Use SharedAxisTransition for the transition animation
+                              return SharedAxisTransition(
+                                animation: animation,
+                                transitionType: SharedAxisTransitionType.horizontal, // Choose the desired transition type
+                                secondaryAnimation: secondaryAnimation,
+                                child: child,
+                              );
+                            },
+                          ),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
@@ -175,8 +224,24 @@ class _ManageState extends State<Manage> {
 
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Driving()));
+                        // Navigator.push(context,
+                        //     MaterialPageRoute(builder: (context) => Driving()));
+                        Navigator.of(context).push(
+                          PageRouteBuilder(
+                            pageBuilder: (context, animation, secondaryAnimation) {
+                              return Driving();
+                            },
+                            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                              // Use SharedAxisTransition for the transition animation
+                              return SharedAxisTransition(
+                                animation: animation,
+                                transitionType: SharedAxisTransitionType.horizontal, // Choose the desired transition type
+                                secondaryAnimation: secondaryAnimation,
+                                child: child,
+                              );
+                            },
+                          ),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 20,vertical: 7),
@@ -205,8 +270,24 @@ class _ManageState extends State<Manage> {
                     SizedBox(height: 20,),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => emergencyEquipment()));
+                        // Navigator.push(context,
+                        //     MaterialPageRoute(builder: (context) => emergencyEquipment()));
+                        Navigator.of(context).push(
+                          PageRouteBuilder(
+                            pageBuilder: (context, animation, secondaryAnimation) {
+                              return emergencyEquipment();
+                            },
+                            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                              // Use SharedAxisTransition for the transition animation
+                              return SharedAxisTransition(
+                                animation: animation,
+                                transitionType: SharedAxisTransitionType.horizontal, // Choose the desired transition type
+                                secondaryAnimation: secondaryAnimation,
+                                child: child,
+                              );
+                            },
+                          ),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 20,vertical: 7),
@@ -236,8 +317,24 @@ class _ManageState extends State<Manage> {
 
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Animal()));
+                        // Navigator.push(context,
+                        //     MaterialPageRoute(builder: (context) => Animal()));
+                        Navigator.of(context).push(
+                          PageRouteBuilder(
+                            pageBuilder: (context, animation, secondaryAnimation) {
+                              return Animal();
+                            },
+                            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                              // Use SharedAxisTransition for the transition animation
+                              return SharedAxisTransition(
+                                animation: animation,
+                                transitionType: SharedAxisTransitionType.horizontal, // Choose the desired transition type
+                                secondaryAnimation: secondaryAnimation,
+                                child: child,
+                              );
+                            },
+                          ),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),

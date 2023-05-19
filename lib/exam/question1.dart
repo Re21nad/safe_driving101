@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'dart:ui';
@@ -780,9 +781,25 @@ class _testQuestionsState1 extends State<testQuestions1> {
                         TextButton(
                           child: Text('Skip'),
                           onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => Result1()),
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(builder: (context) => Result1()),
+                            // );
+                            Navigator.of(context).push(
+                              PageRouteBuilder(
+                                pageBuilder: (context, animation, secondaryAnimation) {
+                                  return Result1();
+                                },
+                                transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                  // Use SharedAxisTransition for the transition animation
+                                  return SharedAxisTransition(
+                                    animation: animation,
+                                    transitionType: SharedAxisTransitionType.horizontal, // Choose the desired transition type
+                                    secondaryAnimation: secondaryAnimation,
+                                    child: child,
+                                  );
+                                },
+                              ),
                             );
                           },
                         ),

@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:safe_driving101/read%20data/Guides/Choose_car/automatic.dart';
@@ -123,8 +124,24 @@ class _ChooseCarState extends State<ChooseCar> {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Automatic()));
+                      // Navigator.push(context,
+                      //     MaterialPageRoute(builder: (context) => Automatic()));
+                      Navigator.of(context).push(
+                        PageRouteBuilder(
+                          pageBuilder: (context, animation, secondaryAnimation) {
+                            return Automatic();
+                          },
+                          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                            // Use SharedAxisTransition for the transition animation
+                            return SharedAxisTransition(
+                              animation: animation,
+                              transitionType: SharedAxisTransitionType.horizontal, // Choose the desired transition type
+                              secondaryAnimation: secondaryAnimation,
+                              child: child,
+                            );
+                          },
+                        ),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       //padding: EdgeInsets.fromLTRB(10, 8, 10, 0),
@@ -152,8 +169,24 @@ class _ChooseCarState extends State<ChooseCar> {
                   SizedBox(width: 20,),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Manual()));
+                      // Navigator.push(context,
+                      //     MaterialPageRoute(builder: (context) => Manual()));
+                      Navigator.of(context).push(
+                        PageRouteBuilder(
+                          pageBuilder: (context, animation, secondaryAnimation) {
+                            return Manual();
+                          },
+                          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                            // Use SharedAxisTransition for the transition animation
+                            return SharedAxisTransition(
+                              animation: animation,
+                              transitionType: SharedAxisTransitionType.horizontal, // Choose the desired transition type
+                              secondaryAnimation: secondaryAnimation,
+                              child: child,
+                            );
+                          },
+                        ),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       //padding: EdgeInsets.fromLTRB(10, 8, 10, 0),

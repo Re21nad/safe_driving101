@@ -49,35 +49,6 @@ class _GuidesState extends State<Guides> {
             children: [
               SizedBox(height: 60,),
 
-              // Container(
-              //   // margin: EdgeInsets.only(top: 50),
-              //   width: double.infinity,
-              //   height: 50,
-              //
-              //   child: TextField(
-              //     style: GoogleFonts.rokkitt(
-              //       //Color(0xffc2c5bc),
-              //       textStyle: TextStyle(
-              //         fontSize: 15.0,
-              //         color: Colors.grey[900],
-              //       ),
-              //     ),
-              //     decoration: InputDecoration(
-              //       filled: true,
-              //       fillColor: Color(0x3fdadada),
-              //       border: OutlineInputBorder(
-              //         borderRadius: BorderRadius.circular(100),
-              //         borderSide: BorderSide.none,
-              //       ),
-              //       hintText: "eg: Traffic infraction",
-              //       prefixIcon: Icon(Icons.search),
-              //       prefixIconColor: Colors.grey,
-              //
-              //     ),
-              //   ),
-              // ),
-              // SizedBox(height: 30,),
-
               Container(
                 // autogroupyxn5XgR (BEu2v5TDdPUCapmWXeyXN5)
                 // margin: EdgeInsets.fromLTRB(25, 30, 20, 20),
@@ -90,16 +61,27 @@ class _GuidesState extends State<Guides> {
                       SizedBox(width: 10,),
                       InkWell(
                         onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Tools1()),
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(builder: (context) => Tools1()),
+                          // );
+                          Navigator.of(context).push(
+                            PageRouteBuilder(
+                              pageBuilder: (context, animation, secondaryAnimation) {
+                                return Tools1();
+                              },
+                              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                // Use FadeTransition for the transition animation
+                                return FadeTransition(
+                                  opacity: animation,
+                                  child: child,
+                                );
+                              },
+                            ),
                           );
                         },
                         child: Container(
-                          // autogrouppgysF6d (BEu3KQ7h5sjLiRSs21PGys)
-                          // margin: EdgeInsets.fromLTRB(0, 0, 13, 0),
-                          // padding: EdgeInsets.fromLTRB(5, 23, 15, 23),
-                          // height: double.infinity,
+
                           width: 157,
                           height: 167,
                           decoration: BoxDecoration(
@@ -138,8 +120,22 @@ class _GuidesState extends State<Guides> {
 
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => ChooseCar()));
+                          // Navigator.push(context,
+                          //     MaterialPageRoute(builder: (context) => ChooseCar()));
+                          Navigator.of(context).push(
+                            PageRouteBuilder(
+                              pageBuilder: (context, animation, secondaryAnimation) {
+                                return ChooseCar();
+                              },
+                              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                // Use FadeTransition for the transition animation
+                                return FadeTransition(
+                                  opacity: animation,
+                                  child: child,
+                                );
+                              },
+                            ),
+                          );
                         },
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.fromLTRB(10, 8, 13, 0),
@@ -190,9 +186,23 @@ class _GuidesState extends State<Guides> {
                     SizedBox(width: 10,),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Driving_license()),
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(builder: (context) => Driving_license()),
+                        // );
+                        Navigator.of(context).push(
+                          PageRouteBuilder(
+                            pageBuilder: (context, animation, secondaryAnimation) {
+                              return Driving_license();
+                            },
+                            transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                              // Use FadeTransition for the transition animation
+                              return FadeTransition(
+                                opacity: animation,
+                                child: child,
+                              );
+                            },
+                          ),
                         );
                       },
                       style: ElevatedButton.styleFrom(
@@ -242,9 +252,24 @@ class _GuidesState extends State<Guides> {
                           ElevatedButton(
                             onPressed: () {
 
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => Manage()),
+                              // Navigator.push(
+                              //   context,
+                              //   MaterialPageRoute(builder: (context) => Manage()),
+                              // );
+
+                              Navigator.of(context).push(
+                                PageRouteBuilder(
+                                  pageBuilder: (context, animation, secondaryAnimation) {
+                                    return Manage();
+                                  },
+                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                    // Use FadeTransition for the transition animation
+                                    return FadeTransition(
+                                      opacity: animation,
+                                      child: child,
+                                    );
+                                  },
+                                ),
                               );
                             },
 
@@ -293,9 +318,23 @@ class _GuidesState extends State<Guides> {
 
                           InkWell(
                             onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => Traffic()),
+                              // Navigator.push(
+                              //   context,
+                              //   MaterialPageRoute(builder: (context) => Traffic()),
+                              // );
+                              Navigator.of(context).push(
+                                PageRouteBuilder(
+                                  pageBuilder: (context, animation, secondaryAnimation) {
+                                    return Traffic();
+                                  },
+                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                    // Use FadeTransition for the transition animation
+                                    return FadeTransition(
+                                      opacity: animation,
+                                      child: child,
+                                    );
+                                  },
+                                ),
                               );
                             },
                             child: Container(

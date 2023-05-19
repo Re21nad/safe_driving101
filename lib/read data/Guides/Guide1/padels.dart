@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:safe_driving101/read%20data/Guides/Guide1/manual_trans.dart';
@@ -80,9 +81,25 @@ class Padels extends StatelessWidget {
                       margin: EdgeInsets.symmetric(vertical: 60),
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Transmissions()),);
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(builder: (context) => Transmissions()),);
+                          Navigator.of(context).push(
+                            PageRouteBuilder(
+                              pageBuilder: (context, animation, secondaryAnimation) {
+                                return Transmissions();
+                              },
+                              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                // Use SharedAxisTransition for the transition animation
+                                return SharedAxisTransition(
+                                  animation: animation,
+                                  transitionType: SharedAxisTransitionType.horizontal, // Choose the desired transition type
+                                  secondaryAnimation: secondaryAnimation,
+                                  child: child,
+                                );
+                              },
+                            ),
+                          );
                         },
                         style: ElevatedButton.styleFrom(
                           // padding: EdgeInsets.symmetric(vertical: 60),
@@ -138,9 +155,25 @@ class Padels extends StatelessWidget {
                       margin: EdgeInsets.symmetric(vertical: 60),
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => ManualTrans()),);
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(builder: (context) => ManualTrans()),);
+                          Navigator.of(context).push(
+                            PageRouteBuilder(
+                              pageBuilder: (context, animation, secondaryAnimation) {
+                                return ManualTrans();
+                              },
+                              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                // Use SharedAxisTransition for the transition animation
+                                return SharedAxisTransition(
+                                  animation: animation,
+                                  transitionType: SharedAxisTransitionType.horizontal, // Choose the desired transition type
+                                  secondaryAnimation: secondaryAnimation,
+                                  child: child,
+                                );
+                              },
+                            ),
+                          );
                         },
                         style: ElevatedButton.styleFrom(
                           // padding: EdgeInsets.symmetric(vertical: 60),

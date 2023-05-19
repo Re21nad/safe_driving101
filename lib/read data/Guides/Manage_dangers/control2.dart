@@ -144,40 +144,40 @@ class _Control2State extends State<Control2> {
               ),
 
               SizedBox(height: 20,),
-              Center(
-                child: Container(
-                  width: 320,
-                  height: 50,
-                  child: ElevatedButton(
-                    child: Text(
-                      'Next',
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.rokkitt(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w700,
-                        height: 1.1375,
-                        color: Color(0xffffffff),
-                      ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                            20), // Adjust border radius as per your need
-                      ),
-                      primary:
-                      Color(0xfc161853), // Set the background color of the button
-                    ),
-                    onPressed: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => Skill()),);
-                    },
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 30,
-              ),
+              // Center(
+              //   child: Container(
+              //     width: 320,
+              //     height: 50,
+              //     child: ElevatedButton(
+              //       child: Text(
+              //         'Next',
+              //         textAlign: TextAlign.center,
+              //         style: GoogleFonts.rokkitt(
+              //           fontSize: 25,
+              //           fontWeight: FontWeight.w700,
+              //           height: 1.1375,
+              //           color: Color(0xffffffff),
+              //         ),
+              //       ),
+              //       style: ElevatedButton.styleFrom(
+              //         shape: RoundedRectangleBorder(
+              //           borderRadius: BorderRadius.circular(
+              //               20), // Adjust border radius as per your need
+              //         ),
+              //         primary:
+              //         Color(0xfc161853), // Set the background color of the button
+              //       ),
+              //       onPressed: () {
+              //         // Navigator.push(
+              //         //   context,
+              //         //   MaterialPageRoute(builder: (context) => Skill()),);
+              //       },
+              //     ),
+              //   ),
+              // ),
+              // SizedBox(
+              //   height: 30,
+              // ),
             ],
           ),
         ),

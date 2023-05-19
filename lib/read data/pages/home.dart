@@ -552,7 +552,6 @@
         ),
       );*/
 // }
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -819,11 +818,25 @@ class _HomeState extends State<Home> {
                                         case 'Choosing a car':
                                           buttonWidget = ElevatedButton(
                                             onPressed: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          ChooseCar()));
+                                              // Navigator.push(
+                                              //     context,
+                                              //     MaterialPageRoute(
+                                              //         builder: (context) =>
+                                              //             ChooseCar()));
+                                              Navigator.of(context).push(
+                                                PageRouteBuilder(
+                                                  pageBuilder: (context, animation, secondaryAnimation) {
+                                                    return ChooseCar();
+                                                  },
+                                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                                    // Use FadeTransition for the transition animation
+                                                    return FadeTransition(
+                                                      opacity: animation,
+                                                      child: child,
+                                                    );
+                                                  },
+                                                ),
+                                              );
                                             },
                                             style: ElevatedButton.styleFrom(
                                               padding: EdgeInsets.fromLTRB(
@@ -869,11 +882,25 @@ class _HomeState extends State<Home> {
                                         case 'Tools using in the car':
                                           buttonWidget = InkWell(
                                             onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        Tools1()),
+                                              // Navigator.push(
+                                              //   context,
+                                              //   MaterialPageRoute(
+                                              //       builder: (context) =>
+                                              //           Tools1()),
+                                              // );
+                                              Navigator.of(context).push(
+                                                PageRouteBuilder(
+                                                  pageBuilder: (context, animation, secondaryAnimation) {
+                                                    return Tools1();
+                                                  },
+                                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                                    // Use FadeTransition for the transition animation
+                                                    return FadeTransition(
+                                                      opacity: animation,
+                                                      child: child,
+                                                    );
+                                                  },
+                                                ),
                                               );
                                             },
                                             child: Container(
@@ -921,11 +948,25 @@ class _HomeState extends State<Home> {
                                         case 'Manage dangers':
                                           buttonWidget = ElevatedButton(
                                             onPressed: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          Manage()));
+                                              // Navigator.push(
+                                              //     context,
+                                              //     MaterialPageRoute(
+                                              //         builder: (context) =>
+                                              //             Manage()));
+                                              Navigator.of(context).push(
+                                                PageRouteBuilder(
+                                                  pageBuilder: (context, animation, secondaryAnimation) {
+                                                    return Manage();
+                                                  },
+                                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                                    // Use FadeTransition for the transition animation
+                                                    return FadeTransition(
+                                                      opacity: animation,
+                                                      child: child,
+                                                    );
+                                                  },
+                                                ),
+                                              );
                                             },
                                             style: ElevatedButton.styleFrom(
                                               padding: EdgeInsets.fromLTRB(
@@ -972,11 +1013,25 @@ class _HomeState extends State<Home> {
                                         case 'Traffic infraction ':
                                           buttonWidget = InkWell(
                                             onTap: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        Traffic()),
+                                              // Navigator.push(
+                                              //   context,
+                                              //   MaterialPageRoute(
+                                              //       builder: (context) =>
+                                              //           Traffic()),
+                                              // );
+                                              Navigator.of(context).push(
+                                                PageRouteBuilder(
+                                                  pageBuilder: (context, animation, secondaryAnimation) {
+                                                    return Traffic();
+                                                  },
+                                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                                    // Use FadeTransition for the transition animation
+                                                    return FadeTransition(
+                                                      opacity: animation,
+                                                      child: child,
+                                                    );
+                                                  },
+                                                ),
                                               );
                                             },
                                             child: Container(
@@ -1002,9 +1057,7 @@ class _HomeState extends State<Home> {
                                                     margin: EdgeInsets.symmetric(
                                                         horizontal: 15,
                                                         vertical: 15),
-                                                    // constraints: BoxConstraints(
-                                                    //   maxWidth: 143,
-                                                    // ),
+
                                                     child: Text(
                                                       searchResults[index],
                                                       style: GoogleFonts.domine(
@@ -1024,9 +1077,23 @@ class _HomeState extends State<Home> {
                                         case 'Driving license':
                                           buttonWidget = ElevatedButton(
                                             onPressed: () {
-                                              Navigator.push(
-                                                context,
-                                                MaterialPageRoute(builder: (context) => Driving_license()),
+                                              // Navigator.push(
+                                              //   context,
+                                              //   MaterialPageRoute(builder: (context) => Driving_license()),
+                                              // );
+                                              Navigator.of(context).push(
+                                                PageRouteBuilder(
+                                                  pageBuilder: (context, animation, secondaryAnimation) {
+                                                    return Driving_license();
+                                                  },
+                                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                                    // Use FadeTransition for the transition animation
+                                                    return FadeTransition(
+                                                      opacity: animation,
+                                                      child: child,
+                                                    );
+                                                  },
+                                                ),
                                               );
                                             },
                                             style: ElevatedButton.styleFrom(
@@ -1128,11 +1195,26 @@ class _HomeState extends State<Home> {
                                       case 0:
                                         buttonWidget = ElevatedButton(
                                           onPressed: () {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        ChooseCar()));
+                                            // Navigator.push(
+                                            //     context,
+                                            //     MaterialPageRoute(
+                                            //         builder: (context) =>
+                                            //             ChooseCar()));
+
+                                            Navigator.of(context).push(
+                                              PageRouteBuilder(
+                                                pageBuilder: (context, animation, secondaryAnimation) {
+                                                  return ChooseCar();
+                                                },
+                                                transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                                  // Use FadeTransition for the transition animation
+                                                  return FadeTransition(
+                                                    opacity: animation,
+                                                    child: child,
+                                                  );
+                                                },
+                                              ),
+                                            );
                                           },
                                           style: ElevatedButton.styleFrom(
                                             padding: EdgeInsets.fromLTRB(
@@ -1178,11 +1260,25 @@ class _HomeState extends State<Home> {
                                       case 1:
                                         buttonWidget = InkWell(
                                           onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      Tools1()),
+                                            // Navigator.push(
+                                            //   context,
+                                            //   MaterialPageRoute(
+                                            //       builder: (context) =>
+                                            //           Tools1()),
+                                            // );
+                                            Navigator.of(context).push(
+                                              PageRouteBuilder(
+                                                pageBuilder: (context, animation, secondaryAnimation) {
+                                                  return Tools1();
+                                                },
+                                                transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                                  // Use FadeTransition for the transition animation
+                                                  return FadeTransition(
+                                                    opacity: animation,
+                                                    child: child,
+                                                  );
+                                                },
+                                              ),
                                             );
                                           },
                                           child: Container(
@@ -1230,11 +1326,26 @@ class _HomeState extends State<Home> {
                                       case 2:
                                         buttonWidget = ElevatedButton(
                                           onPressed: () {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        Manage()));
+                                            // Navigator.push(
+                                            //     context,
+                                            //     MaterialPageRoute(
+                                            //         builder: (context) =>
+                                            //             Manage()));
+
+                                            Navigator.of(context).push(
+                                              PageRouteBuilder(
+                                                pageBuilder: (context, animation, secondaryAnimation) {
+                                                  return Manage();
+                                                },
+                                                transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                                  // Use FadeTransition for the transition animation
+                                                  return FadeTransition(
+                                                    opacity: animation,
+                                                    child: child,
+                                                  );
+                                                },
+                                              ),
+                                            );
                                           },
                                           style: ElevatedButton.styleFrom(
                                             padding: EdgeInsets.fromLTRB(
@@ -1281,11 +1392,25 @@ class _HomeState extends State<Home> {
                                       case 3:
                                         buttonWidget = InkWell(
                                           onTap: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      Traffic()),
+                                            // Navigator.push(
+                                            //   context,
+                                            //   MaterialPageRoute(
+                                            //       builder: (context) =>
+                                            //           Traffic()),
+                                            // );
+                                            Navigator.of(context).push(
+                                              PageRouteBuilder(
+                                                pageBuilder: (context, animation, secondaryAnimation) {
+                                                  return Traffic();
+                                                },
+                                                transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                                  // Use FadeTransition for the transition animation
+                                                  return FadeTransition(
+                                                    opacity: animation,
+                                                    child: child,
+                                                  );
+                                                },
+                                              ),
                                             );
                                           },
                                           child: Container(
@@ -1333,9 +1458,23 @@ class _HomeState extends State<Home> {
                                       case 4:
                                         buttonWidget = ElevatedButton(
                                           onPressed: () {
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(builder: (context) => Driving_license()),
+                                            // Navigator.push(
+                                            //   context,
+                                            //   MaterialPageRoute(builder: (context) => Driving_license()),
+                                            // );
+                                            Navigator.of(context).push(
+                                              PageRouteBuilder(
+                                                pageBuilder: (context, animation, secondaryAnimation) {
+                                                  return Driving_license();
+                                                },
+                                                transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                                  // Use FadeTransition for the transition animation
+                                                  return FadeTransition(
+                                                    opacity: animation,
+                                                    child: child,
+                                                  );
+                                                },
+                                              ),
                                             );
                                           },
                                           style: ElevatedButton.styleFrom(

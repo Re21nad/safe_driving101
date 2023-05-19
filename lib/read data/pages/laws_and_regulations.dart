@@ -70,7 +70,7 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.only(left: 33, right: 33),
+          margin: EdgeInsets.only(left: 40, right: 40),
           width: double.infinity,
           height: 1150,
           child: Column(
@@ -79,7 +79,7 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                 height: 50,
               ),
               Container(
-                margin: EdgeInsets.only(left: 5, right: 5),
+                // margin: EdgeInsets.only(left: 5, right: 5),
                 width: double.infinity,
                 height: 200,
                 //color: Colors.indigo,
@@ -128,31 +128,33 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
               SizedBox(
                 height: 35,
               ),
-              Container(
-                margin: EdgeInsets.only(left: 23),
-                width: double.infinity,
-                height: 30,
-                child: Row(
-                  children: [
-                    Container(
-                      child: Text(
-                        'Laws',
-                        style: GoogleFonts.domine(
-                          fontSize: 17,
-                          fontWeight: FontWeight.w700,
+              SingleChildScrollView(
+                child: Container(
+                  margin: EdgeInsets.only(left: 23),
+                  width: double.infinity,
+                  height: 30,
+                  child: Row(
+                    children: [
+                      Container(
+                        child: Text(
+                          'Laws',
+                          style: GoogleFonts.domine(
+                            fontSize: 17,
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
                       ),
-                    ),
-                    Container(
-                      child: Text(
-                        '   ______________________________',
-                        style: GoogleFonts.domine(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w700,
+                      Container(
+                        child: Text(
+                          '   ___________________________',
+                          style: GoogleFonts.domine(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ), // Header
 
@@ -182,10 +184,24 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                             borderRadius: BorderRadius.circular(26),
                             child: ElevatedButton(
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Law1()));
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //         builder: (context) => Law1()));
+                                Navigator.of(context).push(
+                                  PageRouteBuilder(
+                                    pageBuilder: (context, animation, secondaryAnimation) {
+                                      return Law1();
+                                    },
+                                    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                      // Use FadeTransition for the transition animation
+                                      return FadeTransition(
+                                        opacity: animation,
+                                        child: child,
+                                      );
+                                    },
+                                  ),
+                                );
                               },
                               style: ElevatedButton.styleFrom(
                                 padding: EdgeInsets.zero,
@@ -237,10 +253,24 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                             borderRadius: BorderRadius.circular(26),
                             child: ElevatedButton(
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Law2()));
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //         builder: (context) => Law2()));
+                                Navigator.of(context).push(
+                                  PageRouteBuilder(
+                                    pageBuilder: (context, animation, secondaryAnimation) {
+                                      return Law2();
+                                    },
+                                    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                      // Use FadeTransition for the transition animation
+                                      return FadeTransition(
+                                        opacity: animation,
+                                        child: child,
+                                      );
+                                    },
+                                  ),
+                                );
                               },
                               style: ElevatedButton.styleFrom(
                                 padding: EdgeInsets.zero,
@@ -292,10 +322,24 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                             borderRadius: BorderRadius.circular(26),
                             child: ElevatedButton(
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Law3()));
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //         builder: (context) => Law3()));
+                                Navigator.of(context).push(
+                                  PageRouteBuilder(
+                                    pageBuilder: (context, animation, secondaryAnimation) {
+                                      return Law3();
+                                    },
+                                    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                      // Use FadeTransition for the transition animation
+                                      return FadeTransition(
+                                        opacity: animation,
+                                        child: child,
+                                      );
+                                    },
+                                  ),
+                                );
                               },
                               style: ElevatedButton.styleFrom(
                                 padding: EdgeInsets.zero,
@@ -346,10 +390,24 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                             borderRadius: BorderRadius.circular(26),
                             child: ElevatedButton(
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Law4()));
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //         builder: (context) => Law4()));
+                                Navigator.of(context).push(
+                                  PageRouteBuilder(
+                                    pageBuilder: (context, animation, secondaryAnimation) {
+                                      return Law4();
+                                    },
+                                    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                      // Use FadeTransition for the transition animation
+                                      return FadeTransition(
+                                        opacity: animation,
+                                        child: child,
+                                      );
+                                    },
+                                  ),
+                                );
                               },
                               style: ElevatedButton.styleFrom(
                                 padding: EdgeInsets.zero,
@@ -400,10 +458,24 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                             borderRadius: BorderRadius.circular(26),
                             child: ElevatedButton(
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Law5()));
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //         builder: (context) => Law5()));
+                                Navigator.of(context).push(
+                                  PageRouteBuilder(
+                                    pageBuilder: (context, animation, secondaryAnimation) {
+                                      return Law5();
+                                    },
+                                    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                      // Use FadeTransition for the transition animation
+                                      return FadeTransition(
+                                        opacity: animation,
+                                        child: child,
+                                      );
+                                    },
+                                  ),
+                                );
                               },
                               style: ElevatedButton.styleFrom(
                                 padding: EdgeInsets.zero,
@@ -454,10 +526,24 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                             borderRadius: BorderRadius.circular(26),
                             child: ElevatedButton(
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Law6()));
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //         builder: (context) => Law6()));
+                                Navigator.of(context).push(
+                                  PageRouteBuilder(
+                                    pageBuilder: (context, animation, secondaryAnimation) {
+                                      return Law6();
+                                    },
+                                    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                      // Use FadeTransition for the transition animation
+                                      return FadeTransition(
+                                        opacity: animation,
+                                        child: child,
+                                      );
+                                    },
+                                  ),
+                                );
                               },
                               style: ElevatedButton.styleFrom(
                                 padding: EdgeInsets.zero,
@@ -508,10 +594,24 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                             borderRadius: BorderRadius.circular(26),
                             child: ElevatedButton(
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Law7()));
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //         builder: (context) => Law7()));
+                                Navigator.of(context).push(
+                                  PageRouteBuilder(
+                                    pageBuilder: (context, animation, secondaryAnimation) {
+                                      return Law7();
+                                    },
+                                    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                      // Use FadeTransition for the transition animation
+                                      return FadeTransition(
+                                        opacity: animation,
+                                        child: child,
+                                      );
+                                    },
+                                  ),
+                                );
                               },
                               style: ElevatedButton.styleFrom(
                                 padding: EdgeInsets.zero,
@@ -562,10 +662,24 @@ class _LawsAndRegulationsState extends State<LawsAndRegulations> {
                             borderRadius: BorderRadius.circular(26),
                             child: ElevatedButton(
                               onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => Law8()));
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //         builder: (context) => Law8()));
+                                Navigator.of(context).push(
+                                  PageRouteBuilder(
+                                    pageBuilder: (context, animation, secondaryAnimation) {
+                                      return Law8();
+                                    },
+                                    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                      // Use FadeTransition for the transition animation
+                                      return FadeTransition(
+                                        opacity: animation,
+                                        child: child,
+                                      );
+                                    },
+                                  ),
+                                );
                               },
                               style: ElevatedButton.styleFrom(
                                 padding: EdgeInsets.zero,

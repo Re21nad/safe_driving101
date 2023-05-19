@@ -40,6 +40,16 @@ class _SkillState extends State<Skill> {
           // Convert levels to List<String>
           List<String> userLevels = levels.cast<String>();
 
+          // showDialog(
+          //   context: context,
+          //   barrierDismissible: false,
+          //   builder: (BuildContext context) {
+          //     return AlertDialog(
+          //       title: Text('Loading user levels'),
+          //       content: CircularProgressIndicator(),
+          //     );
+          //   },
+          // );
           return userLevels;
         } else {
           print('User document not found');

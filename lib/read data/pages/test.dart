@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:google_fonts/google_fonts.dart';
@@ -125,10 +126,27 @@ class Test extends StatelessWidget {
                       primary: Color(0xfc161853), // Set the background color of the button
                     ),
                     onPressed: () {
-                      Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => testQuestions1()),
+                      // Navigator.push(
+                      //         context,
+                      //         MaterialPageRoute(builder: (context) => testQuestions1()),
+                      //       );
+
+                      Navigator.of(context).push(
+                        PageRouteBuilder(
+                          pageBuilder: (context, animation, secondaryAnimation) {
+                            return testQuestions1();
+                          },
+                          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                            // Use SharedAxisTransition for the transition animation
+                            return SharedAxisTransition(
+                              animation: animation,
+                              transitionType: SharedAxisTransitionType.horizontal, // Choose the desired transition type
+                              secondaryAnimation: secondaryAnimation,
+                              child: child,
                             );
+                          },
+                        ),
+                      );
                     },
                   ),
                 ),

@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -224,8 +225,25 @@ class _LoginScreenState extends State<LoginScreen> {
                     // The Sign in Button
                     // signupTnD (1:358)
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => ResetPass()));
+                      // Navigator.push(context,
+                      //     MaterialPageRoute(builder: (context) => ResetPass()));
+
+                      Navigator.of(context).push(
+                        PageRouteBuilder(
+                          pageBuilder: (context, animation, secondaryAnimation) {
+                            return ResetPass();
+                          },
+                          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                            // Use SharedAxisTransition for the transition animation
+                            return SharedAxisTransition(
+                              animation: animation,
+                              transitionType: SharedAxisTransitionType.horizontal, // Choose the desired transition type
+                              secondaryAnimation: secondaryAnimation,
+                              child: child,
+                            );
+                          },
+                        ),
+                      );
 
                       //Navigator.of(context).pushReplacementNamed('signUpScreen');
                     },
@@ -295,10 +313,25 @@ class _LoginScreenState extends State<LoginScreen> {
                         // The Sign in Button
                         // signupTnD (1:358)
                         onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => signUp()));
+                          // Navigator.push(context,
+                          //     MaterialPageRoute(builder: (context) => signUp()));
 
-                          //Navigator.of(context).pushReplacementNamed('signUpScreen');
+                          Navigator.of(context).push(
+                            PageRouteBuilder(
+                              pageBuilder: (context, animation, secondaryAnimation) {
+                                return signUp();
+                              },
+                              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                // Use SharedAxisTransition for the transition animation
+                                return SharedAxisTransition(
+                                  animation: animation,
+                                  transitionType: SharedAxisTransitionType.horizontal, // Choose the desired transition type
+                                  secondaryAnimation: secondaryAnimation,
+                                  child: child,
+                                );
+                              },
+                            ),
+                          );
                         },
                         style: TextButton.styleFrom(
                           padding: EdgeInsets.zero,

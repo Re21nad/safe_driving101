@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:safe_driving101/read%20data/Guides/Manage_dangers/control2.dart';
@@ -95,9 +96,25 @@ class Control extends StatelessWidget {
                       Color(0xfc161853), // Set the background color of the button
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Control2()),);
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(builder: (context) => Control2()),);
+                      Navigator.of(context).push(
+                        PageRouteBuilder(
+                          pageBuilder: (context, animation, secondaryAnimation) {
+                            return Control2();
+                          },
+                          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                            // Use SharedAxisTransition for the transition animation
+                            return SharedAxisTransition(
+                              animation: animation,
+                              transitionType: SharedAxisTransitionType.horizontal, // Choose the desired transition type
+                              secondaryAnimation: secondaryAnimation,
+                              child: child,
+                            );
+                          },
+                        ),
+                      );
                     },
                   ),
                 ),
