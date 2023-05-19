@@ -26,7 +26,7 @@ class _signUpState extends State<signUp> {
   String? valueChoice1 = 'Gender';
   List<String> listItems1 = ['Gender', 'Male', 'Female'];
   String? valueChoice2 = 'City';
-  List<String> listItems2 = ['City', 'Jeddah', 'Makkah', 'Madinah'];
+  List<String> listItems2 = ['City', 'Jeddah', 'Makkah', 'Madinah','Riyagh','Tabuk','Taif','Hail','Dahran'];
   DateTime date = DateTime.now();
   final _nameController = TextEditingController();
   final _nickNameController = TextEditingController();

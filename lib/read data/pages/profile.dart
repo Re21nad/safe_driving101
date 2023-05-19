@@ -138,58 +138,121 @@ class _Profile_State extends State<Profile_> {
                       SizedBox(
                         height: 10,
                       ),
+
                       Container(
                         width: 200,
                         height: 200,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('images/tata.png'),
-                            fit: BoxFit.fill,
+                        child: CircleAvatar(
+                          radius: 50,
+                          backgroundImage: AssetImage('images/tata.png'),
+                          backgroundColor: Colors.pink[100],
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                top: 145,
+                                left: 130,
+                                child: Container(
+                                  width: 50,
+                                  height: 50,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Color(0xfc161853),
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                top: 150,
+                                left: 136,
+                                child: Container(
+                                  width: 38,
+                                  height: 38,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                top: 152,
+                                left: 139,
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => EditProfilePage()),
+                                    );
+                                  },
+                                  child: Icon(Icons.edit, size: 30, color: Colors.black),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                        child: Stack(
-                          children: [
-                            Positioned(
-                              top: 145,
-                              left: 130,
-                              child: Container(
-                                width: 50,
-                                height: 50,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Color(0xfc161853),
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              top: 150,
-                              left: 136,
-                              child: Container(
-                                width: 38,
-                                height: 38,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              top: 152,
-                              left: 139,
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (context) => EditProfilePage()),
-                                  );
-                                },
-                                child: Icon(Icons.edit,
-                                    size: 30, color: Colors.black),
-                              )
-                            ),
-                          ],
-                        ),
                       ),
+
+
+                      // Container(
+                      //   width: 200,
+                      //   height: 200,
+                      //   child: CircleAvatar(
+                      //     radius: 50,
+                      //     backgroundImage: AssetImage('images/tata.png'),
+                      //     backgroundColor: Colors.pink[100],
+                      //   ),
+                      //   // decoration: BoxDecoration(
+                      //   //   image: DecorationImage(
+                      //   //     image: AssetImage('images/tata.png'),
+                      //   //     fit: BoxFit.fill,
+                      //   //   ),
+                      //   // ),
+                      // ),
+                      //   Container(
+                      //     width: 200,
+                      //     height: 200,
+                      //     child: Stack(
+                      //       children: [
+                      //         Positioned(
+                      //           top: -15,
+                      //           left: 130,
+                      //           child: Container(
+                      //             width: 50,
+                      //             height: 50,
+                      //             decoration: BoxDecoration(
+                      //               shape: BoxShape.circle,
+                      //               color: Color(0xfc161853),
+                      //             ),
+                      //           ),
+                      //         ),
+                      //         Positioned(
+                      //           top: 150,
+                      //           left: 136,
+                      //           child: Container(
+                      //             width: 38,
+                      //             height: 38,
+                      //             decoration: BoxDecoration(
+                      //               shape: BoxShape.circle,
+                      //               color: Colors.white,
+                      //             ),
+                      //           ),
+                      //         ),
+                      //         Positioned(
+                      //           top: 152,
+                      //           left: 139,
+                      //           child: GestureDetector(
+                      //             onTap: () {
+                      //               Navigator.push(
+                      //                 context,
+                      //                 MaterialPageRoute(builder: (context) => EditProfilePage()),
+                      //               );
+                      //             },
+                      //             child: Icon(Icons.edit,
+                      //                 size: 30, color: Colors.black),
+                      //           )
+                      //         ),
+                      //       ],
+                      //     ),
+                      //   ),
+
 
                       SizedBox(
                         height: 20,

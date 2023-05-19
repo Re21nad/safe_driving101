@@ -565,7 +565,6 @@ import 'package:safe_driving101/read%20data/Guides/Guide1/tools1.dart';
 import 'package:safe_driving101/read%20data/Guides/Manage_dangers/manage_dangers.dart';
 import 'package:safe_driving101/read%20data/Guides/Traffic_Infraction/traffic_infraction.dart';
 import 'package:safe_driving101/read%20data/pages/test.dart';
-
 import '../Guides/Choose_car/choose_car1.dart';
 
 class Lesson {
@@ -589,6 +588,7 @@ class _HomeState extends State<Home> {
   bool loggedIn = false;
   List<Lesson> recomended = [];
   List<Lesson> completed = [];
+  bool newUser = true;
 
   List<String> searchData = [
     'Choosing a car',
@@ -701,6 +701,8 @@ class _HomeState extends State<Home> {
                               SizedBox(
                                 height: 30,
                               ),
+
+
                               Container(
                                 margin: EdgeInsets.only(left: 23),
                                 width: double.infinity,
