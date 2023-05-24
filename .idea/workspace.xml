@@ -10,31 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aca00ca-39dd-40df-bc52-5e3968c15edc" name="Changes" comment="Final Code">
-      <change afterPath="$PROJECT_DIR$/lib/testing/animation.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/testing/container_transition.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/testing/dark_mode.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/testing/fade_scale_transition.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/testing/fade_through_transition.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/testing/shared_axis_transition.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/testing/dark_theme.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Authentication_Page/log-in.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Authentication_Page/log-in.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/exam/question1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/exam/question1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Choose_car/choose_car1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Choose_car/choose_car1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Guide1/padels.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Guide1/padels.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Guide1/tools1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Guide1/tools1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/control.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/control.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/control2.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/control2.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/emergency_equipment.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/emergency_equipment.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/manage_dangers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/Guides/Manage_dangers/manage_dangers.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/pages/guides.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/guides.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/read data/pages/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/home.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/pages/laws_and_regulations.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/laws_and_regulations.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/pages/profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/profile.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/pages/test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/pages/test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/read data/skill.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/read data/skill.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
@@ -95,7 +76,7 @@
       <recent name="C:\Users\asus\src\safe_driving101\lib\read data" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.dark_mode.dart">
+  <component name="RunManager" selected="Flutter.main.dart">
     <configuration name="animation.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/testing/animation.dart" />
       <method v="2" />
@@ -104,8 +85,8 @@
       <option name="filePath" value="$PROJECT_DIR$/lib/testing/dark_mode.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="guides1.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/read data/pages/guides1.dart" />
+    <configuration name="dark_theme.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/testing/dark_theme.dart" />
       <method v="2" />
     </configuration>
     <configuration name="login_test.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
@@ -122,11 +103,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Flutter.dark_theme.dart" />
         <item itemvalue="Flutter.dark_mode.dart" />
         <item itemvalue="Flutter.animation.dart" />
         <item itemvalue="Flutter.reset_password_test.dart" />
         <item itemvalue="Flutter.login_test.dart" />
-        <item itemvalue="Flutter.guides1.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -405,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684478709283</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Final Code">
+      <created>1684511201610</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1684511201610</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

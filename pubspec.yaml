@@ -38,6 +38,7 @@ dependencies:
   animations: ^2.0.7
   loading_animation_widget: ^1.2.0+4
   day_night_switcher: ^0.2.0+1
+  thememode_selector: ^0.1.0-dev.2
 
 
 dev_dependencies:

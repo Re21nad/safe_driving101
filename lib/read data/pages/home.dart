@@ -574,6 +574,14 @@ class Lesson {
   });
 }
 
+class Lesson1 {
+  final String lessons;
+
+  const Lesson1({
+    required this.lessons,
+  });
+}
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -587,6 +595,8 @@ class _HomeState extends State<Home> {
   bool loggedIn = false;
   List<Lesson> recomended = [];
   List<Lesson> completed = [];
+  // List<Lesson1> recomended = [];
+  // List<Lesson1> completed = [];
   bool newUser = true;
 
   List<String> searchData = [
@@ -610,12 +620,12 @@ class _HomeState extends State<Home> {
       }
     });
   }
+
   @override
   void initState() {
     super.initState();
     search('');
   }
-
 
   void signOut() {
     setState(() {
@@ -648,13 +658,59 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+
     for (int i = 0; i < 5; i++) {
-      if (results[i] == 'Expert') {
-        completed.add(Lesson(lessonID: i));
-      } else {
+        if (results[i] == 'Expert') {
+         completed.add(Lesson(lessonID: i));
+       } else {
         recomended.add(Lesson(lessonID: i));
       }
-    }
+      }
+
+
+    // for (int i = 0; i < 5; i++) {
+    //   if (results[i] == 'Expert') {
+    //     switch(i){
+    //       case 0:
+    //         completed.add(Lesson1(lessons:"Choosing a car"));
+    //         break;
+    //       case 1:
+    //         completed.add(Lesson1(lessons:"Tools using in the car"));
+    //         break;
+    //       case 2:
+    //         completed.add(Lesson1(lessons:"Manage dangers"));
+    //         break;
+    //       case 3:
+    //         completed.add(Lesson1(lessons:"Traffic infraction "));
+    //         break;
+    //       case 4:
+    //         completed.add(Lesson1(lessons:"Driving license"));
+    //         break;
+    //
+    //     }
+    //     // completed.add(Lesson(lessonID: i));
+    //   } else {
+    //     switch(i){
+    //       case 0:
+    //         recomended.add(Lesson1(lessons:"Choosing a car"));
+    //         break;
+    //       case 1:
+    //         recomended.add(Lesson1(lessons:"Tools using in the car"));
+    //         break;
+    //       case 2:
+    //         recomended.add(Lesson1(lessons:"Manage dangers"));
+    //         break;
+    //       case 3:
+    //         recomended.add(Lesson1(lessons:"Traffic infraction "));
+    //         break;
+    //       case 4:
+    //         recomended.add(Lesson1(lessons:"Driving license"));
+    //         break;
+    //
+    //     }
+    //     // recomended.add(Lesson(lessonID: i));
+    //   }
+    // }
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xfcffffff),
@@ -672,7 +728,6 @@ class _HomeState extends State<Home> {
             color: Color(0xff000000),
           ),
         ),
-
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -701,7 +756,6 @@ class _HomeState extends State<Home> {
                                 height: 30,
                               ),
 
-
                               Container(
                                 margin: EdgeInsets.only(left: 23),
                                 width: double.infinity,
@@ -726,9 +780,7 @@ class _HomeState extends State<Home> {
                                       fontSize: 20,
                                       color: Color(0xFFEC255A),
                                     ),
-                                  )
-
-                                  ),
+                                  )),
                               Container(
                                 margin: EdgeInsets.only(left: 23),
                                 width: double.infinity,
@@ -806,7 +858,6 @@ class _HomeState extends State<Home> {
                               SingleChildScrollView(
                                 child: Container(
                                   height: 140,
-
                                   child: ListView.separated(
                                     scrollDirection: Axis.horizontal,
                                     itemCount: recomended.length,
@@ -814,332 +865,383 @@ class _HomeState extends State<Home> {
                                         SizedBox(width: 15),
                                     itemBuilder: (context, int index) {
                                       Widget buttonWidget;
-                                      switch (searchResults[index]) {
-                                        case 'Choosing a car':
-                                          buttonWidget = ElevatedButton(
-                                            onPressed: () {
-                                              // Navigator.push(
-                                              //     context,
-                                              //     MaterialPageRoute(
-                                              //         builder: (context) =>
-                                              //             ChooseCar()));
-                                              Navigator.of(context).push(
-                                                PageRouteBuilder(
-                                                  pageBuilder: (context, animation, secondaryAnimation) {
-                                                    return ChooseCar();
-                                                  },
-                                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                                                    // Use FadeTransition for the transition animation
-                                                    return FadeTransition(
-                                                      opacity: animation,
-                                                      child: child,
-                                                    );
-                                                  },
-                                                ),
-                                              );
-                                            },
-                                            style: ElevatedButton.styleFrom(
-                                              padding: EdgeInsets.fromLTRB(
-                                                  10, 8, 10, 0),
-                                              primary: Color(0xfcc4eaf6),
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(26),
-                                              ),
-                                            ),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Container(
-                                                  margin: EdgeInsets.fromLTRB(
-                                                      0, 15, 0, 10),
-                                                  child: Text(
-                                      index < searchResults.length ? searchResults[index] : '',
-                                                    style: GoogleFonts.domine(
-                                                      fontSize: 12,
-                                                      fontWeight: FontWeight.w400,
-                                                      height: 1.35,
-                                                      color: Color(0xff000000),
-                                                    ),
-                                                    textAlign: TextAlign.left,
+                                      if (index < searchResults.length) {
+                                        switch (searchResults[index]) {
+                                          case 'Choosing a car':
+                                            buttonWidget = ElevatedButton(
+                                              onPressed: () {
+                                                // Navigator.push(
+                                                //     context,
+                                                //     MaterialPageRoute(
+                                                //         builder: (context) =>
+                                                //             ChooseCar()));
+                                                Navigator.of(context).push(
+                                                  PageRouteBuilder(
+                                                    pageBuilder: (context,
+                                                        animation,
+                                                        secondaryAnimation) {
+                                                      return ChooseCar();
+                                                    },
+                                                    transitionsBuilder:
+                                                        (context,
+                                                            animation,
+                                                            secondaryAnimation,
+                                                            child) {
+                                                      // Use FadeTransition for the transition animation
+                                                      return FadeTransition(
+                                                        opacity: animation,
+                                                        child: child,
+                                                      );
+                                                    },
                                                   ),
-                                                ),
-                                                Container(
-                                                  margin: EdgeInsets.fromLTRB(
-                                                      50, 10, 0, 0),
-                                                  width: 75,
-                                                  height: 75,
-                                                  child: Image.asset(
-                                                    'images/image-24.png',
-                                                    fit: BoxFit.cover,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          );
-                                          break;
-                                        case 'Tools using in the car':
-                                          buttonWidget = InkWell(
-                                            onTap: () {
-                                              // Navigator.push(
-                                              //   context,
-                                              //   MaterialPageRoute(
-                                              //       builder: (context) =>
-                                              //           Tools1()),
-                                              // );
-                                              Navigator.of(context).push(
-                                                PageRouteBuilder(
-                                                  pageBuilder: (context, animation, secondaryAnimation) {
-                                                    return Tools1();
-                                                  },
-                                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                                                    // Use FadeTransition for the transition animation
-                                                    return FadeTransition(
-                                                      opacity: animation,
-                                                      child: child,
-                                                    );
-                                                  },
-                                                ),
-                                              );
-                                            },
-                                            child: Container(
-                                              margin: EdgeInsets.symmetric(
-                                                  horizontal: 10),
-                                              width: 150,
-                                              height: double.infinity,
-                                              decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(26),
-                                                image: DecorationImage(
-                                                  fit: BoxFit.cover,
-                                                  image: AssetImage(
-                                                    'images/rectangle-118-bg.png',
-                                                  ),
+                                                );
+                                              },
+                                              style: ElevatedButton.styleFrom(
+                                                padding: EdgeInsets.fromLTRB(
+                                                    10, 8, 10, 0),
+                                                primary: Color(0xfcc4eaf6),
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(26),
                                                 ),
                                               ),
-                                              child: Align(
-                                                // toolsusinginthecarj1o (1:68)
-                                                alignment: Alignment.topLeft,
-                                                child: SizedBox(
-                                                  child: Container(
-                                                    margin: EdgeInsets.symmetric(
-                                                        horizontal: 15,
-                                                        vertical: 15),
-                                                    // constraints: BoxConstraints(
-                                                    //   maxWidth: 143,
-                                                    // ),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Container(
+                                                    margin: EdgeInsets.fromLTRB(
+                                                        0, 15, 0, 10),
                                                     child: Text(
-                                                      searchResults[index],
+                                                      index <
+                                                              searchResults
+                                                                  .length
+                                                          ? searchResults[index]
+                                                          : '',
                                                       style: GoogleFonts.domine(
                                                         fontSize: 12,
                                                         fontWeight:
-                                                            FontWeight.w700,
+                                                            FontWeight.w400,
                                                         height: 1.35,
-                                                        color: Color(0xfcffffff),
+                                                        color:
+                                                            Color(0xff000000),
+                                                      ),
+                                                      textAlign: TextAlign.left,
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    margin: EdgeInsets.fromLTRB(
+                                                        50, 10, 0, 0),
+                                                    width: 75,
+                                                    height: 75,
+                                                    child: Image.asset(
+                                                      'images/image-24.png',
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            );
+                                            break;
+                                          case 'Tools using in the car':
+                                            buttonWidget = InkWell(
+                                              onTap: () {
+                                                // Navigator.push(
+                                                //   context,
+                                                //   MaterialPageRoute(
+                                                //       builder: (context) =>
+                                                //           Tools1()),
+                                                // );
+                                                Navigator.of(context).push(
+                                                  PageRouteBuilder(
+                                                    pageBuilder: (context,
+                                                        animation,
+                                                        secondaryAnimation) {
+                                                      return Tools1();
+                                                    },
+                                                    transitionsBuilder:
+                                                        (context,
+                                                            animation,
+                                                            secondaryAnimation,
+                                                            child) {
+                                                      // Use FadeTransition for the transition animation
+                                                      return FadeTransition(
+                                                        opacity: animation,
+                                                        child: child,
+                                                      );
+                                                    },
+                                                  ),
+                                                );
+                                              },
+                                              child: Container(
+                                                margin: EdgeInsets.symmetric(
+                                                    horizontal: 10),
+                                                width: 150,
+                                                height: double.infinity,
+                                                decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(26),
+                                                  image: DecorationImage(
+                                                    fit: BoxFit.cover,
+                                                    image: AssetImage(
+                                                      'images/rectangle-118-bg.png',
+                                                    ),
+                                                  ),
+                                                ),
+                                                child: Align(
+                                                  // toolsusinginthecarj1o (1:68)
+                                                  alignment: Alignment.topLeft,
+                                                  child: SizedBox(
+                                                    child: Container(
+                                                      margin:
+                                                          EdgeInsets.symmetric(
+                                                              horizontal: 15,
+                                                              vertical: 15),
+                                                      // constraints: BoxConstraints(
+                                                      //   maxWidth: 143,
+                                                      // ),
+                                                      child: Text(
+                                                        searchResults[index],
+                                                        style:
+                                                            GoogleFonts.domine(
+                                                          fontSize: 12,
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                          height: 1.35,
+                                                          color:
+                                                              Color(0xfcffffff),
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
                                                 ),
                                               ),
-                                            ),
-                                          );
-                                          break;
-                                        case 'Manage dangers':
-                                          buttonWidget = ElevatedButton(
-                                            onPressed: () {
-                                              // Navigator.push(
-                                              //     context,
-                                              //     MaterialPageRoute(
-                                              //         builder: (context) =>
-                                              //             Manage()));
-                                              Navigator.of(context).push(
-                                                PageRouteBuilder(
-                                                  pageBuilder: (context, animation, secondaryAnimation) {
-                                                    return Manage();
-                                                  },
-                                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                                                    // Use FadeTransition for the transition animation
-                                                    return FadeTransition(
-                                                      opacity: animation,
-                                                      child: child,
-                                                    );
-                                                  },
-                                                ),
-                                              );
-                                            },
-                                            style: ElevatedButton.styleFrom(
-                                              padding: EdgeInsets.fromLTRB(
-                                                  10, 8, 10, 0),
-                                              primary: Color(0xfc161853),
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(26),
-                                              ),
-                                            ),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Container(
-                                                  // choosingacarnuB (1:76)
-                                                  margin: EdgeInsets.fromLTRB(
-                                                      0, 15, 0, 10),
-                                                  child: Text(
-                                                    searchResults[index],
-                                                    style: GoogleFonts.domine(
-                                                      fontSize: 12,
-                                                      fontWeight: FontWeight.w400,
-                                                      height: 1.35,
-                                                      color: Colors.white,
-                                                    ),
+                                            );
+                                            break;
+                                          case 'Manage dangers':
+                                            buttonWidget = ElevatedButton(
+                                              onPressed: () {
+                                                // Navigator.push(
+                                                //     context,
+                                                //     MaterialPageRoute(
+                                                //         builder: (context) =>
+                                                //             Manage()));
+                                                Navigator.of(context).push(
+                                                  PageRouteBuilder(
+                                                    pageBuilder: (context,
+                                                        animation,
+                                                        secondaryAnimation) {
+                                                      return Manage();
+                                                    },
+                                                    transitionsBuilder:
+                                                        (context,
+                                                            animation,
+                                                            secondaryAnimation,
+                                                            child) {
+                                                      // Use FadeTransition for the transition animation
+                                                      return FadeTransition(
+                                                        opacity: animation,
+                                                        child: child,
+                                                      );
+                                                    },
                                                   ),
-                                                ),
-                                                Container(
-                                                  // image24hFT (1:77)
-                                                  margin: EdgeInsets.fromLTRB(
-                                                      50, 10, 0, 0),
-                                                  width: 75,
-                                                  height: 75,
-                                                  child: Image.asset(
-                                                    'images/image-25-83X.png',
-                                                    fit: BoxFit.cover,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          );
-                                          break;
-                                        case 'Traffic infraction ':
-                                          buttonWidget = InkWell(
-                                            onTap: () {
-                                              // Navigator.push(
-                                              //   context,
-                                              //   MaterialPageRoute(
-                                              //       builder: (context) =>
-                                              //           Traffic()),
-                                              // );
-                                              Navigator.of(context).push(
-                                                PageRouteBuilder(
-                                                  pageBuilder: (context, animation, secondaryAnimation) {
-                                                    return Traffic();
-                                                  },
-                                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                                                    // Use FadeTransition for the transition animation
-                                                    return FadeTransition(
-                                                      opacity: animation,
-                                                      child: child,
-                                                    );
-                                                  },
-                                                ),
-                                              );
-                                            },
-                                            child: Container(
-                                              margin: EdgeInsets.symmetric(
-                                                  horizontal: 10),
-                                              width: 150,
-                                              height: double.infinity,
-                                              decoration: BoxDecoration(
-                                                borderRadius:
-                                                BorderRadius.circular(26),
-                                                image: DecorationImage(
-                                                  fit: BoxFit.cover,
-                                                  image: AssetImage(
-                                                    'images/car 4.jpg',
-                                                  ),
+                                                );
+                                              },
+                                              style: ElevatedButton.styleFrom(
+                                                padding: EdgeInsets.fromLTRB(
+                                                    10, 8, 10, 0),
+                                                primary: Color(0xfc161853),
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(26),
                                                 ),
                                               ),
-                                              child: Align(
-                                                // toolsusinginthecarj1o (1:68)
-                                                alignment: Alignment.topLeft,
-                                                child: SizedBox(
-                                                  child: Container(
-                                                    margin: EdgeInsets.symmetric(
-                                                        horizontal: 15,
-                                                        vertical: 15),
-
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Container(
+                                                    // choosingacarnuB (1:76)
+                                                    margin: EdgeInsets.fromLTRB(
+                                                        0, 15, 0, 10),
                                                     child: Text(
                                                       searchResults[index],
                                                       style: GoogleFonts.domine(
                                                         fontSize: 12,
                                                         fontWeight:
-                                                        FontWeight.w700,
+                                                            FontWeight.w400,
                                                         height: 1.35,
-                                                        color: Color(0xfcffffff),
+                                                        color: Colors.white,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Container(
+                                                    // image24hFT (1:77)
+                                                    margin: EdgeInsets.fromLTRB(
+                                                        50, 10, 0, 0),
+                                                    width: 75,
+                                                    height: 75,
+                                                    child: Image.asset(
+                                                      'images/image-25-83X.png',
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            );
+                                            break;
+                                          case 'Traffic infraction ':
+                                            buttonWidget = InkWell(
+                                              onTap: () {
+                                                // Navigator.push(
+                                                //   context,
+                                                //   MaterialPageRoute(
+                                                //       builder: (context) =>
+                                                //           Traffic()),
+                                                // );
+                                                Navigator.of(context).push(
+                                                  PageRouteBuilder(
+                                                    pageBuilder: (context,
+                                                        animation,
+                                                        secondaryAnimation) {
+                                                      return Traffic();
+                                                    },
+                                                    transitionsBuilder:
+                                                        (context,
+                                                            animation,
+                                                            secondaryAnimation,
+                                                            child) {
+                                                      // Use FadeTransition for the transition animation
+                                                      return FadeTransition(
+                                                        opacity: animation,
+                                                        child: child,
+                                                      );
+                                                    },
+                                                  ),
+                                                );
+                                              },
+                                              child: Container(
+                                                margin: EdgeInsets.symmetric(
+                                                    horizontal: 10),
+                                                width: 150,
+                                                height: double.infinity,
+                                                decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(26),
+                                                  image: DecorationImage(
+                                                    fit: BoxFit.cover,
+                                                    image: AssetImage(
+                                                      'images/car 4.jpg',
+                                                    ),
+                                                  ),
+                                                ),
+                                                child: Align(
+                                                  // toolsusinginthecarj1o (1:68)
+                                                  alignment: Alignment.topLeft,
+                                                  child: SizedBox(
+                                                    child: Container(
+                                                      margin:
+                                                          EdgeInsets.symmetric(
+                                                              horizontal: 15,
+                                                              vertical: 15),
+                                                      child: Text(
+                                                        searchResults[index],
+                                                        style:
+                                                            GoogleFonts.domine(
+                                                          fontSize: 12,
+                                                          fontWeight:
+                                                              FontWeight.w700,
+                                                          height: 1.35,
+                                                          color:
+                                                              Color(0xfcffffff),
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
                                                 ),
                                               ),
-                                            ),
-                                          );
-                                          break;
-                                        case 'Driving license':
-                                          buttonWidget = ElevatedButton(
-                                            onPressed: () {
-                                              // Navigator.push(
-                                              //   context,
-                                              //   MaterialPageRoute(builder: (context) => Driving_license()),
-                                              // );
-                                              Navigator.of(context).push(
-                                                PageRouteBuilder(
-                                                  pageBuilder: (context, animation, secondaryAnimation) {
-                                                    return Driving_license();
-                                                  },
-                                                  transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                                                    // Use FadeTransition for the transition animation
-                                                    return FadeTransition(
-                                                      opacity: animation,
-                                                      child: child,
-                                                    );
-                                                  },
+                                            );
+                                            break;
+                                          case 'Driving license':
+                                            buttonWidget = ElevatedButton(
+                                              onPressed: () {
+                                                // Navigator.push(
+                                                //   context,
+                                                //   MaterialPageRoute(builder: (context) => Driving_license()),
+                                                // );
+                                                Navigator.of(context).push(
+                                                  PageRouteBuilder(
+                                                    pageBuilder: (context,
+                                                        animation,
+                                                        secondaryAnimation) {
+                                                      return Driving_license();
+                                                    },
+                                                    transitionsBuilder:
+                                                        (context,
+                                                            animation,
+                                                            secondaryAnimation,
+                                                            child) {
+                                                      // Use FadeTransition for the transition animation
+                                                      return FadeTransition(
+                                                        opacity: animation,
+                                                        child: child,
+                                                      );
+                                                    },
+                                                  ),
+                                                );
+                                              },
+                                              style: ElevatedButton.styleFrom(
+                                                padding: EdgeInsets.fromLTRB(
+                                                    10, 8, 10, 0),
+                                                primary: Color(0xfcfee0e0),
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(26),
                                                 ),
-                                              );
-                                            },
-                                            style: ElevatedButton.styleFrom(
-                                              padding: EdgeInsets.fromLTRB(
-                                                  10, 8, 10, 0),
-                                              primary: Color(0xfcfee0e0),
-                                              shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                BorderRadius.circular(26),
                                               ),
-                                            ),
-                                            child: Column(
-                                              crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                              children: [
-                                                Container(
-                                                  // choosingacarnuB (1:76)
-                                                  margin: EdgeInsets.fromLTRB(
-                                                      0, 15, 0, 10),
-                                                  child: Text(
-                                                    searchResults[index],
-                                                    style: GoogleFonts.domine(
-                                                      fontSize: 12,
-                                                      fontWeight: FontWeight.w400,
-                                                      height: 1.35,
-                                                      color: Color(0xff000000),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Container(
+                                                    // choosingacarnuB (1:76)
+                                                    margin: EdgeInsets.fromLTRB(
+                                                        0, 15, 0, 10),
+                                                    child: Text(
+                                                      searchResults[index],
+                                                      style: GoogleFonts.domine(
+                                                        fontSize: 12,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        height: 1.35,
+                                                        color:
+                                                            Color(0xff000000),
+                                                      ),
                                                     ),
                                                   ),
-                                                ),
-                                                Container(
-                                                  // image24hFT (1:77)
-                                                  margin: EdgeInsets.fromLTRB(
-                                                      50, 6, 0, 0),
-                                                  width: 75,
-                                                  height: 75,
-                                                  child: Image.asset(
-                                                    'images/license.png',
-                                                    fit: BoxFit.cover,
+                                                  Container(
+                                                    // image24hFT (1:77)
+                                                    margin: EdgeInsets.fromLTRB(
+                                                        50, 6, 0, 0),
+                                                    width: 75,
+                                                    height: 75,
+                                                    child: Image.asset(
+                                                      'images/license.png',
+                                                      fit: BoxFit.cover,
+                                                    ),
                                                   ),
-                                                ),
-                                              ],
-                                            ),
-                                          );
-                                          break;
-                                        default:
-                                          return SizedBox.shrink();
+                                                ],
+                                              ),
+                                            );
+                                            break;
+                                          default:
+                                            buttonWidget =
+                                                Container(); // Default case when search result doesn't match any cases
+                                            break;
+                                        }
+                                      } else {
+                                        buttonWidget =
+                                            Container(); // Handle case when index is out of range
                                       }
                                       return Container(child: buttonWidget);
                                     },
@@ -1183,7 +1285,6 @@ class _HomeState extends State<Home> {
 
                               Container(
                                 height: 140,
-
                                 child: ListView.separated(
                                   scrollDirection: Axis.horizontal,
                                   itemCount: completed.length,
@@ -1203,10 +1304,15 @@ class _HomeState extends State<Home> {
 
                                             Navigator.of(context).push(
                                               PageRouteBuilder(
-                                                pageBuilder: (context, animation, secondaryAnimation) {
+                                                pageBuilder: (context,
+                                                    animation,
+                                                    secondaryAnimation) {
                                                   return ChooseCar();
                                                 },
-                                                transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                                transitionsBuilder: (context,
+                                                    animation,
+                                                    secondaryAnimation,
+                                                    child) {
                                                   // Use FadeTransition for the transition animation
                                                   return FadeTransition(
                                                     opacity: animation,
@@ -1222,12 +1328,12 @@ class _HomeState extends State<Home> {
                                             primary: Color(0xfcc4eaf6),
                                             shape: RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(26),
+                                                  BorderRadius.circular(26),
                                             ),
                                           ),
                                           child: Column(
                                             crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                                CrossAxisAlignment.start,
                                             children: [
                                               Container(
                                                 margin: EdgeInsets.fromLTRB(
@@ -1268,10 +1374,15 @@ class _HomeState extends State<Home> {
                                             // );
                                             Navigator.of(context).push(
                                               PageRouteBuilder(
-                                                pageBuilder: (context, animation, secondaryAnimation) {
+                                                pageBuilder: (context,
+                                                    animation,
+                                                    secondaryAnimation) {
                                                   return Tools1();
                                                 },
-                                                transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                                transitionsBuilder: (context,
+                                                    animation,
+                                                    secondaryAnimation,
+                                                    child) {
                                                   // Use FadeTransition for the transition animation
                                                   return FadeTransition(
                                                     opacity: animation,
@@ -1288,7 +1399,7 @@ class _HomeState extends State<Home> {
                                             height: double.infinity,
                                             decoration: BoxDecoration(
                                               borderRadius:
-                                              BorderRadius.circular(26),
+                                                  BorderRadius.circular(26),
                                               image: DecorationImage(
                                                 fit: BoxFit.cover,
                                                 image: AssetImage(
@@ -1312,7 +1423,7 @@ class _HomeState extends State<Home> {
                                                     style: GoogleFonts.domine(
                                                       fontSize: 12,
                                                       fontWeight:
-                                                      FontWeight.w700,
+                                                          FontWeight.w700,
                                                       height: 1.35,
                                                       color: Color(0xfcffffff),
                                                     ),
@@ -1334,10 +1445,15 @@ class _HomeState extends State<Home> {
 
                                             Navigator.of(context).push(
                                               PageRouteBuilder(
-                                                pageBuilder: (context, animation, secondaryAnimation) {
+                                                pageBuilder: (context,
+                                                    animation,
+                                                    secondaryAnimation) {
                                                   return Manage();
                                                 },
-                                                transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                                transitionsBuilder: (context,
+                                                    animation,
+                                                    secondaryAnimation,
+                                                    child) {
                                                   // Use FadeTransition for the transition animation
                                                   return FadeTransition(
                                                     opacity: animation,
@@ -1353,12 +1469,12 @@ class _HomeState extends State<Home> {
                                             primary: Color(0xfc161853),
                                             shape: RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(26),
+                                                  BorderRadius.circular(26),
                                             ),
                                           ),
                                           child: Column(
                                             crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                                CrossAxisAlignment.start,
                                             children: [
                                               Container(
                                                 // choosingacarnuB (1:76)
@@ -1400,10 +1516,15 @@ class _HomeState extends State<Home> {
                                             // );
                                             Navigator.of(context).push(
                                               PageRouteBuilder(
-                                                pageBuilder: (context, animation, secondaryAnimation) {
+                                                pageBuilder: (context,
+                                                    animation,
+                                                    secondaryAnimation) {
                                                   return Traffic();
                                                 },
-                                                transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                                transitionsBuilder: (context,
+                                                    animation,
+                                                    secondaryAnimation,
+                                                    child) {
                                                   // Use FadeTransition for the transition animation
                                                   return FadeTransition(
                                                     opacity: animation,
@@ -1420,7 +1541,7 @@ class _HomeState extends State<Home> {
                                             height: double.infinity,
                                             decoration: BoxDecoration(
                                               borderRadius:
-                                              BorderRadius.circular(26),
+                                                  BorderRadius.circular(26),
                                               image: DecorationImage(
                                                 fit: BoxFit.cover,
                                                 image: AssetImage(
@@ -1444,7 +1565,7 @@ class _HomeState extends State<Home> {
                                                     style: GoogleFonts.domine(
                                                       fontSize: 12,
                                                       fontWeight:
-                                                      FontWeight.w700,
+                                                          FontWeight.w700,
                                                       height: 1.35,
                                                       color: Color(0xfcffffff),
                                                     ),
@@ -1464,10 +1585,15 @@ class _HomeState extends State<Home> {
                                             // );
                                             Navigator.of(context).push(
                                               PageRouteBuilder(
-                                                pageBuilder: (context, animation, secondaryAnimation) {
+                                                pageBuilder: (context,
+                                                    animation,
+                                                    secondaryAnimation) {
                                                   return Driving_license();
                                                 },
-                                                transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                                                transitionsBuilder: (context,
+                                                    animation,
+                                                    secondaryAnimation,
+                                                    child) {
                                                   // Use FadeTransition for the transition animation
                                                   return FadeTransition(
                                                     opacity: animation,
@@ -1483,12 +1609,12 @@ class _HomeState extends State<Home> {
                                             primary: Color(0xfcfee0e0),
                                             shape: RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(26),
+                                                  BorderRadius.circular(26),
                                             ),
                                           ),
                                           child: Column(
                                             crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                                CrossAxisAlignment.start,
                                             children: [
                                               Container(
                                                 // choosingacarnuB (1:76)
@@ -1526,7 +1652,6 @@ class _HomeState extends State<Home> {
                                   },
                                 ),
                               ),
-
                             ],
                           ),
                         ),
