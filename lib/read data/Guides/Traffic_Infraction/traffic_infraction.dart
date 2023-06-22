@@ -40,34 +40,49 @@ class _TrafficState extends State<Traffic> {
       width: double.infinity,
       child: Column(
         //mainAxisAlignment: MainAxisAlignment.center,
+        // crossAxisAlignment: CrossAxisAlignment.center,
+        // children: [
+        //   SizedBox(height: 45,),
+        //   Container(
+        //     child: Row(
+        //       children: [
+        //         IconButton(
+        //           icon: Icon(
+        //             Icons.arrow_back,
+        //             color: Colors.black,
+        //           ),
+        //           onPressed: () {
+        //              Navigator.pop(context);
+        //           },
+        //         ),
+        //         Center(
+        //           child: Text(
+        //             'Infractions No. 1',
+        //             style: GoogleFonts.domine(
+        //               fontSize: 20,
+        //               fontWeight: FontWeight.bold,
+        //               height: 1.35,
+        //               color: Colors.black,
+        //             ),
+        //             textAlign: TextAlign.center,
+        //           ),
+        //         ),
+        //       ],
+        //     ),
+        //   ),
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(height: 45,),
-          Container(
-            child: Row(
-              children: [
-                IconButton(
-                  icon: Icon(
-                    Icons.arrow_back,
-                    color: Colors.black,
-                  ),
-                  onPressed: () {
-                    // _navigateBack(context);
-                  },
-                ),
-                Center(
-                  child: Text(
-                    'Infractions No. 1',
-                    style: GoogleFonts.domine(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      height: 1.35,
-                      color: Colors.black,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ],
+          Center(
+            child: Text(
+              'Infractions No. 1',
+              style: GoogleFonts.domine(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                height: 1.35,
+                color: Colors.black, // Changing the text color to white for better visibility
+              ),
+              textAlign: TextAlign.center,
             ),
           ),
 

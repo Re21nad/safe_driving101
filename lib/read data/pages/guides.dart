@@ -47,7 +47,20 @@ class _GuidesState extends State<Guides> {
           width: double.infinity,
           child: Column(
             children: [
-              SizedBox(height: 60,),
+              // SizedBox(height: 5,),
+
+              Text(
+                'You can select the lessons you want from those that are offered.',
+                style: GoogleFonts.rokkitt(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w400,
+                  height: 1.35,
+                  color: Colors.black, // Changing the text color to white for better visibility
+                ),
+                textAlign: TextAlign.center, // Centering the text within the container
+              ),
+
+              SizedBox(height: 20,),
 
               Container(
                 // autogroupyxn5XgR (BEu2v5TDdPUCapmWXeyXN5)
@@ -375,7 +388,7 @@ class _GuidesState extends State<Guides> {
                   ],
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 10,),
 
             ],
           ),
